@@ -8,8 +8,21 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
   background-color: #EBEBEB!important;
 }
 
-#sidebar {
-  background-color: #3d3f41!important;
+#sidebar, #mainContent-1, #sidebar {
+  background-color: #191919!important;
 }
 
 #side-folders li a {color: #8C8C8C;}
+
+.logo-interia-white {
+  background-image: url(../assets/interia_white.svg),url(images/logo/poczta_white.svg);
+  background-position: 1px 19px,24px 37px;
+  background-repeat: no-repeat;
+  background-size: 57px 15px,34px 6px;
+  bottom: 0;
+  height: 73px;
+  left: 0;
+  margin-top: 10px;
+  width: 300px;
+  position: absolute;
+}
