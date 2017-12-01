@@ -1,0 +1,15 @@
+body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {background-color: #fff;}
+
+.mails-container {
+  background-color: #F7F7F7;
+}
+
+.mTable tr:hover, #attgal-main>ul>li:hover, .attachments-images-list li:hover {
+  background-color: #EBEBEB!important;
+}
+
+#sidebar {
+  background-color: #3d3f41!important;
+}
+
+#side-folders li a {color: #8C8C8C;}
