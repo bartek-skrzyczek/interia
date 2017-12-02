@@ -290,11 +290,11 @@ div.tabsHeader {
 
 .tabHeader {
   color: #636c75;
-  background: #fdfdfd url(../assets/../assets/tabs.png) no-repeat scroll left -26px
+  background: #fdfdfd url(../assets/tabs.png) no-repeat scroll left -26px
 }
 
 .tabHeader div {
-  background: transparent url(../assets/../assets/tabs.png) no-repeat scroll right -78px
+  background: transparent url(../assets/tabs.png) no-repeat scroll right -78px
 }
 
 .tabHeader button {
@@ -315,13 +315,13 @@ ul.tabsList li.threadList.activeHeaderTab {
 }
 
 ul.tabsList li.activeHeaderTab {
-  background: #c4e8ff url(../assets/../assets/tabs.png) no-repeat scroll top left;
+  background: #c4e8ff url(../assets/tabs.png) no-repeat scroll top left;
   height: 26px
 }
 
 li.activeHeaderTab div {
   color: #000;
-  background: transparent url(../assets/../assets/tabs.png) no-repeat scroll right -52px
+  background: transparent url(../assets/tabs.png) no-repeat scroll right -52px
 }
 
 li.activeHeaderTab div span.cr {
@@ -339,12 +339,12 @@ li.activeHeaderTab div span.cr {
 
 .scLeft a,
 .scRight a {
-  background: #f0f3f5 url(../assets/../assets/tabs.png) no-repeat scroll left -104px
+  background: #f0f3f5 url(../assets/tabs.png) no-repeat scroll left -104px
 }
 
 .scLeft b,
 .scRight b {
-  background-image: url(../assets/../assets/tabs.png)
+  background-image: url(../assets/tabs.png)
 }
 
 li.searchResults,

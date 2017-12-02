@@ -466,6 +466,7 @@
   content: "\e65e"
 }
 
+/*
 .composition-from:before,
 .email-input-plain:before,
 .mobile-search-from-container:before,
@@ -475,8 +476,9 @@
 [class*=" icon-"],
 [class^=icon-],
 [contentEditable=true]:empty:before {
-  font-family: Roboto, sans-serif
+   font-family: Roboto, sans-serif
 }
+*/
 
 .dialog-header-button,
 :before,
@@ -764,13 +766,144 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
   display:none;
 }
 
+.icon-list-1, .icon-list-2, .icon-list-3, .icon-list-4, .icon-list-5, .icon-list-6, .icon-list-7, .icon-list-8,
+.icon-list-9, .icon-list-10, .side-contacts, .toolbar {position: relative}
+
 .icon-list-1:before {
   position: absolute;
   content: "\e60a";
-  font-size: 27px;
-  height: 27px;
+  font-size: 20px;
+  height: 210px;
+  color: #8C8C8C;
 }
 
-.icon-list-2 a:before {
+.icon-list-2:before {
   content: "\e60b";
+  position: absolute;
+  font-size: 20px;
+  height: 20px;
+  color: #8C8C8C;
+}
+
+.icon-list-3:before {
+  content: "\e60c";
+  position: absolute;
+  font-size: 20px;
+  height: 20px;
+  color: #8C8C8C;
+}
+
+.icon-list-4:before {
+  content: "\e60d";
+  position: absolute;
+  font-size: 20px;
+  height: 20px;
+  color: #8C8C8C;
+}
+
+.icon-list-5:before {
+  content: "\e60e";
+  position: absolute;
+  font-size: 20px;
+  height: 20px;
+  color: #8C8C8C;
+}
+
+.icon-list-6:before {
+  content: "\e60f";
+  position: absolute;
+  font-size: 20px;
+  height: 20px;
+  color: #8C8C8C;
+}
+
+.icon-list-7:before {
+  content: "\e610";
+  position: absolute;
+  font-size: 20px;
+  height: 20px;
+  color: #8C8C8C;
+}
+
+.icon-list-8:before {
+  content: "\e607";
+  position: absolute;
+  font-size: 20px;
+  height: 20px;
+  left:6px;
+  left: -27px;
+  top: 1px;
+  color: #8C8C8C;
+}
+
+.icon-list-9:before {
+  content: "\e635";
+  position: absolute;
+  font-size: 20px;
+  height: 20px;
+  left:6px;
+  left: -27px;
+  top: 1px;
+  color: #8C8C8C;
+}
+
+.icon-list-10:before {
+  content: "\e635";
+  position: absolute;
+  font-size: 20px;
+  height: 20px;
+  left:6px;
+}
+
+.side-cnt-manage span {
+  background-image: none;
+}
+
+.side-cnt-manage span:before {
+  content: "\e67e";
+  position: absolute;
+  font-size: 27px;
+  height: 27px;
+  left:6px;
+  color: #8C8C8C;
+}
+
+#compose_nav0:before {
+  content: "\e609";
+  position: absolute;
+  font-size: 45px;
+  height: 31px;
+  left: 10px;
+  color: #8C8C8C;
+  top: -3px;
+}
+
+#compose_nav0:hover, #contacts_nav0:hover, #fetch_nav0:hover {
+  background:#edf0f2;
+}
+
+#contacts_nav0:before{
+  position: absolute;
+  font-size: 53px;
+  height: 27px;
+  color: #8C8C8C;
+  content: "\e67e";
+  top: -8px;
+  right: 10px;
+}
+
+.toolbar button.act {
+    background-image: none;
+}
+
+#icon-sync {
+  position: absolute;
+  font-size: 53px;
+  height: 27px;
+  fill: #8C8C8C;
+  content: "\e67e";
+  top: 5px;
+  right: 90px;
+  width:21px;
+  content: "\e9000";
 }

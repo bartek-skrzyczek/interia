@@ -12,4 +12,29 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
   background-color: #EBEBEB!important;
 }
 
-border:#D3D3D3;
+.active-tr {
+  background-color: white!important;
+}
+
+.font-400 {
+  font-weight: 400;
+}
+
+.border-tab {
+  border: 1px solid #d1d1d1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+ul.tabsList li.activeHeaderTab, li.activeHeaderTab div {
+  background: none;
+}
+
+.msglist-header {
+  border-bottom: 1px solid #d1d1d1;
+  border-top: 1px solid #d1d1d1;
+}
+
+.tabBody {
+  border-color: #d1d1d1;
+}
