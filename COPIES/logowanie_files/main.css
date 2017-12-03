@@ -1,0 +1,19 @@
+.baloon-antyweb {
+    background-image: url(../assets/sprite-icons.png);
+    background-position: left -119px;
+}
+
+.baloon-spiderweb {
+    background-image: url(../assets/sprite-icons.png);
+    background-position: left -180px;
+}
+
+.mails-framecontainer .mail-wrapper {
+  background: #fff!important;
+  border: 0;
+  height: 211px;
+  width: 100%;
+  min-height: 130px;
+  text-align: center;
+  margin-top: 10px;
+}
