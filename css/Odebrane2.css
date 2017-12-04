@@ -17,7 +17,7 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
 }
 
 .font-400 {
-  font-weight: 400;
+  font-weight: 400!important;
 }
 
 .border-tab {
@@ -37,4 +37,8 @@ ul.tabsList li.activeHeaderTab, li.activeHeaderTab div {
 
 .tabBody {
   border-color: #d1d1d1;
+}
+
+.tabHeader, .tabHeader div {
+  background: none;
 }
