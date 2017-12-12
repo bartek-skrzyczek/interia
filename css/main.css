@@ -17,3 +17,7 @@
   text-align: center;
   margin-top: 10px;
 }
+
+#emFoot_1, textarea, #textarea {
+  padding: 5px;
+}

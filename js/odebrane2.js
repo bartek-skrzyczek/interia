@@ -9,5 +9,9 @@ jQuery(document).ready(function() {
     $(this).addClass('font-400');
     var val =  $(this).find('input:checkbox').prop('checked')?true:false;
     $(this).find('input:checkbox').prop('checked', val);
+
+    $(document).delegate('#perforce_info_modal_layer', 'click', function(e) {
+  e.stopPropagation();
+});
   });
 });

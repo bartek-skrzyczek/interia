@@ -1,0 +1,22 @@
+#message-textarea {
+  padding: 5px;
+}
+
+#sendT_nav1 {
+  border: none;
+  color: #059;
+  font-weight: bold;
+  text-align: center;
+  font-family: arial, sans-serif;
+  font-size: 11px;
+  background: none;
+  padding:0;
+}
+
+#sendT_nav1:hover {
+  text-decoration: underline;
+}
+
+#sendT_nav:hover input {
+  text-decoration: underline;
+}

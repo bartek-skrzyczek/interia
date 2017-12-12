@@ -28,6 +28,16 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
     margin-top: 10px;
 }
 
+#tabBodyCont .emHead {
+    background: #f5f5f5;
+}
+
+.bottomIcons {
+    background: #f5f5f5;
+    border: 1px solid #abd0ec;
+    border-top: 0;
+}
+
 #mainContent, #rightContent {
     background: #f5f5f5;
 }
@@ -35,6 +45,7 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
 #bottomRight {
     background: #f5f5f5;
 }
+
 #content {
     background: #f5f5f5
 }
@@ -48,7 +59,6 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
 .toolbar button:hover {
     color: #059;
     cursor: pointer;
-    background-image: url(../assets/buttons.01.png);
 }
 
 .toolbar span.separator, .mSeparator {
@@ -57,4 +67,8 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
 
 #additionalNavLink {
   border-color: #8C8C8C;
+}
+
+.bottomIcons {
+    border: 1px solid #8C8C8C;
 }

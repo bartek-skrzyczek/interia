@@ -30,6 +30,10 @@ ul.tabsList li.activeHeaderTab, li.activeHeaderTab div {
   background: none;
 }
 
+li.activeHeaderTab {
+  background-color: #f5f5f5!important;
+}
+
 .msglist-header {
   border-bottom: 1px solid #d1d1d1;
   border-top: 1px solid #d1d1d1;
@@ -41,4 +45,15 @@ ul.tabsList li.activeHeaderTab, li.activeHeaderTab div {
 
 .tabHeader, .tabHeader div {
   background: none;
+}
+
+.mails-framecontainer .mail-frame {
+  max-height: 75px;
+  min-height: 75px;
+}
+
+.separator-border {
+  margin: 0 0 0 .8ex;
+  border-left: 1px #ccc solid;
+  padding-left: 1ex;
 }
