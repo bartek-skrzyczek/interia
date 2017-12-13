@@ -18,6 +18,51 @@
   margin-top: 10px;
 }
 
+.main-cta {
+  display: inline-block;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+    line-height: normal;
+    color: #fff;
+    background: 0;
+    background-color: #155eb3;
+    width: 100%;
+    margin: 0;
+    height: 50px;
+    font-size: 14px;
+    width: 225px;
+    margin-left: 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-cta span {
+  height: 20px;
+  text-transform: uppercase;
+}
+
+.hr-before.active:after {
+  width: 100%!important;
+}
+
+.hr-before.active:after {
+    background-color: #67aa55!important;
+}
+
+/*
+LOGOWANIE ALL END
+----------------------------------
+*/
+
 #emFoot_1, textarea, #textarea {
   padding: 5px;
+}
+
+#emFoot_1 {
+  overflow: scroll;
 }

