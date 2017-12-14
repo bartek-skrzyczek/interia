@@ -1,0 +1,202 @@
+html {
+    padding: 8px;
+    min-height: 100%;
+    cursor: text;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+/* Bug #7827 [nowa wiadomość] webkit - znacznik "pisania" zostaje w "treść" */
+body:focus {
+    outline: 1px solid transparent;
+}
+
+.inpl-inline-attachment.loading {
+    min-width: 24px;
+    min-height: 24px;
+    background: white 50% 50% no-repeat url('data:image/gif;base64,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');
+    padding: 3px;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+body.inpl-mail-template_1{background:#D82214 url('../../../st/b_21.jpg') no-repeat right top;color:#FFFFFF;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding: 8px 280px 8px 8px!important;min-height:233px}
+body.inpl-mail-template_1 a, body.inpl-mail-template_1 a:link:-moz-read-write {color:#FFFFFF!important}
+/* sylwester */
+body.inpl-mail-template_2{background:#FEF2E4 url('../../../st/04.png') no-repeat right bottom;color:#A6744F;font-family:Georgia, Times new roman, Times, Serif;font-size:15px;padding:8px 8px 288px 8px!important}
+body.inpl-mail-template_2 a, body.inpl-mail-template_2 a:link:-moz-read-write {color:#000000!important}
+/* baloniki */
+body.inpl-mail-template_3{background:#FFFFFF url('../../../st/11.png') no-repeat left top;color:#0081C9;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding: 144px 8px 8px 119px!important;min-height:144px}
+body.inpl-mail-template_3 a, body.inpl-mail-template_3 a:link:-moz-read-write {color:#000000!important}
+/* urodziny */
+body.inpl-mail-template_4{background:#FFFFFF url('../../../st/20_1.png') no-repeat right bottom;color:#C21D63;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding: 8px 25px 217px 25px!important}
+body.inpl-mail-template_4 a, body.inpl-mail-template_4 a:link:-moz-read-write {color:#000000!important}
+/* floral */
+body.inpl-mail-template_5{background:#FFFFFF url('../../../st/b_8.jpg') no-repeat right top;color:#4D4A3D;font-family:Georgia, Times new roman, Times, Serif;font-size:15px;padding:8px 336px 8px 8px!important;min-height:272px}
+body.inpl-mail-template_5 a, body.inpl-mail-template_5 a:link:-moz-read-write {color:#FFFFFF!important}
+/* CV */
+body.inpl-mail-template_6{background:#FFF0C7 url('../../../st/b_12.jpg') no-repeat left top;color:#721c00;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 8px 8px 275px!important;min-height:179px}
+body.inpl-mail-template_6 a, body.inpl-mail-template_6 a:link:-moz-read-write {color:#000000!important}
+/* pilka */
+body.inpl-mail-template_7{background:#000000 url('../../../st/b_5.jpg') no-repeat right top;color:#f3a06a;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 336px 8px 8px!important;min-height:308px}
+body.inpl-mail-template_7 a, body.inpl-mail-template_7 a:link:-moz-read-write {color:#FFFFFF!important}
+/* Slonko */
+body.inpl-mail-template_8{background:#FFFFFF url('../../../st/17.jpg') no-repeat right top;color:#596D99;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding: 8px 316px 8px 8px!important;min-height:260px}
+body.inpl-mail-template_8 a, body.inpl-mail-template_8 a:link:-moz-read-write {color:#000000!important}
+/* Serduszka */
+body.inpl-mail-template_9{background:#FFFFFF url('../../../st/b_14.png') no-repeat right top;color:#E2221F;font-family:Georgia, Times new roman, Times, Serif;font-size:15px;font-style:italic;padding:8px 380px 8px 8px!important;min-height:231px}
+body.inpl-mail-template_9 a, body.inpl-mail-template_9 a:link:-moz-read-write {color:#000000!important}
+/* Serce */
+body.inpl-mail-template_10{background:#FFFFFF url('../../../st/14.png') no-repeat right top;color:#F15D7D;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 251px 8px 8px!important;min-height:325px}
+body.inpl-mail-template_10 a, body.inpl-mail-template_10 a:link:-moz-read-write {color:#000000!important}
+/* Walentynka */
+body.inpl-mail-template_11{background:#FFFFFF url('../../../st/b_13.jpg') no-repeat right bottom;color:#E2221F;font-family:Georgia, Times new roman, Times, Serif;font-size:15px;font-style:italic;padding:8px 8px 251px 8px!important}
+body.inpl-mail-template_11 a, body.inpl-mail-template_11 a:link:-moz-read-write {color:#000000!important}
+/* R�a */
+body.inpl-mail-template_12{background:#FFFFFF url('../../../st/13.png') no-repeat left top;color:#D61A5D;font-family:Arial, Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 8px 8px 298px!important;min-height:266px}
+body.inpl-mail-template_12 a, body.inpl-mail-template_12 a:link:-moz-read-write {color:#000000!important}
+/* Osiemnastka */
+body.inpl-mail-template_13{background:#000000 url('../../../st/b_3.jpg') no-repeat right bottom;color:#ffffff;font-family:arial, helvetica, tahoma, sans-serif;font-size:17px;font-style:italic;padding:8px 306px 8px 8px!important;min-height:244px}
+body.inpl-mail-template_13 a, body.inpl-mail-template_13 a:link:-moz-read-write {color:#FFFFFF!important}
+/* Prezent z kokarda */
+body.inpl-mail-template_14{background:#FFFFFF url('../../../st/15.png') no-repeat right bottom;color:#960C34;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 299px 8px 8px!important;min-height:293px}
+body.inpl-mail-template_14 a, body.inpl-mail-template_14 a:link:-moz-read-write {color:#000000!important}
+/* mis z balonikiem */
+body.inpl-mail-template_15{background:#FFFFFF url('../../../st/01.png') no-repeat right bottom;color:#0D86B8;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 131px 297px 8px!important;min-height:187px}
+body.inpl-mail-template_15 a, body.inpl-mail-template_15 a:link:-moz-read-write {color:#000000!important}
+/* Mi� z prezentem  */
+body.inpl-mail-template_16{background:#FFFFFF url('../../../st/03.jpg') no-repeat right bottom;color:#A0785F;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding: 8px 8px 285px 8px;}
+body.inpl-mail-template_16 a, body.inpl-mail-template_16 a:link:-moz-read-write {color:#000000!important}
+/* slub  */
+body.inpl-mail-template_17{background:#F7FAF1 url('../../../st/b_16n_1.png') no-repeat left top;color:#906C15;font-family:Georgia, Times new roman, Times, Serif;font-size:15px;padding:108px 8px 8px 206px!important;min-height:100px}
+body.inpl-mail-template_17 a, body.inpl-mail-template_17 a:link:-moz-read-write {color:#000000!important}
+/* Bobas */
+body.inpl-mail-template_18{background:#FFFFFF url('../../../st/b_7.jpg') no-repeat right bottom;color:#0D86B8;font-family:Verdana, Tahoma, Sans-serif;font-size:15px;font-style:italic;padding:8px 8px 186px 8px!important}
+body.inpl-mail-template_18 a, body.inpl-mail-template_18 a:link:-moz-read-write {color:#000000!important}
+/* Bocian */
+body.inpl-mail-template_19{background:#FFFFFF url('../../../st/12.png') no-repeat right bottom;color:#2C779C;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding: 8px 241px 8px 8px!important;min-height:310px}
+body.inpl-mail-template_19 a, body.inpl-mail-template_19 a:link:-moz-read-write {color:#000000!important}
+/* Mops */
+body.inpl-mail-template_20{background:#FFFFFF url('../../../st/b_17.jpg') no-repeat right bottom;color:#aa0519;font-family:Georgia, Times new roman, Times, Serif;font-size:15px;font-style:italic;padding: 8px 8px 242px 8px!important}
+body.inpl-mail-template_20 a, body.inpl-mail-template_20 a:link:-moz-read-write {color:#000000!important}
+/* Mis z listem */
+body.inpl-mail-template_21{background:#FFFFFF url('../../../st/02.jpg') no-repeat right bottom;color:#A0785F;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 8px 289px 8px!important}
+body.inpl-mail-template_21 a, body.inpl-mail-template_21 a:link:-moz-read-write {color:#000000!important}
+/* Dziewczyna z prezentem */
+body.inpl-mail-template_22{background:#FFFFFF url('../../../st/b_4.jpg') no-repeat right bottom;color:#4B3E1A;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 242px 8px 8px!important;min-height:351px}
+body.inpl-mail-template_22 a, body.inpl-mail-template_22 a:link:-moz-read-write {color:#000000!important}
+/* Rodzinka */
+body.inpl-mail-template_23{background:#FFFFFF url('../../../st/16.jpg') no-repeat right bottom;color:#2C779C;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 297px 8px 8px!important;min-height:301px}
+body.inpl-mail-template_23 a, body.inpl-mail-template_23 a:link:-moz-read-write {color:#000000!important}
+/* balony */
+body.inpl-mail-template_24{background:#FFFFFF url('../../../st/b_6.jpg') no-repeat right bottom;color:#2C779C;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding: 8px 235px 8px 8px!important;min-height:341px}
+body.inpl-mail-template_24 a, body.inpl-mail-template_24 a:link:-moz-read-write {color:#000000!important}
+/* Zima */
+body.inpl-mail-template_25{background:#BBE2FC url('../../../st/b_23.jpg') no-repeat right top;color:#0A4D79;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 334px 8px 8px!important;min-height:310px}
+body.inpl-mail-template_25 a, body.inpl-mail-template_25 a:link:-moz-read-write {color:#000000!important}
+/* Zima */
+body.inpl-mail-template_26{background:#FFFFFF url('../../../st/08.png') no-repeat right top;color:#177DC5;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 331px 8px 8px!important;min-height:311px}
+body.inpl-mail-template_26 a, body.inpl-mail-template_26 a:link:-moz-read-write {color:#000000!important}
+/* Wiosna */
+body.inpl-mail-template_27{background:#498B0F url('../../../st/b_26.jpg') no-repeat right top;color:#FFFFFF;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 334px 8px 8px!important;min-height:254px}
+body.inpl-mail-template_27 a, body.inpl-mail-template_27 a:link:-moz-read-write {color:#FFFFFF!important}
+/* Wiosna */
+body.inpl-mail-template_28{background:#FFFFFF url('../../../st/09.png') no-repeat right top;color:#5C9C2B;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 331px 8px 8px!important;min-height:311px}
+body.inpl-mail-template_28 a, body.inpl-mail-template_28 a:link:-moz-read-write {color:#000000!important}
+/* Lato */
+body.inpl-mail-template_29{background: url('../../../st/b_25x.png') no-repeat right top; color:#4D3C18;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 365px 8px 8px!important;min-height:190px}
+body.inpl-mail-template_29 a, body.inpl-mail-template_29 a:link:-moz-read-write {color:#000000!important}
+/* Lato */
+body.inpl-mail-template_30{background:#FFFFFF url('../../../st/06.png') no-repeat right top;color:#B14300;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding: 8px 331px 8px 8px!important;min-height:311px}
+body.inpl-mail-template_30 a, body.inpl-mail-template_30 a:link:-moz-read-write {color:#000000!important}
+/* jesien */
+body.inpl-mail-template_31{background:#FEF1D0 url('../../../st/b_24.jpg') no-repeat right top;color:#4D3C18;font-family:Georgia, Times new roman, Times, Serif;font-size:15px;padding:8px 268px 8px 8px!important;min-height:171px}
+body.inpl-mail-template_31 a, body.inpl-mail-template_31 a:link:-moz-read-write {color:#000000!important}
+/* jesien */
+body.inpl-mail-template_32{background:#FFFFFF url('../../../st/07.png') no-repeat right top;color:#A13832;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding: 8px 331px 8px 8px!important;min-height:311px}
+body.inpl-mail-template_32 a, body.inpl-mail-template_32 a:link:-moz-read-write {color:#000000!important}
+/* Biedronka */
+body.inpl-mail-template_33{background:#EBF765 url('../../../st/b_27.jpg') no-repeat right top;color:#535A03;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 356px 8px 8px!important;min-height:303px}
+body.inpl-mail-template_33 a, body.inpl-mail-template_33 a:link:-moz-read-write {color:#000000!important}
+/* Gory */
+body.inpl-mail-template_34{background:#EBE6DB url('../../../st/b_1.jpg') no-repeat right top;color:#165575;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 356px 8px 8px!important;min-height:242px}
+body.inpl-mail-template_34 a, body.inpl-mail-template_34 a:link:-moz-read-write {color:#000000!important}
+/* Palmy */
+body.inpl-mail-template_35{background:#FAF5E2 url('../../../st/b_15.jpg') no-repeat right top;color:#896510;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 297px 8px 8px!important;min-height:279px}
+body.inpl-mail-template_35 a, body.inpl-mail-template_35 a:link:-moz-read-write {color:#000000!important}
+/* zagle */
+body.inpl-mail-template_36{background:#A0D7FF url('../../../st/b_2.jpg') no-repeat right top;color:#0F3256;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 303px 8px 8px!important;min-height:236px}
+body.inpl-mail-template_36 a, body.inpl-mail-template_36 a:link:-moz-read-write {color:#000000!important}
+/* lodka*/
+body.inpl-mail-template_37{background:#FFFFFF url('../../../st/10.png') no-repeat right bottom;color:#0081C9;font-family:Arial, Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 292px 8px 8px!important;min-height:264px}
+body.inpl-mail-template_37 a, body.inpl-mail-template_37 a:link:-moz-read-write {color:#000000!important}
+/* dzien babci */
+body.inpl-mail-template_38{background:#FFFFFF url('../../../st/b_10.jpg') no-repeat right bottom;color:#040A6F;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;font-style:italic;padding:8px 8px 230px 8px!important}
+body.inpl-mail-template_38 a, body.inpl-mail-template_38 a:link:-moz-read-write {color:#000000!important}
+/* dzien dziadka */
+body.inpl-mail-template_39{background:#D5F2FA url('../../../st/b_9.jpg') no-repeat right bottom;color:#040A6F;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;font-style:italic;padding: 8px 8px 272px 8px!important}
+body.inpl-mail-template_39 a, body.inpl-mail-template_39 a:link:-moz-read-write {color:#000000!important}
+/* dzien kobiet */
+body.inpl-mail-template_40{background:#FFFFFF url('../../../st/b_11.jpg') no-repeat right bottom;color:#183667;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;font-style:italic;padding: 8px 8px 272px 8px!important}
+body.inpl-mail-template_40 a, body.inpl-mail-template_40 a:link:-moz-read-write {color:#000000!important}
+/* dzien matki */
+body.inpl-mail-template_41{background:#FAF5F1 url('../../../st/b_19.jpg') no-repeat right bottom;color:#914670;font-family:Georgia, Times new roman, Times, Serif;font-size:15px;font-style:italic;padding: 8px 8px 273px 8px!important}
+body.inpl-mail-template_41 a, body.inpl-mail-template_41 a:link:-moz-read-write {color:#000000!important}
+/* dzien ojca */
+body.inpl-mail-template_42{background:#C4E6F1 url('../../../st/b_18.jpg') no-repeat right bottom;color:#4F5363;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;font-style:italic;padding:8px 8px 287px 8px!important}
+body.inpl-mail-template_42 a, body.inpl-mail-template_42 a:link:-moz-read-write {color:#000000!important}
+/* wielkanoc */
+body.inpl-mail-template_43{background:#D2F674 url('../../../st/b_22.jpg') no-repeat right top;color:#42561A;font-family:Georgia, Times new roman, Times, Serif;font-size:15px;font-style:italic;padding:8px 339px 8px 8px!important;min-height:249px}
+body.inpl-mail-template_43 a, body.inpl-mail-template_43 a:link:-moz-read-write {color:#000000!important}
+/* kwiaty1 */
+body.inpl-mail-template_44{background:#FFFFFF url('../../../st/n1.jpg') no-repeat right bottom;color:#5B0103;font-family:Georgia, Times new roman, Times, Serif;font-size:13px;padding:8px 215px 8px 8px!important;min-height:330px}
+body.inpl-mail-template_44 a, body.inpl-mail-template_44 a:link:-moz-read-write {color:#000000!important}
+/* kwiaty2 */
+body.inpl-mail-template_45{background:#FFFFFF url('../../../st/n2.jpg') no-repeat right bottom;color:#5B0103;font-family:Georgia, Times new roman, Times, Serif;font-size:13px;padding:8px 235px 8px 8px!important;min-height:243px}
+body.inpl-mail-template_45 a, body.inpl-mail-template_45 a:link:-moz-read-write {color:#000000!important}
+/* kwiaty3 */
+body.inpl-mail-template_46{background:#FFFFFF url('../../../st/n3.jpg') no-repeat right bottom;color:#8A205D;font-family:Georgia, Times new roman, Times, Serif;font-size:13px;padding:8px 8px 278px 8px!important}
+body.inpl-mail-template_46 a, body.inpl-mail-template_46 a:link:-moz-read-write {color:#000000!important}
+/* kwiaty4 */
+body.inpl-mail-template_47{background:#FFFFFF url('../../../st/n4.jpg') no-repeat right bottom;color:#8A205D;font-family:Georgia, Times new roman, Times, Serif;font-size:13px;padding:8px 8px 327px 8px!important}
+body.inpl-mail-template_47 a, body.inpl-mail-template_47 a:link:-moz-read-write {color:#000000!important}
+/* kwiaty5 */
+body.inpl-mail-template_48{background:#FFFFFF url('../../../st/n5.jpg') no-repeat right bottom;color:#6C53B8;font-family:Georgia, Times new roman, Times, Serif;font-size:13px;padding:8px 8px 338px 8px!important}
+body.inpl-mail-template_48 a, body.inpl-mail-template_48 a:link:-moz-read-write {color:#000000!important}
+/* ozdobna1 */
+body.inpl-mail-template_49{background:#FFFFFF url('../../../st/n6.png') no-repeat right bottom;color:#4C3805;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 8px 338px 8px!important}
+body.inpl-mail-template_49 a, body.inpl-mail-template_49 a:link:-moz-read-write {color:#000000!important}
+/* ozdobna2 */
+body.inpl-mail-template_50{background:#FFFFFF url('../../../st/n7.png') no-repeat right bottom;color:#4C3805;font-family:Arial, Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 185px 200px 8px!important;min-height:176px}
+body.inpl-mail-template_50 a, body.inpl-mail-template_50 a:link:-moz-read-write {color:#000000!important}
+/* ozdobna3 */
+body.inpl-mail-template_51{background:#E3E8EC url('../../../st/n8.jpg') no-repeat right bottom;color:#214C63;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 8px 362px 8px!important}
+body.inpl-mail-template_51 a, body.inpl-mail-template_51 a:link:-moz-read-write {color:#000000!important}
+/* ozdobna4 */
+body.inpl-mail-template_52{background:#FFFFFF url('../../../st/n9.png') no-repeat right bottom;color:#767676;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 8px 222px 8px!important}
+body.inpl-mail-template_52 a, body.inpl-mail-template_52 a:link:-moz-read-write {color:#000000!important}
+/* ozdobna5 */
+body.inpl-mail-template_53{background:#A7E400 url('../../../st/n10.png') no-repeat right bottom;color:#426000;font-family:Verdana, Tahoma, Sans-serif;font-size:13px;padding:8px 300px 8px 8px!important;min-height:325px}
+body.inpl-mail-template_53 a, body.inpl-mail-template_53 a:link:-moz-read-write {color:#000000!important}
+/* bozenarodzenie 2011 - wersja ciemna */
+body.inpl-mail-template_54{background:#001F39 url('../../../st/54.png') no-repeat right bottom;color:#FFF;font-family:Georgia, Times new roman, Times, Serif;font-size:13px;padding:8px 335px 182px 8px!important;min-height:308px}
+body.inpl-mail-template_54 a, body.inpl-mail-template_54 a:link:-moz-read-write {color:#69BED4!important}
+/* bozenarodzenie 2011 - wersja czerwona */
+body.inpl-mail-template_55 {background: #b51b23 url('../../../st/xmas2011.png') no-repeat right top;color: #fde9c0;font-family: Georgia, Times new roman, Times, Serif;font-size: 13px;padding: 8px 390px 8px 8px!important;min-height: 310px;}
+body.inpl-mail-template_55 a, body.inpl-mail-template_55 a:link:-moz-read-write {color:#000000!important}
+/* walentynki 1 */
+body.inpl-mail-template_56 {background: #d8210b url('../../../st/b_56.png') no-repeat right top;color: #fff;font-family: Georgia, Times new roman, Times, Serif;font-size: 13px;padding: 8px 390px 8px 8px!important;min-height: 310px;}
+body.inpl-mail-template_56 a, body.inpl-mail-template_56 a:link:-moz-read-write {color:#000000!important}
+/* walentynki 2 */
+body.inpl-mail-template_57{background: #d81921 url('../../../st/b_57.png') no-repeat left top;color: #fff;font-family:Georgia, Times new roman, Times, Serif;font-size:13px;padding: 8px 8px 8px 276px!important;min-height:100px;}
+body.inpl-mail-template_57 a, body.inpl-mail-template_57 a:link:-moz-read-write {color:#000000!important}
+/* wielkanoc 2 */
+body.inpl-mail-template_58 {background: #fcd300 url('../../../st/easter.png') no-repeat right top;color: #3e6d02;font-family: Georgia, Times New Roman, Times, serif;font-size: 18px;padding: 60px 210px 60px 90px!important;min-height:100px;}
+body.inpl-mail-template_58 a, body.inpl-mail-template_58 a:link:-moz-read-write {color:#000000!important}

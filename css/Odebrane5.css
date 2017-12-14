@@ -745,15 +745,15 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
 #side-folders li a {color: #8C8C8C;}
 
 .logo-interia-white {
-  background-image: url(../assets/interia_white.svg),url(images/logo/poczta_white.svg);
-  background-position: 1px 19px,24px 37px;
+  background-image: url(../assets/interia_white.svg),url(../assets/poczta_white.svg);
+  background-position: 7px 11px,-54px 38px;
   background-repeat: no-repeat;
-  background-size: 57px 15px,34px 6px;
+  background-size: 84px 23px,197px 13px;
   bottom: 0;
-  height: 73px;
+  height: 82px;
   left: 0;
   margin-top: 10px;
-  width: 300px;
+  width: 185px;
   position: absolute;
 }
 
@@ -773,7 +773,6 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
   position: absolute;
   content: "\e60a";
   font-size: 20px;
-  height: 210px;
   color: #8C8C8C;
 }
 
@@ -878,7 +877,7 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
   top: -3px;
 }
 
-#compose_nav0:hover, #contacts_nav0:hover, #fetch_nav0:hover {
+#compose_nav0:hover, #contacts_nav0:hover, #fetch_nav0:hover, #responseT_nav1:hover, #responseAllT_nav1:hover, #forwardT_nav1:hover, #removeBtn_nav1:hover, #printBtn_nav1:hover, #spamT_nav1:hover, #moveMsg_nav1:hover {
   background:#edf0f2;
 }
 
@@ -901,9 +900,45 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
   font-size: 53px;
   height: 27px;
   fill: #8C8C8C;
-  content: "\e67e";
   top: 5px;
   right: 90px;
   width:21px;
-  content: "\e9000";
+}
+
+#responseT_nav1, #responseAllT_nav1, #forwardT_nav1, #removeBtn_nav1, #printBtn_nav1, #spamT_nav1, #moveMsg_nav1 {
+  background-image: none;
+  position: relative;
+}
+
+#icon-reply, #icon-forward, #response-all-icon, #delete-icon, #print-icon, #icon-spam, #move-icon {
+  position: absolute;
+  height: 27px;
+  fill: #8C8C8C;
+  top: 5px;
+}
+
+#delete-icon {
+  right: 0;
+}
+
+
+.new-nav-title {
+  color: #292929;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.icon-all-accounts:before {
+  content: "\69";
+  font-size: 20px;
+  color: #8C8C8C;
+  color: #fff;
+    width: 16px;
+    height: 16px;
+    padding-left: 2px;
+    padding-top: 2px;
+    border-radius: 100%;
+    font-weight: 700;
+    background-color: #DD4545;
+    font-size: 13px;
 }
