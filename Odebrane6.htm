@@ -202,17 +202,17 @@
                               <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
                               <td class="msglist-size">106 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_2">
+                            <tr class="msglist-msg-tr ch font-400" id="mailsTable_1_item_2">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
                               <td class="msglist-flag none"><span></span></td>
                               <td class="msglist-threads"><span class="msg-status "></span></td>
                               <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Marvint - dostarczone przez Interię</div>
+                                <div class="emTo_3"><span></span></div>
                               </td>
                               <td class="msglist-subject" title="Wyprzedaż markowych kurtek zimowych Canada Goose i inne już od 349zł! Sprawdź teraz!">
-                                <div>Wyprzedaż markowych kurtek zimowych Canada Goose i inne już od 349zł! Sprawdź teraz!</div>
+                                <div class="compose-subject_3"></div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
@@ -1406,7 +1406,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
           }
         })();
 

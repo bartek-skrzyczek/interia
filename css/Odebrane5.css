@@ -905,16 +905,19 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
   width:21px;
 }
 
-#responseT_nav1, #responseAllT_nav1, #forwardT_nav1, #removeBtn_nav1, #printBtn_nav1, #spamT_nav1, #moveMsg_nav1 {
+#responseT_nav1, #responseAllT_nav1, #forwardT_nav1, #removeBtn_nav1, #printBtn_nav1, #spamT_nav1, #moveMsg_nav1,
+.responseT.act, .responseAllT.act, .forwardT.last.act, .moveMsg.act, .removeBtn.act, .spamT.last.act, .printBtn.last.act,
+#sendT, .sendT.act, .saveT.last.act, #cancelBtn, #cancelBtn_nav1 {
   background-image: none;
   position: relative;
 }
 
-#icon-reply, #icon-forward, #response-all-icon, #delete-icon, #print-icon, #icon-spam, #move-icon {
+#icon-reply, #icon-forward, #response-all-icon, #delete-icon, #print-icon, #icon-spam, #move-icon, #send-icon, #icon-save {
   position: absolute;
   height: 27px;
   fill: #8C8C8C;
   top: 5px;
+  left:0;
 }
 
 #delete-icon {

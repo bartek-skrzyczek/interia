@@ -66,3 +66,7 @@ LOGOWANIE ALL END
 #emFoot_1 {
   overflow: scroll;
 }
+
+#textarea {
+  overflow-y: scroll;
+}
