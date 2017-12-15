@@ -1000,8 +1000,8 @@
                       <div id="drag" class="slideCr">
                         <div></div>
                       </div>
-                      <div class="mails-framecontainer"><div class="mails-headerscontainer " id="emHead_1"><div class="emHead"><span class="message-date"><b>Data: </b>2017-11-26 17:22</span><span class="header-switch" title="Wyświetl/ukryj pełny nagłówek"> </span><span class="emSubject compose-subject_3">Erasmus</span><dl><dt>Od:</dt><dd>Wanda Sidło &lt;<a href="mailto:&quot;Wanda Sidło&quot; &lt;wanda.sidlo@interia.pl&gt;">wanda.sidlo@interia.pl</a>&gt;</dd><br>
-                        <dt title="Do:">Do:</dt><span class="emTo_3" style="margin-left:3px"><a href="mailto:wanda.sidlo@interia.pl"></a></dt><br></span><div class="hide extHead" id="extHead1"><ul><li><b>Date:</b> Sun, 26 Nov 2017 17:22:44 +0100
+                      <div class="mails-framecontainer"><div class="mails-headerscontainer " id="emHead_1"><div class="emHead"><span class="message-date"><b>Data: </b>2017-11-26 17:22</span><span class="header-switch" title="Wyświetl/ukryj pełny nagłówek"> </span><span class="emSubject compose-subject_3"></span><dl><dt>Od:</dt><a href="#"><dd class="emTo_3"></dd></a><br>
+                        <dt title="Do:">Do:</dt><a href="#"><span class="user-email" style="margin-left:3px"><a href="mailto:wanda.sidlo@interia.pl"></a></dt></a><br></span><div class="hide extHead" id="extHead1"><ul><li><b>Date:</b> Sun, 26 Nov 2017 17:22:44 +0100
                       </li><li><b>From:</b> Wanda Sidło &lt;wanda.sidlo@interia.pl&gt;
                       </li><li><b>Subject:</b> Erasmus
                       </li><li><b>To:</b> wanda.sidlo@interia.pl
@@ -1429,7 +1429,7 @@
         var titleOutput = localStorage.getItem("title");
         var nameOutput = localStorage.getItem("name");
         var textareaContent = localStorage.getItem("divToTextarea");
-        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zminay w sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
+        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmianyw sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
 
         console.log(richContent);
         document.getElementById("emFoot_1").innerHTML = richContent;
@@ -1445,7 +1445,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
           }
         })();
 
@@ -1465,12 +1465,20 @@
         ////////////////////////////////////////////////////////////////
         //New data
         //////////////////////////////////////////////////////////////////
+
         var textareaInput = localStorage.getItem("answerTextarea");
-        console.log(textareaInput);
-        (function displayContent() {
-          document.getElementById("emFoot_1").innerHTML = "<div class=separator-border>" + textareaInput + "</div>";
-        })();
+        var richThird = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Również przepraszam za późną odpowiedź, gdyż jestem w rozjazdach. " + "<br/>" + "Powodzenia!" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + textareaInput + "</div>";
+
+          document.getElementById("emFoot_1").innerHTML = richThird;
+          console.log(richThird);
+
+          var thirdUpdateMessage = localStorage.setItem('divToTextareaThird',richThird);
+          console.log(thirdUpdateMessage);
+          console.log(localStorage.getItem("divToTextareaThird"));
+          console.log(richThird);
+
       });
+
 
     </script>
 

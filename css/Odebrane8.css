@@ -1,0 +1,38 @@
+.new-navigation-update {
+  width: 100%;
+  list-style-type: none;
+  content: "";
+  display: table;
+  clear: both;
+  padding: 20px 0;
+  margin:0;
+}
+
+.title-header {
+  float: left;
+  margin-left:30px;
+}
+
+body {
+  padding-left: 0!important;
+}
+
+.hektor-logo {
+  padding-top: 60px;
+}
+
+.icon-contacts {
+  content: "\e67e";
+}
+
+.logo-interia-white {
+  background-image: url(../assets/interia_white.svg),url(../assets/poczta_white.svg);
+  background-position: 13px 16px, -7px 38px;
+  background-size: 56px 19px, 111px 7px;
+  bottom: 10px;
+  height: 82px;
+  left: 0;
+  margin-top: 10px;
+  width: 185px;
+  position: fixed;
+}

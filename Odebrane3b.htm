@@ -1185,7 +1185,7 @@
                     </div>
                   </div>
                   <div class="bottomIcons toolbar">
-                    <div class="message-size">Całkowity rozmiar: <b class="totalSize">0 kB</b> ze 100 MB</div><span class="compose-bottom-icons"><a href="./Odebrane2c.htm"><button onclick="./Odebrane%20(3441)%20-%20Poczta%20w%20Interii0.htm" id="sendT" class="sendT act" title="Wyślij wiadomość" tabindex="1"><span>Wyślij</span></button></a><span class="mSeparator"></span>
+                    <div class="message-size">Całkowity rozmiar: <b class="totalSize">0 kB</b> ze 100 MB</div><span class="compose-bottom-icons"><a href="./Odebrane3c.htm"><button onclick="updateTextareaThree();" id="sendT" class="sendT act" title="Wyślij wiadomość" tabindex="1"><span>Wyślij</span></button></a><span class="mSeparator"></span>
                     <button id="saveT"
                     class="saveT last act" title="Zapisz wiadomość w Kopiach roboczych" tabindex="1"><span>Zapisz</span></button><span class="separator"></span>
                     <button id="cancelBtn" class="cancelBtn last act" title="Rezygnuj z pisania wiadomości" tabindex="1"><span>Anuluj</span></button>
@@ -1556,7 +1556,7 @@
         var titleOutput = localStorage.getItem("title");
         var nameOutput = localStorage.getItem("name");
         var textareaContent = localStorage.getItem("divToTextarea");
-        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zminay w sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
+        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmianyw sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
 
         console.log(richContent);
         document.getElementById("emFoot_1").innerHTML = richContent;
@@ -1592,10 +1592,10 @@
         ////////////////////////////////////////////////////////////////
         //New data
         //////////////////////////////////////////////////////////////////
-        var textareaInput = localStorage.getItem("answerTextarea");
-        console.log(textareaInput);
+        var textareaInputThird = localStorage.getItem("divToTextareaThird");
+        console.log(textareaInputThird);
         (function displayContent() {
-          document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + "<div class=separator-border>" + textareaInput + "</div>";
+          document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: " + nameOutput + "<br/>" + "Do: " + email + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + "<div class=separator-border>" + textareaInputThird  + "</div>";
         })();
       });
 
@@ -1606,9 +1606,9 @@
     ////////////////////
     // NEW INPUT ///////
 
-      var answerTextarea = $('#textarea').html();
-      console.log(answerTextarea);
-      localStorage.setItem('answerTextarea',answerTextarea);
+      var answeredTextarea = $('#textarea').html();
+      console.log(answeredTextarea);
+      localStorage.setItem('answeredTextarea',answeredTextarea);
     };
     </script>
   </body>

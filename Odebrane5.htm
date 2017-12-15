@@ -235,17 +235,17 @@
                               <td class="msglist-date" title="2017-11-30 12:45">dziś, 12:45</td>
                               <td class="msglist-size">131 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_1">
+                            <tr onclick="location.href='./Odebrane5a.htm';" class="msglist-msg-tr ch " id="mailsTable_1_item_1">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" id="abc">
                               </td>
                               <td class="msglist-flag none"><span></span></td>
                               <td class="msglist-threads"><span class="msg-status "></span></td>
                               <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Sklep-intymny.pl - dostarczone przez Interię</div>
+                                <div class="emTo_3"><span></span></div>
                               </td>
                               <td class="msglist-subject" title="Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.">
-                                <div>Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.</div>
+                                <div class="msglist-subject compose-subject_3"></div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
@@ -1439,7 +1439,7 @@
         var titleOutput = localStorage.getItem("title");
         var nameOutput = localStorage.getItem("name");
         var textareaContent = localStorage.getItem("divToTextarea");
-        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zminay w sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
+        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmianyw sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
 
         console.log(richContent);
         document.getElementById("emFoot_1").innerHTML = richContent;
@@ -1455,7 +1455,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
           }
         })();
 
