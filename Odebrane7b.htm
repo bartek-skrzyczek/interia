@@ -9,10 +9,16 @@
     <!--[if IE 7]><link rel=stylesheet href=#://o.iplsc.com/p/css/ie7-71003-1739.css><![endif]-->
     <!--[if lte IE 6]><link rel=stylesheet href=#://o.iplsc.com/p/css/ie6-71003-1739.css><![endif]-->
     <link rel="stylesheet" href="./Odebrane/wosp-31216-1458.css">
+    <link rel="stylesheet" href="./Odebrane/editor.css">
+    <link rel="stylesheet" href="./Odebrane/editor(1).css">
+    <link rel="stylesheet" href="./Odebrane/editor(2).css">
+    <link rel="stylesheet" href="./Odebrane/editor(3).css">
+    <link rel="stylesheet" href="./Odebrane/editor(4).css">
     <link type="text/css" rel="stylesheet" href="./Odebrane/interiaToolbar.140410.css" media="all">
 
     <link type="text/css" rel="stylesheet" href="./css/Odebrane2.css">
     <link type="text/css" rel="stylesheet" href="./css/Odebrane3.css">
+    <link type="text/css" rel="stylesheet" href="./css/Odebrane3b.css">
     <link rel="stylesheet" href="./css/Odebrane4.css">
     <link rel="stylesheet" href="./css/Odebrane5.css">
     <link rel="stylesheet" href="./css/Odebrane6.css">
@@ -55,13 +61,27 @@
               <path d="M20.483 14.796c0.371 2.554-0.408 5.243-2.4 7.206-2.943 2.904-7.484 3.262-10.824 1.080l2.34-2.281-8.6-1.199 1.2 8.398 2.626-2.516c4.716 3.477 11.404 3.148 15.689-1.080 2.484-2.451 3.617-5.705 3.477-8.916l-3.508-0.692zM5.921 10.002c2.942-2.904 7.482-3.264 10.822-1.080l-2.344 2.28 8.6 1.2-1.199-8.402-2.623 2.521c-4.717-3.479-11.403-3.147-15.689 1.080-2.484 2.45-3.616 5.704-3.477 8.914l3.508 0.691c-0.371-2.555 0.41-5.241 2.402-7.205z"></path>
               </svg><span>Odśwież</span></button><span class="mSeparator"></span>
             <button id="contacts_nav0" class="contacts last act" accesskey="k" title="Kontakty"><span>Kontakty</span></button><span class="separator"></span></li>
-            <li class="title-header">
-              <div>
-                <div>
-                  <span class="icon-all-accounts"></span><span class="all-accounts">Wszystkie konta</span>
-                </div>
-                <div class="new-nav-title">Odebrane</div>
-              </li>
+            <li id="nav1" class="toolbar">
+              <a href="./Odebrane7c.htm"><button onclick="sendWholeContentToValue2();" id="sendT_nav1" class="sendT act" title="Wyślij wiadomość">
+                <svg id="send-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32">
+                <title>envelope</title>
+                <path d="M29 4h-26c-1.657 0-3 1.343-3 3v18c0 1.656 1.343 3 3 3h26c1.657 0 3-1.344 3-3v-18c0-1.657-1.343-3-3-3zM2.741 25.99l-0.731-0.732 8.249-8.248 0.731 0.732-8.249 8.248zM29.259 25.99l-8.249-8.248 0.731-0.732 8.249 8.248-0.731 0.732zM17 19.325v0.675h-2v-0.675l-12.997-12.050 1.272-1.272 12.725 11.798 12.725-11.798 1.272 1.272-12.997 12.050z"></path>
+                </svg><span>Wyślij</span></button></a>
+
+              <span class="mSeparator"></span>
+              <button id="saveT_nav1" class="saveT last act" title="Zapisz wiadomość w Kopiach roboczych">
+                <svg id="icon-save" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16">
+                <title>in</title>
+                <path d="M15 7c-0.553 0-1 0.448-1 1v6h-12v-6c0-0.552-0.447-1-1-1s-1 0.448-1 1v7c0 0.552 0.447 1 1 1h14c0.553 0 1-0.448 1-1v-7c0-0.552-0.447-1-1-1zM9 7v-6.122c0-0.485-0.447-0.878-1-0.878s-1 0.393-1 0.878v6.122h-3l4 4 4-4h-3z"></path>
+                </svg>
+                <span>Zapisz</span></button><span class="separator"></span>
+              <button id="cancelBtn_nav1" class="cancelBtn last act" title="Rezygnuj z pisania wiadomości">
+                <svg id="delete-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32">
+                <title>cross</title>
+                <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+                </svg>
+                <span>Anuluj</span></button>
+            </li>
               <li class="advertisement">
                 <a href="#://interia.hit.gemius.pl/hitredir/id=dvaVVIOuySx01gA8FKEw_adzrmGU0Jr4Fg7oihQmG5H.j7/url=#://forum.interia.pl/dlaczego-storczyk-nie-kwitnie-tematy,dId,3059329" target="_blank" id="additionalNavLink"><span class="adNavLeft">Sprawdzone sposoby<br>na piękne storczyki!</span><span class="adNavLinkButton"> Zobacz<span class="adNavRaquo"> »</span></span></a></li>
               <li class="search-header">
@@ -158,32 +178,77 @@
             <div id="rightContent" style="min-height: 660px;">
               <div id="tabs" class="tabs">
                 <div id="outerTabHeaderCont" class=" dropTarget "> <span class="scrollable-left scrollable-arrow scrollable-inactive " style="display: none;"><span class="scLeft"><a title="Przewiń w lewo"><b>◀</b></a></span></span><span class="scrollable-right scrollable-arrow" style="display: none;"><span class="scRight"><a title="Przewiń w prawo"><b>▶</b></a></span></span>
-                  <div class="scrollable-wrapper">
+                  <div
+                  class="scrollable-wrapper">
+                    <div id="tabHeaderCont" class="tabsHeader">
+                      <ul id="tabsHeader" class="tabsList">
+                        <li class="tabHeader tab-permanent border-tab">
+                          <div onclick="location.href='./Odebrane (3441) - Poczta w Interii.htm';"><span title="Odebrane">Odebrane</span></div>
+                        </li>
+                        <li class="tabHeader activeHeaderTab border-tab">
+                          <div><span title="Nowa wiadomość" class="compose-subject_3"></span>
+                            <button title="Zamknij kartę"><span>Zamknij kartę</span></button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                 </div>
               </div>
-              <div id="tabBodyCont" style="margin:0">
-                <div class="tabBody activeBodyTab ">
+              <div id="tabBodyCont">
+                <div class="tabBody ">
                   <div id="msglist_1" class="mailList msglist-fld_1">
                     <div id="outMails_1" class="outMails">
                       <div class="msglist-header">
                         <div class="floatedColumnHeader">
-                          <div class="msglist-head-date"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości po dacie" class="selected"><span>Data</span><i></i></a></div>
-                          <div class="msglist-head-size"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości po rozmiarze"><span>Rozmiar</span><i></i></a></div>
-                          <div class="filter-chooser-container"><a class="filter-chooser" href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Filtruj wiadomości"><b></b></a></div>
+                          <div class="msglist-head-date"><a href="#" title="Posortuj wiadomości po dacie" class="selected"><span>Data</span><i></i></a></div>
+                          <div class="msglist-head-size"><a href="#" title="Posortuj wiadomości po rozmiarze"><span>Rozmiar</span><i></i></a></div>
+                          <div class="filter-chooser-container"><a class="filter-chooser" href="#" title="Filtruj wiadomości"><b></b></a></div>
                         </div>
                         <div class="msglist-head-check">
                           <input id="checkAll_1" type="checkbox" title="Zaznacz/odznacz wszystkie">
                         </div>
-                        <div class="msglist-head-flag"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości wg flag"><b class="filter-icon filter-icon-fb">&nbsp;</b></a></div>
-                        <div class="msglist-head-from"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości alfabetycznie"><span>Od</span><i></i></a></div>
-                        <div class="msglist-head-subject"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości alfabetycznie"><span>Temat</span><i></i></a></div>
+                        <div class="msglist-head-flag"><a href="#" title="Posortuj wiadomości wg flag"><b class="filter-icon filter-icon-fb">&nbsp;</b></a></div>
+                        <div class="msglist-head-from"><a href="#" title="Posortuj wiadomości alfabetycznie"><span>Od</span><i></i></a></div>
+                        <div class="msglist-head-subject"><a href="#" title="Posortuj wiadomości alfabetycznie"><span>Temat</span><i></i></a></div>
                       </div>
-                      <div class="msglist-notice"><span class=""></span><a href="#://ustawienia.interia.pl/poczta/bez-reklam/?utm_source=poczta_html&amp;utm_medium=zolta_belka&amp;utm_campaign=posprzataj_poczte">Posprzątaj pocztę »</a></div>
+                      <div class="msglist-notice"><span class=""></span><a href="#s://ustawienia.interia.pl/poczta/bez-reklam/?utm_source=poczta_html&amp;utm_medium=zolta_belka&amp;utm_campaign=posprzataj_poczte">Posprzątaj pocztę »</a></div>
                       <div class="mails-container" id="mailsTbContainer_1"
-                      style="height: 216px;">
+                      style="height: 572px;">
                         <table class="mTable" id="mailsTable_1">
                           <tbody id="mailsTbBody_1">
                             <tr class="msglist-msg-tr ch first " id="mailsTable_1_item_0">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Alior Bank - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Konto Jakże Osobiste – sprawdź nowość Alior Banku">
+                                <div>Konto Jakże Osobiste – sprawdź nowość Alior Banku</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-30 18:00">dziś, 18:00</td>
+                              <td class="msglist-size">77 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_1">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Alior Bank - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Założyłeś firmę? Korzystaj z bezpłatnej księgowości online!">
+                                <div>Założyłeś firmę? Korzystaj z bezpłatnej księgowości online!</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-30 18:00">dziś, 18:00</td>
+                              <td class="msglist-size">76 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_2">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -199,23 +264,23 @@
                               <td class="msglist-date" title="2017-11-30 12:45">dziś, 12:45</td>
                               <td class="msglist-size">131 kB</td>
                             </tr>
-                            <tr onclick="location.href='./Odebrane7a.htm';" class="msglist-msg-tr ch " id="mailsTable_1_item_1">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_3">
                               <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" id="abc">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
                               <td class="msglist-flag none"><span></span></td>
                               <td class="msglist-threads"><span class="msg-status "></span></td>
                               <td class="msglist-from" title="mailing@interia.pl">
-                                <div class="new-message-sender"><span></span></div>
+                                <div><span></span>Sklep-intymny.pl - dostarczone przez Interię</div>
                               </td>
-                              <td class="msglist-subject" title="">
-                                <div class="new-message-title"></div>
+                              <td class="msglist-subject" title="Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.">
+                                <div>Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
                               <td class="msglist-size">106 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_2">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_4">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -231,7 +296,7 @@
                               <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
                               <td class="msglist-size">129 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_3">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_5">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -240,14 +305,14 @@
                               <td class="msglist-from" title="mailing@interia.pl">
                                 <div><span></span>Sexshop112.pl - dostarczone przez Interię</div>
                               </td>
-                              <td class="msglist-subject" title="Dyskretny Sklep Erotyczny. Sprawdź &gt;&gt;">
+                              <td class="msglist-subject" title="Dyskretny Sklep Erotyczny. Sprawdź >>">
                                 <div>Dyskretny Sklep Erotyczny. Sprawdź &gt;&gt;</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-29 08:37">29 lis, 08:37</td>
                               <td class="msglist-size">59 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_4">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_6">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -263,7 +328,7 @@
                               <td class="msglist-date" title="2017-11-29 07:30">29 lis, 07:30</td>
                               <td class="msglist-size">112 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_5">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_7">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -279,7 +344,7 @@
                               <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_6">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_8">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -295,7 +360,7 @@
                               <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
                               <td class="msglist-size">129 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_7">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_9">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -311,7 +376,7 @@
                               <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
                               <td class="msglist-size">68 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_8">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_10">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -327,7 +392,7 @@
                               <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
                               <td class="msglist-size">74 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_9">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_11">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -343,7 +408,7 @@
                               <td class="msglist-date" title="2017-11-28 09:45">28 lis, 09:45</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_10">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_12">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -359,7 +424,7 @@
                               <td class="msglist-date" title="2017-11-28 07:00">28 lis, 07:00</td>
                               <td class="msglist-size">71 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_11">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_13">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -375,7 +440,7 @@
                               <td class="msglist-date" title="2017-11-28 07:00">28 lis, 07:00</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_12">
+                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_14">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -391,7 +456,7 @@
                               <td class="msglist-date" title="2017-11-27 23:59">27 lis, 23:59</td>
                               <td class="msglist-size">37 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_13">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_15">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -407,7 +472,7 @@
                               <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
                               <td class="msglist-size">62 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_14">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_16">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -423,7 +488,7 @@
                               <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
                               <td class="msglist-size">85 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_15">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_17">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -439,7 +504,7 @@
                               <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
                               <td class="msglist-size">116 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_16">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_18">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -455,7 +520,7 @@
                               <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
                               <td class="msglist-size">129 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_17">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_19">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -471,7 +536,7 @@
                               <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
                               <td class="msglist-size">82 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_18">
+                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_20">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -480,14 +545,14 @@
                               <td class="msglist-from" title="mailing@interia.pl">
                                 <div><span></span>Sexshop112.pl - dostarczone przez Interię</div>
                               </td>
-                              <td class="msglist-subject" title="Dyskretny Sklep Erotyczny. Sprawdź &gt;&gt;">
+                              <td class="msglist-subject" title="Dyskretny Sklep Erotyczny. Sprawdź >>">
                                 <div>Dyskretny Sklep Erotyczny. Sprawdź &gt;&gt;</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-26 20:00">26 lis, 20:00</td>
                               <td class="msglist-size">59 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_19">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_21">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -503,7 +568,7 @@
                               <td class="msglist-date" title="2017-11-26 18:00">26 lis, 18:00</td>
                               <td class="msglist-size">46 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_20">
+                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_22">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -519,7 +584,7 @@
                               <td class="msglist-date" title="2017-11-26 17:22">26 lis, 17:22</td>
                               <td class="msglist-size">2 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_21">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_23">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -535,7 +600,7 @@
                               <td class="msglist-date" title="2017-11-24 18:00">24 lis, 18:00</td>
                               <td class="msglist-size">58 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_22">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_24">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -551,7 +616,7 @@
                               <td class="msglist-date" title="2017-11-24 18:00">24 lis, 18:00</td>
                               <td class="msglist-size">68 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_23">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_25">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -567,7 +632,7 @@
                               <td class="msglist-date" title="2017-11-24 18:00">24 lis, 18:00</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_24">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_26">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -583,7 +648,7 @@
                               <td class="msglist-date" title="2017-11-24 18:00">24 lis, 18:00</td>
                               <td class="msglist-size">86 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_25">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_27">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -599,7 +664,7 @@
                               <td class="msglist-date" title="2017-11-24 13:00">24 lis, 13:00</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_26">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_28">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -615,7 +680,7 @@
                               <td class="msglist-date" title="2017-11-23 23:59">23 lis, 23:59</td>
                               <td class="msglist-size">95 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_27">
+                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_29">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -631,7 +696,7 @@
                               <td class="msglist-date" title="2017-11-23 18:00">23 lis, 18:00</td>
                               <td class="msglist-size">106 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_28">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_30">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -647,7 +712,7 @@
                               <td class="msglist-date" title="2017-11-22 23:59">22 lis, 23:59</td>
                               <td class="msglist-size">57 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_29">
+                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_31">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -656,14 +721,14 @@
                               <td class="msglist-from" title="mailing@interia.pl">
                                 <div><span></span>Sexshop112.pl - dostarczone przez Interię</div>
                               </td>
-                              <td class="msglist-subject" title="Dyskretny Sklep Erotyczny. Sprawdź &gt;&gt;">
+                              <td class="msglist-subject" title="Dyskretny Sklep Erotyczny. Sprawdź >>">
                                 <div>Dyskretny Sklep Erotyczny. Sprawdź &gt;&gt;</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-22 19:00">22 lis, 19:00</td>
                               <td class="msglist-size">73 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_30">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_32">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -672,14 +737,14 @@
                               <td class="msglist-from" title="mailing@interia.pl">
                                 <div><span></span>Jagoda Bartczak (Entra Limited) - dostarczone przez Interię</div>
                               </td>
-                              <td class="msglist-subject" title="Potężne przyrodzenie - TYM przedłużysz je w domu &gt;&gt;">
+                              <td class="msglist-subject" title="Potężne przyrodzenie - TYM przedłużysz je w domu >>">
                                 <div>Potężne przyrodzenie - TYM przedłużysz je w domu &gt;&gt;</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-22 18:10">22 lis, 18:10</td>
                               <td class="msglist-size">78 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_31">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_33">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -695,7 +760,7 @@
                               <td class="msglist-date" title="2017-11-22 18:00">22 lis, 18:00</td>
                               <td class="msglist-size">71 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_32">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_34">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -711,7 +776,7 @@
                               <td class="msglist-date" title="2017-11-22 18:00">22 lis, 18:00</td>
                               <td class="msglist-size">89 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_33">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_35">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -727,7 +792,7 @@
                               <td class="msglist-date" title="2017-11-20 00:01">20 lis, 00:01</td>
                               <td class="msglist-size">55 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_34">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_36">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -743,7 +808,7 @@
                               <td class="msglist-date" title="2017-11-18 18:00">18 lis, 18:00</td>
                               <td class="msglist-size">108 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_35">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_37">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -752,14 +817,14 @@
                               <td class="msglist-from" title="mailing@interia.pl">
                                 <div><span></span>Tomasz Gwiazdowski (Entra Ltd) - dostarczone przez Interię</div>
                               </td>
-                              <td class="msglist-subject" title="Udowodnij swoją męskość. Silna, pełna potencja czeka &gt;&gt;">
+                              <td class="msglist-subject" title="Udowodnij swoją męskość. Silna, pełna potencja czeka >>">
                                 <div>Udowodnij swoją męskość. Silna, pełna potencja czeka &gt;&gt;</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-17 18:10">17 lis, 18:10</td>
                               <td class="msglist-size">77 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_36">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_38">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -768,14 +833,14 @@
                               <td class="msglist-from" title="mailing@interia.pl">
                                 <div><span></span>Grupa VECTRA - dostarczone przez Interię</div>
                               </td>
-                              <td class="msglist-subject" title="W Vectrze TV + 5GB Internetu mobilnego za jedyne 39,90 zł! Sprawdź &gt;&gt;">
+                              <td class="msglist-subject" title="W Vectrze TV + 5GB Internetu mobilnego za jedyne 39,90 zł! Sprawdź >>">
                                 <div>W Vectrze TV + 5GB Internetu mobilnego za jedyne 39,90 zł! Sprawdź &gt;&gt;</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-17 18:00">17 lis, 18:00</td>
                               <td class="msglist-size">106 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_37">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_39">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -791,7 +856,7 @@
                               <td class="msglist-date" title="2017-11-17 18:00">17 lis, 18:00</td>
                               <td class="msglist-size">71 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_38">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_40">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -807,7 +872,7 @@
                               <td class="msglist-date" title="2017-11-16 18:00">16 lis, 18:00</td>
                               <td class="msglist-size">142 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_39">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_41">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -823,7 +888,7 @@
                               <td class="msglist-date" title="2017-11-16 07:00">16 lis, 07:00</td>
                               <td class="msglist-size">49 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_40">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_42">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -839,7 +904,7 @@
                               <td class="msglist-date" title="2017-11-15 18:00">15 lis, 18:00</td>
                               <td class="msglist-size">71 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_41">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_43">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -855,7 +920,7 @@
                               <td class="msglist-date" title="2017-11-15 18:00">15 lis, 18:00</td>
                               <td class="msglist-size">66 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_42">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_44">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -871,7 +936,7 @@
                               <td class="msglist-date" title="2017-11-15 07:00">15 lis, 07:00</td>
                               <td class="msglist-size">50 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_43">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_45">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -887,7 +952,7 @@
                               <td class="msglist-date" title="2017-11-14 23:59">14 lis, 23:59</td>
                               <td class="msglist-size">84 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_44">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_46">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -903,7 +968,7 @@
                               <td class="msglist-date" title="2017-11-14 18:30">14 lis, 18:30</td>
                               <td class="msglist-size">56 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_45">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_47">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -919,7 +984,7 @@
                               <td class="msglist-date" title="2017-11-14 18:00">14 lis, 18:00</td>
                               <td class="msglist-size">77 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_46">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_48">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -935,7 +1000,7 @@
                               <td class="msglist-date" title="2017-11-08 18:00">8 lis, 18:00</td>
                               <td class="msglist-size">78 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_47">
+                            <tr class="msglist-msg-tr ch last " id="mailsTable_1_item_49">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
@@ -951,66 +1016,225 @@
                               <td class="msglist-date" title="2017-11-08 18:00">8 lis, 18:00</td>
                               <td class="msglist-size">24 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_48">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Barlinek - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="Deska Barlinecka – poznaj zalety podłogi drewnianej Barlinek">
-                                <div>Deska Barlinecka – poznaj zalety podłogi drewnianej Barlinek</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-07 19:10">7 lis, 19:10</td>
-                              <td class="msglist-size">136 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr ch last " id="mailsTable_1_item_49">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Dr Pills (Global Proinvestment Ltd) - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="PeniGrow: Zaskakujące przedłużenie męskości. Obudź w sobie Olbrzyma i stań na wysokości zadania">
-                                <div>PeniGrow: Zaskakujące przedłużenie męskości. Obudź w sobie Olbrzyma i stań na wysokości zadania</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-07 18:10">7 lis, 18:10</td>
-                              <td class="msglist-size">136 kB</td>
-                            </tr>
                           </tbody>
                         </table>
                       </div>
                       <div class="packs-container">
                         <div class="packs">
                           <ul class="packs-list">
-                            <li class="pack-selected"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p1">1</a></li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p2">2</a></li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p3">3</a></li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p4">4</a></li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p5">5</a></li>
+                            <li class="pack-selected"><a href="#p1">1</a></li>
+                            <li class=""><a href="#p2">2</a></li>
+                            <li class=""><a href="#p3">3</a></li>
+                            <li class=""><a href="#p4">4</a></li>
+                            <li class=""><a href="#p5">5</a></li>
                             <li>…</li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p8">8</a></li>
+                            <li class=""><a href="#p8">8</a></li>
                           </ul>
                         </div>
                       </div>
-                      <div class="msgListSub msgListSub-left"><span class="thread-mode-switcher">Wątkowanie:&nbsp;</span><a class="thread-mode-switcher" href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Włącz wątkowanie">włącz</a></div>
-                      <div class="msgListSub msgListSub-right"><span>Podgląd:&nbsp;</span><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Wyłącz podgląd wiadomości">wyłącz</a></div>
-                      <div id="drag" class="slideCr">
+                      <div class="msgListSub msgListSub-left"><span class="thread-mode-switcher">Wątkowanie:&nbsp;</span><a class="thread-mode-switcher" href="#" title="Włącz wątkowanie">włącz</a></div>
+                      <div class="msgListSub msgListSub-right"><span>Podgląd:&nbsp;</span><a href="#" title="Wyłącz podgląd wiadomości">wyłącz</a></div>
+                      <div class="slideCr">
                         <div></div>
                       </div>
                       <div class="mails-framecontainer">
-                        <div class="mail-wrapper" frameborder="0" src="./Odebrane/mailads.html">
-                          <img src="./assets/750x2001.jpg">
-                        </div>
+                        <div class="mails-headerscontainer hide" id="emHead_1"></div>
+                        <iframe name="mail-frame-1" id="mail-frame-1" class="mail-frame" frameborder="0" src="#s://poczta.interia.pl/mailads" style="height: 220px;"></iframe>
                         <div class="hide" id="emFoot_1"></div>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div class="tabBody activeBodyTab ">
+                  <div class="composition">
+                    <div class="composition-head">
+                      <ul class="composition-fields">
+                        <li class="select-account">
+                          <label for="emFrom_3" class=" select-account-single-label ">Od:</label><span class="select-account-list select-account-list--single">Wanda Sidło &lt;<i class="single-account-address">wanda.sidlo@interia.pl</i>&gt;</span><span></span></li>
+                        <li>
+                          <button class="addCnt2Msg" title="Wybierz odbiorców z Kontaktów" tabindex="3"><span></span> Do:</button><span><textarea class="emTo_3" accesskey="D" tabindex="1" class="dropTarget GINGER_SOFTWARE_control " spellcheck="false" ginger_software_editor="true" style="background-repeat: no-repeat !important; background-attachment: local !important; background-position: 0px 0px !important; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABicAAAATCAYAAAD7/d7NAAACTUlEQVR4Xu3ZMQ0AAAzDsJU/6bHI5RGoZO3LzhEgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIEQoGFW6YIECBAgAABAgQIECBAgAABAgQIECBAgAABAidOeAICBAgQIECAAAECBAgQIECAAAECBAgQIEAgFRAnUm5jBAgQIECAAAECBAgQIECAAAECBAgQIECAgDjhBwgQIECAAAECBAgQIECAAAECBAgQIECAAIFUQJxIuY0RIECAAAECBAgQIECAAAECBAgQIECAAAEC4oQfIECAAAECBAgQIECAAAECBAgQIECAAAECBFIBcSLlNkaAAAECBAgQIECAAAECBAgQIECAAAECBAiIE36AAAECBAgQIECAAAECBAgQIECAAAECBAgQSAXEiZTbGAECBAgQIECAAAECBAgQIECAAAECBAgQICBO+AECBAgQIECAAAECBAgQIECAAAECBAgQIEAgFRAnUm5jBAgQIECAAAECBAgQIECAAAECBAgQIECAgDjhBwgQIECAAAECBAgQIECAAAECBAgQIECAAIFUQJxIuY0RIECAAAECBAgQIECAAAECBAgQIECAAAEC4oQfIECAAAECBAgQIECAAAECBAgQIECAAAECBFIBcSLlNkaAAAECBAgQIECAAAECBAgQIECAAAECBAiIE36AAAECBAgQIECAAAECBAgQIECAAAECBAgQSAXEiZTbGAECBAgQIECAAAECBAgQIECAAAECBAgQICBO+AECBAgQIECAAAECBAgQIECAAAECBAgQIEAgFXgZWQAUymVsagAAAABJRU5ErkJggg==&quot;) !important; position: relative; font-size: 12px; white-space: pre-wrap;"></textarea></span></li>
+                        <li
+                        style="display: none;">
+                          <button class="addCnt2Msg" title="Wybierz odbiorców z Kontaktów" tabindex="3"><span></span> DW:</button><span><textarea id="emCC_3" accesskey="C" tabindex="1" class=" dropTarget "></textarea></span></li>
+                          <li id="hideLi_3" class="hideLi"><span><a tabindex="2" href="#" title="Dodaj pole Kopia (DW)">Dodaj pole Kopia (DW)</a></span><span class="spanHideSep">|</span><span><a tabindex="2" href="#" title="Dodaj pole Kopia ukryta (UDW)">Dodaj pole Kopia ukryta (UDW)</a></span></li>
+                          <li
+                          style="display: none;">
+                            <button class="addCnt2Msg" title="Wybierz odbiorców z Kontaktów" tabindex="3"><span></span> UDW:</button><span><textarea id="emBCC_3" accesskey="U" tabindex="1" class=" dropTarget "></textarea></span></li>
+                            <li class="compose-field-li">
+                              <label for="compose-subject_3">Temat:</label><span><textarea id="compose-subject_3" class="compose-subject_3" accesskey="null" tabindex="1"></textarea></span></li>
+                      </ul>
+                      <div class="composition-options">
+                        <div class="linkOptMsg">
+                          <label title="Ustaw potwierdzenie odczytu wiadomości">Potwierdzenie odczytu:
+                            <select tabindex="2">
+                              <option value="1">tak</option>
+                              <option value="0">nie</option>
+                            </select>
+                          </label><span class="pipe">|</span>
+                          <label title="Ustaw priorytet wiadomości">Priorytet:
+                            <select tabindex="2">
+                              <option value="5">niski</option>
+                              <option value="3">normalny</option>
+                              <option value="1">wysoki</option>
+                            </select>
+                          </label><span class="pipe">|</span>
+                          <label class="signature-select-label">Podpis:
+                            <select class="signature-select">
+                              <option value="-1">brak</option>
+                              <option value="-99" disabled="">————————</option>
+                              <option value="-2">nowy podpis</option>
+                            </select>
+                          </label>
+                        </div>
+                        <div class="composition-attachments hide-att-purge" style="display: block;">
+                          <div class="attachListImages" id="atts_479"></div>
+                          <div class="attachList" id="atts_479"></div>
+                          <div id="iframe_3-1" class="att-operations">
+                            <div class="attach-iframe-box"><span></span>
+                              <html>
+
+                                <head>
+                                  <meta charset="UTF-8">
+                                  <title>Dodaj załącznik</title>
+                                </head>
+
+
+                                <body>
+                                  <form id="iform" name="iform" action="#s://ud.interia.pl:443/html/addattach,markmsg,479,attId,3-1,uid,7bdd6caa203d3c37?redir_host=#s://poczta.interia.pl/html/addAttachResult" method="post" enctype="multipart/form-data" style="padding:0;margin-left:5px;width:200px;overflow:hidden;margin-bottom:10px;">
+                                    <label id="file-lbl" for="file-inp" style="color: rgb(0, 85, 153);display:block;height:20px;height:20px;background:transparent;cursor:pointer;font-family:tahoma,verdana,arial,sans-serif;font-size:12px;padding-left:7px;margin-left:0;line-height:20px;margin-top:1px}body:hover;">Dodaj załączniki</label>
+                                    <input id="file-inp" type="file" name="attach[]" title="" onchange="parent.Inpl.Mail.Composition.getById('479').beginUpload(document, this.value, '3-1', this, frameElement)" multiple="" style="font-size:50px;height:20px;margin-left:-120px;cursor:pointer;margin-top:-20px;position:absolute;right:0;opacity:0;FILTER:Alpha(Opacity=0);">
+                                    <input type="hidden" id="imgnum" name="imgnum" value="" style="font-size:50px;height:20px;margin-left:-120px;cursor:pointer;margin-top:-20px;position:absolute;right:0;opacity:0;FILTER:Alpha(Opacity=0);">
+                                    <script>
+                                      if (parent.Inpl.Mail.browser.supports.multiFile) {
+                                        document.getElementById("file-inp").multiple = true;
+                                        document.getElementById("file-lbl").innerHTML = "Dodaj załączniki"
+                                      }
+                                      var color = parent.Inpl.Mail.DOM.getStyle((parent.Inpl.Mail.DOM.elmsByClass('simpleMessage')[0]), 'color');
+                                      document.getElementById("file-lbl").style.color = color;
+
+                                    </script>
+                                  </form>
+                                </body>
+
+                              </html>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div id="mode-switcher-3" class="mode-switcher"><a href="#mode-switch" tabindex="2" class="" title="Wyślij papeterię">Papeterie</a><a href="#mode-switch" tabindex="2" class="swSeparate simpleMessage" title="Wyślij wiadomość tekstową">Wiadomość tekstowa</a></div>
+                      </div>
+                    </div>
+                    <div class="composition-body">
+                      <div id="tarNewMail_3_w" class="punymce">
+                        <table id="tarNewMail_3_c" class="punymce">
+                          <tbody>
+                            <tr class="mceToolbar">
+                              <td id="tarNewMail_3_t">
+                                <ul id="tarNewMail_3_tb" class="punymce">
+                                  <li id="tarNewMail_3_bold" class="bold">
+                                    <a href="javascript:void(0);" class="bold" title="Pogrubienie (Ctrl+B)" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_italic" class="italic">
+                                    <a href="javascript:void(0);" class="italic" title="Kursywa (Ctrl+I)" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_underline" class="underline">
+                                    <a href="javascript:void(0);" class="underline" title="Podkreślenie (Ctrl+U)" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_strike" class="strike">
+                                    <a href="javascript:void(0);" class="strike" title="Przekreślenie" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_increasefontsize" class="increasefontsize">
+                                    <a href="javascript:void(0);" class="increasefontsize" title="Zwiększ rozmiar czcionki" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_decreasefontsize" class="decreasefontsize">
+                                    <a href="javascript:void(0);" class="decreasefontsize" title="Zmniejsz rozmiar czcionki" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_ul" class="ul">
+                                    <a href="javascript:void(0);" class="ul" title="Lista wypunktowana" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_ol" class="ol">
+                                    <a href="javascript:void(0);" class="ol" title="Lista numerowana" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_indent" class="indent">
+                                    <a href="javascript:void(0);" class="indent" title="Większe wcięcie" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_outdent" class="outdent">
+                                    <a href="javascript:void(0);" class="outdent" title="Mniejsze wcięcie" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_left" class="left">
+                                    <a href="javascript:void(0);" class="left" title="Wyrównaj do lewej" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_center" class="center">
+                                    <a href="javascript:void(0);" class="center" title="Wyrównaj do środka" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_right" class="right">
+                                    <a href="javascript:void(0);" class="right" title="Wyrównaj do prawej" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_style" class="style">
+                                    <a href="javascript:void(0);" class="style" title="Styl tekstu" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_removeformat" class="removeformat">
+                                    <a href="javascript:void(0);" class="removeformat" title="Usuń formatowanie" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_textcolor" class="textcolor">
+                                    <a href="javascript:void(0);" class="textcolor" title="Kolor tekstu" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_inpluploadimage" class="inpluploadimage">
+                                    <a href="javascript:void(0);" class="inpluploadimage" title="Prześlij obrazek..." tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_link" class="link">
+                                    <a href="javascript:void(0);" class="link" title="Wstaw odnośnik" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_unlink" class="unlink">
+                                    <a href="javascript:void(0);" class="unlink" title="Usuń odnośnik" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_editsource" class="editsource">
+                                    <a href="javascript:void(0);" class="editsource" title="Edytuj źródło HTML" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_interiaemoticons" class="interiaemoticons">
+                                    <a href="javascript:void(0);" class="interiaemoticons" title="Wstaw emotikonę" tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                  <li id="tarNewMail_3_inplstationery" class="inplstationery">
+                                    <a href="javascript:void(0);" class="inplstationery" title="Wybierz papeterię..." tabindex="-1" onmousedown="return false;"></a>
+                                  </li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr class="mceBody">
+                              <td>
+                                <div id="tarNewMail_3_b" class="mceBody">
+                                  <div id="tarNewMail_3_r" class="mceResize"></div>
+                                  <div id="textarea" contenteditable="true" style="width: 100%; height: 448px;border:none;"></div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div id="tarNewMail_3_p" class="mcePlaceholder"></div>
+                      </div>
+                      <textarea class="tarNewMail" rows="25" cols="68" name="content" id="tarNewMail_3" tabindex="1" style="display: none;"></textarea>
+                    </div>
+                  </div>
+                  <div class="bottomIcons toolbar">
+                    <div class="message-size">Całkowity rozmiar: <b class="totalSize">0 kB</b> ze 100 MB</div><span class="compose-bottom-icons"><a href="./Odebrane7c.htm"><button onclick="sendWholeContentToValue2();" id="sendT" class="sendT act" title="Wyślij wiadomość" tabindex="1">
+                      <svg id="send-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32">
+                      <title>envelope</title>
+                      <path d="M29 4h-26c-1.657 0-3 1.343-3 3v18c0 1.656 1.343 3 3 3h26c1.657 0 3-1.344 3-3v-18c0-1.657-1.343-3-3-3zM2.741 25.99l-0.731-0.732 8.249-8.248 0.731 0.732-8.249 8.248zM29.259 25.99l-8.249-8.248 0.731-0.732 8.249 8.248-0.731 0.732zM17 19.325v0.675h-2v-0.675l-12.997-12.050 1.272-1.272 12.725 11.798 12.725-11.798 1.272 1.272-12.997 12.050z"></path>
+                      </svg>
+                      <span>Wyślij</span></button></a><span class="mSeparator"></span>
+                    <button id="saveT" class="saveT last act" title="Zapisz wiadomość w Kopiach roboczych" tabindex="1">
+                      <svg id="icon-save" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16">
+                      <title>in</title>
+                      <path d="M15 7c-0.553 0-1 0.448-1 1v6h-12v-6c0-0.552-0.447-1-1-1s-1 0.448-1 1v7c0 0.552 0.447 1 1 1h14c0.553 0 1-0.448 1-1v-7c0-0.552-0.447-1-1-1zM9 7v-6.122c0-0.485-0.447-0.878-1-0.878s-1 0.393-1 0.878v6.122h-3l4 4 4-4h-3z"></path>
+                      </svg>
+                    <span>Zapisz</span></button><span class="separator"></span>
+                    <button id="cancelBtn" class="cancelBtn last act" title="Rezygnuj z pisania wiadomości" tabindex="1">
+                      <svg id="delete-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32">
+                      <title>cross</title>
+                      <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+                      </svg>
+                      <span>Anuluj</span></button>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1404,12 +1628,6 @@
         var nameOutput = localStorage.getItem("name");
         var textareaContent = localStorage.getItem("divToTextarea");
 
-        (function assignSender() {
-          var senderName = document.getElementsByClassName("new-message-sender");
-          for(var i = 0; i < senderName.length; i++) {
-          senderName[i].innerHTML = nameOutput.toString();
-          }
-        })();
 
         //////////////////////////////////
         //NEW DATA!!!!!
@@ -1418,15 +1636,6 @@
         var newName = localStorage.getItem("newName");
         var newTitleOutput = localStorage.getItem("newTitle");
         var newMessageContent = localStorage.getItem("newMessage");
-
-
-        (function displayMessage() {
-          var titleValue = document.getElementsByClassName("compose-subject_3");
-          console.log(titleValue);
-          for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
-          }
-        })();
 
         var email = localStorage.getItem("email");
         (function assignEmail() {
@@ -1439,7 +1648,7 @@
 
 
         (function assignNewSender() {
-          var newSenderName = document.getElementsByClassName("new-message-sender");
+          var newSenderName = document.getElementsByClassName("emTo_3");
           console.log(newSenderName);
           for(var i = 0; i < newSenderName.length; i++) {
           newSenderName[i].innerHTML = newName.toString();
@@ -1447,14 +1656,33 @@
         })();
 
         (function assignNewTitle() {
-          var newMessageTitle = document.getElementsByClassName("new-message-title");
+          var newMessageTitle = document.getElementsByClassName("compose-subject_3");
           for(var i = 0; i < newMessageTitle.length; i++) {
           newMessageTitle[i].innerHTML = 'Re: ' + newTitleOutput.toString();
           }
         })();
 
+
+
+        var textareaInputFive = localStorage.getItem("newMessage");
+        console.log(textareaInputFive);
+        (function displayContent() {
+          document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: " + email + "<br/>" + "Do: " + newName + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + newTitleOutput + "<br/>" + "<br/>" + "Wandziu, pisz pod krystynalubanska@interia.pl ." + "<br/>" + "Krysia jest teraz w szpitalu, ale jak tylko wyjdzie, napisze do Ciebie, poinformuję ją o Twoim pytaniu. " + "<br/>" + "Zaczekaj więc proszę dwa tygodnie" + "<br/>" + "Pozdrawiam, Aga. " + "<br/>" + "<br/>"
+          + "<div class=separator-border>" + "On Mon, Dec 11, 2017 at 5:53 PM, " + "<a href=#>" + email + "</a>" + " wrote:" + "<br/>" + "<br/>" + "<div class=separator-border>" + textareaInputFive + "</div>";
+        })();
+
       });
 
+    </script>
+
+    <script>
+    function sendWholeContentToValue(){
+    ////////////////////
+    // NEW INPUT ///////
+
+      var inputTextareaSix = $('#textarea').html();
+      localStorage.setItem('inputTextareaSeven',inputTextareaSix);
+    };
     </script>
   </body>
 

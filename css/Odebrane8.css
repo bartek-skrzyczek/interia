@@ -30,9 +30,8 @@ body {
   background-position: 13px 16px, -7px 38px;
   background-size: 56px 19px, 111px 7px;
   bottom: 10px;
-  height: 82px;
+  height: 46px;
   left: 0;
-  margin-top: 10px;
   width: 185px;
-  position: fixed;
+  background-repeat: no-repeat;
 }

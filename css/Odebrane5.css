@@ -744,19 +744,6 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
 
 #side-folders li a {color: #8C8C8C;}
 
-.logo-interia-white {
-  background-image: url(../assets/interia_white.svg),url(../assets/poczta_white.svg);
-  background-position: 7px 11px,-54px 38px;
-  background-repeat: no-repeat;
-  background-size: 84px 23px,197px 13px;
-  bottom: 0;
-  height: 82px;
-  left: 0;
-  margin-top: 10px;
-  width: 185px;
-  position: absolute;
-}
-
 #side-folders ul li a {
   margin-left: 28px;
 }

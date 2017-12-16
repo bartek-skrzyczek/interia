@@ -45,7 +45,7 @@
         <div id="mainContent-1">
           <div id="mainContent-2">
             <div id="sidebar">
-
+              <div class="logo-interia-white"></div>
               <div class="navigation navigation--main">
                         <header class="navigation-header navigation-section navigation-header--main">
                           <div nxt-avatar="" nxt-avatar-options="{'imgClass': 'C414', 'isOwnAvatar': true}" class="navigation-header-avatar ng-isolate-scope" ng-click="showSettings(); $event.preventDefault()" data-tooltip-stop-propagation="">
@@ -126,7 +126,7 @@
                           <!-- ngIf: ::env.device.isMobile && sendSuggestConf && !env.isMobileApp -->
                         </footer>
                       </div>
-                    <div class="logo-interia-white"></div>
+
             </div>
             <div id="rightContent" style="min-height: 660px;">
               <ul class="new-navigation-update">
@@ -172,7 +172,7 @@
                       </div>
                       <div class="msglist-notice"><span class=""></span><a href="#://ustawienia.interia.pl/poczta/bez-reklam/?utm_source=poczta_html&amp;utm_medium=zolta_belka&amp;utm_campaign=posprzataj_poczte">Posprzątaj pocztę »</a></div>
                       <div class="mails-container" id="mailsTbContainer_1"
-                      style="height: 616px;">
+                      style="height: 316px;">
                         <table class="mTable" id="mailsTable_1">
                           <tbody id="mailsTbBody_1">
                             <tr class="msglist-msg-tr ch first " id="mailsTable_1_item_0">
@@ -191,14 +191,14 @@
                               <td class="msglist-date" title="2017-11-30 12:45">dziś, 12:45</td>
                               <td class="msglist-size">131 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_1">
+                            <tr onclick="location.href='./Odebrane8a.htm';" class="msglist-msg-tr ch " id="mailsTable_1_item_1">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" id="abc">
                               </td>
                               <td class="msglist-flag none"><span></span></td>
                               <td class="msglist-threads"><span class="msg-status "></span></td>
                               <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Sklep-intymny.pl - dostarczone przez Interię</div>
+                                <div class="new-message-sender"><span></span></div>
                               </td>
                               <td class="msglist-subject" title="Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.">
                                 <div>Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.</div>
@@ -1419,6 +1419,23 @@
 
         document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + textareaContent.toString();
         console.log(localStorage.getItem("divToTextarea"));
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+        (function assignNewSender() {
+          var newSenderName = document.getElementsByClassName("emTo_3");
+          console.log(newSenderName);
+          for(var i = 0; i < newSenderName.length; i++) {
+          newSenderName[i].innerHTML = newName.toString();
+          }
+        })();
+
+        (function assignNewTitle() {
+          var newMessageTitle = document.getElementsByClassName("compose-subject_3");
+          for(var i = 0; i < newMessageTitle.length; i++) {
+          newMessageTitle[i].innerHTML = 'Re: ' + newTitleOutput.toString();
+          }
+        })();
       });
 
     </script>
