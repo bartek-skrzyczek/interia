@@ -545,7 +545,7 @@
                               <td class="msglist-flag none"><span></span></td>
                               <td class="msglist-threads"><span class="msg-status "></span></td>
                               <td class="msglist-from" title="wanda.sidlo@interia.pl">
-                                <div><span></span>Wanda Sidło</div>
+                                <div><span></span></div>
                               </td>
                               <td class="msglist-subject" title="Erasmus">
                                 <div>Erasmus</div>
@@ -1020,7 +1020,7 @@
                     <div class="composition-head">
                       <ul class="composition-fields">
                         <li class="select-account">
-                          <label for="emFrom_3" class=" select-account-single-label ">Od:</label><span class="select-account-list select-account-list--single">Wanda Sidło &lt;<i class="single-account-address">wanda.sidlo@interia.pl</i>&gt;</span><span></span></li>
+                          <label for="emFrom_3" class=" select-account-single-label ">Od:</label><span class="select-account-list select-account-list--single real-name"></span> &lt;<i class="single-account-address user-email"><span class="user-email"</span></i>&gt;</li>
                         <li>
                           <button class="addCnt2Msg" title="Wybierz odbiorców z Kontaktów" tabindex="3"><span></span> Do:</button><span><textarea id="emTo_3" accesskey="D" tabindex="1" class="dropTarget GINGER_SOFTWARE_control " spellcheck="false" ginger_software_editor="true" style="background-repeat: no-repeat !important; background-attachment: local !important; background-position: 0px 0px !important; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABicAAAATCAYAAAD7/d7NAAACTUlEQVR4Xu3ZMQ0AAAzDsJU/6bHI5RGoZO3LzhEgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIEQoGFW6YIECBAgAABAgQIECBAgAABAgQIECBAgAABAidOeAICBAgQIECAAAECBAgQIECAAAECBAgQIEAgFRAnUm5jBAgQIECAAAECBAgQIECAAAECBAgQIECAgDjhBwgQIECAAAECBAgQIECAAAECBAgQIECAAIFUQJxIuY0RIECAAAECBAgQIECAAAECBAgQIECAAAEC4oQfIECAAAECBAgQIECAAAECBAgQIECAAAECBFIBcSLlNkaAAAECBAgQIECAAAECBAgQIECAAAECBAiIE36AAAECBAgQIECAAAECBAgQIECAAAECBAgQSAXEiZTbGAECBAgQIECAAAECBAgQIECAAAECBAgQICBO+AECBAgQIECAAAECBAgQIECAAAECBAgQIEAgFRAnUm5jBAgQIECAAAECBAgQIECAAAECBAgQIECAgDjhBwgQIECAAAECBAgQIECAAAECBAgQIECAAIFUQJxIuY0RIECAAAECBAgQIECAAAECBAgQIECAAAEC4oQfIECAAAECBAgQIECAAAECBAgQIECAAAECBFIBcSLlNkaAAAECBAgQIECAAAECBAgQIECAAAECBAiIE36AAAECBAgQIECAAAECBAgQIECAAAECBAgQSAXEiZTbGAECBAgQIECAAAECBAgQIECAAAECBAgQICBO+AECBAgQIECAAAECBAgQIECAAAECBAgQIEAgFXgZWQAUymVsagAAAABJRU5ErkJggg==&quot;) !important; position: relative; font-size: 12px; white-space: pre-wrap;"></textarea></span></li>
                         <li
@@ -1571,6 +1571,16 @@
         console.log(emailAddress);
         for(var i = 0; i < emailAddress.length; i++) {
           emailAddress[i].innerHTML = email.toString();
+        }
+      })();
+    </script>
+
+    <script>
+      var realName = localStorage.getItem("realName");
+      (function assignRealName() {
+        var userName = document.getElementsByClassName("real-name");
+        for(var i = 0; i < userName.length; i++) {
+          userName[i].innerHTML = realName.toString();
         }
       })();
     </script>

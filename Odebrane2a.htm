@@ -1000,7 +1000,7 @@
                       <div id="drag" class="slideCr">
                         <div></div>
                       </div>
-                      <div class="mails-framecontainer"><div class="mails-headerscontainer " id="emHead_1"><div class="emHead"><span class="message-date"><b>Data: </b>2017-11-26 17:22</span><span class="header-switch" title="Wyświetl/ukryj pełny nagłówek"> </span><span class="emSubject compose-subject_3"></span><dl><dt>Od:</dt><a href="#"><dd class="emTo_3">&gt;</dd></a></a><br>
+                      <div class="mails-framecontainer"><div class="mails-headerscontainer " id="emHead_1"><div class="emHead"><span class="message-date"><b>Data: </b>2017-11-26 17:22</span><span class="header-switch" title="Wyświetl/ukryj pełny nagłówek"> </span><span class="emSubject compose-subject_3"></span><dl><dt>Od: <span class="font-400 real-name"> </span></dt>&lt;<a href="#"><dd class="emTo_3">&gt;</dd></a></a>&gt;<br>
                         <dt title="Do:">Do:</dt><a href="#"><span class="user-email" style="margin-left:3px"><a href="mailto:wanda.sidlo@interia.pl"></a></dt></a><br></span><div class="hide extHead" id="extHead1"><ul><li><b>Date:</b> Sun, 26 Nov 2017 17:22:44 +0100
                       </li><li><b>From:</b> Wanda Sidło &lt;wanda.sidlo@interia.pl&gt;
                       </li><li><b>Subject:</b> Erasmus
@@ -1430,7 +1430,8 @@
         var email = localStorage.getItem("email");
 
         var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmiany w sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
-        console.log(richContent);
+
+        // var richContent = "Szanowny Jerzy, " + "<br/>" + "<br/>" + "Na wstępie chciałbym przeprosić Cię za późną odpowiedź. Dzięki, że do mnie napisałeś! Aktualnie przebywam w New York City i jak tylko znajdę chwilę, chętnie napiszę. "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
         document.getElementById("emFoot_1").innerHTML = richContent;
 
         (function assignSender() {
@@ -1457,6 +1458,16 @@
 
         var messageVAlue = localStorage.setItem('divToTextarea',richContent);
       });
+    </script>
+
+    <script>
+      var realName = localStorage.getItem("realName");
+      (function assignRealName() {
+        var userName = document.getElementsByClassName("real-name");
+        for(var i = 0; i < userName.length; i++) {
+          userName[i].innerHTML = realName.toString();
+        }
+      })();
     </script>
 
   </body>

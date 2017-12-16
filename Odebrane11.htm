@@ -447,84 +447,12 @@
         </div>
         </li>
         <!-- end ngRepeat: contact in contacts -->
-        <li class="contact-list-item ng-scope" ng-repeat="contact in contacts" ng-attr-id="::contact.id">
-          <div class="contact ng-isolate-scope" ng-show="contact" ng-class="{&#39;contact--expanded&#39;: isExpanded, &#39;contact--is-group-edited&#39;: isGroupEdited}" nxt-contact="" nxt-contact-data="contact" nxt-contact-is-mode-expanded="isExpanded"
-          nxt-contact-is-group-edited="isGroupEdited" nxt-contact-selected-group="selectedGroup" nxt-contact-is-mode-select="isModeSelect">
-            <div data-tooltip="Napisz wiadomość do tej osoby">
-              <div ng-click="newMessage(contact)" nxt-avatar="" nxt-avatar-list="contact.avatar" class="contact-avatar contact-avatar--filled ng-isolate-scope">
-                <div class="avatars-simple-container" ng-click="toggleAvatarCard($event);" ng-mouseleave="leaveAvatarCard();" ng-mouseover="toggleAvatarCard($event);" data-tooltip="" ng-class="::{&#39;avatars--large&#39;: options.isOwnAvatar}">
-                  <!-- ngIf: !senderInfo.provider --><span ng-if="!senderInfo.provider" class="ng-scope"><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><div class="avatar-simple-content ng-scope" ng-if="::avatar.type == AVATAR_TYPE.IMAGE" ng-style="::{&#39;background-image&#39;: &#39;url(&#39; + BASE_URL + &#39;/-/&#39; + avatar.data.id + &#39;-&#39; + IMG_CLASS + &#39;.&#39; + avatar.data.ext + &#39;)&#39;}" data-tooltip-in-parents="" style="background-image: url(&quot;//i.iplsc.com/-/00040VQ2KFH46I2P-C409.jpg&quot;);"></div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span>
-                  <!-- end ngIf: !senderInfo.provider -->
-                  <!-- ngIf: senderInfo.provider -->
-                </div>
-              </div>
-            </div>
-            <div class="contact-info" ng-click="newMessage(contact)">
-              <h4 class="contact-name ng-binding contact-name--normal" ng-class="{&#39;contact-name--normal&#39; : !isModeExpanded}" ng-bind="::contact.name">Biuro Obsługi Klienta</h4>
-              <div class="contact-email ng-binding ng-hide" ng-hide="!isModeExpanded" ng-bind="::contact.email">pomoc@firma.interia.pl</div>
-            </div>
-            <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" tabindex="999" class="contact-show-details ng-hide icon-arrow-down" data-tooltip="Zobacz dane kontaktowe" ng-show="isModeExpanded &amp;&amp; !isGroupEdited" ng-class="isExpanded ? &#39;icon-arrow-up&#39; : &#39;icon-arrow-down&#39;"
-            ng-click="isExpanded = !isExpanded; $event.preventDefault();"></a> <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="contact-show-details icon-close ng-hide" ng-show="isGroupEdited &amp;&amp; isInSelectedGroup" ng-click="removeFromSelectedGroup(); $event.preventDefault();">Usuń z&nbsp;grupy</a>            <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="contact-show-details icon-add ng-hide" ng-show="isGroupEdited &amp;&amp; !isInSelectedGroup" ng-click="addToSelectedGroup(); $event.preventDefault();">Dodaj do&nbsp;grupy</a>
-            <div
-            class="contact-details ng-hide" ng-show="isModeExpanded &amp;&amp; isExpanded">
-              <div class="contact-details-section">
-                <ul class="contact-details-actions clearfix">
-                  <li class="contact-details-actions-item">
-                    <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="icon-contact-mail" ng-click="createNewMessage(); $event.preventDefault();" data-tooltip="Utwórz nową wiadomość" data-track-click="contactListClickIcon"></a>
-                  </li>
-                  <li class="contact-details-actions-item">
-                    <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" ng-click="showMailingHistory(); $event.preventDefault();" class="icon-contact-cloak" data-tooltip="Pokaż historię korespondencji" data-track-click="contactHistory"></a>
-                  </li>
-                  <li class="contact-details-actions-item">
-                    <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="icon-contact-filter" ng-click="addNewFilter(); $event.preventDefault();" data-tooltip="Zdefiniuj nowy filtr" data-track-click="contactAddFilter"></a>
-                  </li>
-                  <!-- ngIf: !contact.isReadonly -->
-                  <li class="contact-details-actions-item ng-scope" ng-if="!contact.isReadonly">
-                    <!-- ngIf: !contact.isOnBlacklist -->
-                    <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="icon-contact-block ng-scope" ng-if="!contact.isOnBlacklist" ng-click="addToBlacklist(); $event.preventDefault();" data-tooltip="Dodaj do listy zablokowanych" data-track-click="contactBlock"></a>
-                    <!-- end ngIf: !contact.isOnBlacklist -->
-                    <!-- ngIf: contact.isOnBlacklist -->
-                  </li>
-                  <!-- end ngIf: !contact.isReadonly -->
-                  <!-- ngIf: !contact.isReadonly -->
-                  <li class="contact-details-actions-item ng-scope" ng-if="!contact.isReadonly">
-                    <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="icon-contact-edit" ng-click="edit(); $event.preventDefault();" data-tooltip="Edytuj" data-track-click="contactEdit"></a>
-                  </li>
-                  <!-- end ngIf: !contact.isReadonly -->
-                  <!-- ngIf: !contact.isReadonly -->
-                  <li class="contact-details-actions-item ng-scope" ng-if="!contact.isReadonly">
-                    <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="icon-contact-trash" ng-click="deleteContact(); $event.preventDefault();" data-tooltip="Usuń" data-track-click="contactDelete"></a>
-                  </li>
-                  <!-- end ngIf: !contact.isReadonly -->
-                </ul>
-              </div>
-              <div class="contact-details-section ng-hide" ng-show="contact.emails.length">
-                <h3 class="contact-details-section-header">Adresy email</h3>
-                <ul class="contact-details-list">
-                  <!-- ngRepeat: email in contact.emails -->
-                </ul>
-              </div>
-              <!-- ngIf: groups && contact.groups.length -->
-              <!-- ngIf: contact.phones.length -->
-              <div class="contact-details-section ng-scope" ng-if="contact.phones.length">
-                <h3 class="contact-details-section-header">Telefon</h3>
-                <ul class="contact-details-list">
-                  <!-- ngRepeat: phone in contact.phones -->
-                  <li class="contact-details-list-item ng-scope" ng-repeat="phone in contact.phones">
-                    <label for="phone_0" class="contact-details-list-item-label ng-binding" ng-bind="::getPhoneType(phone)">Inny</label><span class="contact-phone ng-binding" ng-bind="::phone.value">126462812</span></li>
-                  <!-- end ngRepeat: phone in contact.phones -->
-                </ul>
-              </div>
-              <!-- end ngIf: contact.phones.length -->
-              <!-- ngIf: contact.note.length -->
-              <div class="contact-details-section ng-scope" ng-if="contact.note.length">
-                <h3 class="contact-details-section-header">Notatka</h3>
-                <p class="contact-note ng-binding" ng-bind="contact.note">Biuro Obsługi Klienta jest czynne od poniedziałku do piątku od 8:00 do 20:00, oraz w soboty od 8:00 do 16:00.</p>
-              </div>
-              <!-- end ngIf: contact.note.length -->
-          </div>
-      </div>
-      </li>
+        <li class="contact-list-item">
+                            <div class="element-contact" style="text-align:center">
+                            <span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-16" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span>
+                            <h4 class="contact-name">Biuro Obsługi Klienta</h4>
+                            </div>
+                          </li>
       <!-- end ngRepeat: contact in contacts -->
       <li ng-show="!contacts.length &amp;&amp; !contactIsLoading" class="contact-list-item contact-list-item--sub-label ng-hide">Brak kontaktów w grupie</li>
       <!-- ngIf: isGroupEdited -->

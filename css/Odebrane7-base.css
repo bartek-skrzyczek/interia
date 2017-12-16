@@ -13042,7 +13042,7 @@ p.setting-promo-button-title {
 }
 
 .setting-promo-button {
-  background: url(images/autopromo/button.jpg);
+  background: url(../assets/button-check-in.jpg);
   background-size: 152px 41px;
   display: block;
   margin: 0 auto;

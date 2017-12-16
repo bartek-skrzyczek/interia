@@ -3,7 +3,7 @@
 <html lang="pl-PL" class="l10n-pl_PL">
 
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv=""-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="./Odebrane/core-71025-1138.css">
     <link id="theme-stylesheet" rel="stylesheet" href="./Odebrane/color-1-71003-1739.css">
     <!--[if IE 7]><link rel=stylesheet href=#://o.iplsc.com/p/css/ie7-71003-1739.css><![endif]-->
@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="./css/Odebrane6.css">
     <link rel="stylesheet" href="./css/Odebrane7-base.css">
     <link rel="stylesheet" href="./css/Odebrane8.css">
-
-    <link rel="stylesheet" href="./css/Odebrane6.css">
+    <link rel="stylesheet" href="./css/Odebrane9.css">
     <link type="text/css" rel="stylesheet" href="./css/main.css">
+
     <title>Odebrane (344) - Poczta w Interii</title>
     <link rel="shortcut icon" href="#://poczta.interia.pl/favmix.ico">
     <meta name="application-name" content="Poczta w Interii">
@@ -32,9 +32,145 @@
   </head>
 
   <body class="webkit supports-columns sov-enabled shv-enabled hasShortToolbar toolbar-ready">
-    <div class="notice" id="main-notice">
-      <p class="notice-content">&nbsp;</p>
-      <div class="notice-footer"><span class="nf-left"></span><span class="nf-right"></span><span class="nf-mid"></span></div>
+
+    <div id="hook-loginout-action" class="settings-container" style="display:none">
+  <div class="navigation-header-actions">
+    <button type="button" class="btn-icon icon-close" ng-click="close();" data-track-click="settingPanelClose"></button>
+  </div>
+  <div class="settings-section settings-user-info">
+    <div class="settings-user-info-profile">
+      <div nxt-avatar="" nxt-avatar-options="{'imgClass': 'C435', 'isOwnAvatar': true}" data-tooltip-stop-propagation="">
+        <div class="avatars-simple-container avatars--large" ng-click="toggleAvatarCard($event);" ng-mouseleave="leaveAvatarCard();" ng-mouseover="toggleAvatarCard($event);" data-tooltip="" ng-class="::{'avatars--large': options.isOwnAvatar}"><span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-15" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span></div>
+      </div><a class="link" ng-href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia">Zmień awatar</a>
+      <div class="settings-user-info-name txt-overflow"
+      ng-bind="env.ownName" ng-show="::env.ownName" data-tooltip="Bartek Skrzyczek">Bartek Skrzyczek</div>
+      <div class="settings-user-info-email txt-overflow" ng-bind-html="::breakLineOwnEmail" ng-show="::env.ownEmail" data-tooltip="bartek.skrzyczek@interia.pl">bartek.skrzyczek
+        <br>@interia.pl</div>
+    </div>
+    <div class="settings-user-info-logout">
+      <div class="settings-user-info-logout-time" ng-bind-html="::getLastLoginText()">Ostatnie logowanie:
+        <br>2017-12-13</div><a ng-href="#://interia.hit.gemius.pl/hitredir/id=0ig7YC8kFJmzxBNx4qL5QWaG7FRZSdAG1BSZ7sJNsmz.K7/url=#s://konto.interia.pl/wyloguj?referer=#%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail"
+      class="button" data-track-click="settingPanelLogout" href="#://interia.hit.gemius.pl/hitredir/id=0ig7YC8kFJmzxBNx4qL5QWaG7FRZSdAG1BSZ7sJNsmz.K7/url=#s://konto.interia.pl/wyloguj?referer=#%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail">Wyloguj</a></div>
+  </div>
+  <!-- ngIf: ::!isMobile -->
+  <div nxt-bind-html-compile="autopromo" ng-if="::!isMobile">
+    <div class="settings-section settings-section--promo" data-track-click="settingPanelClickAutoPromo">
+      <div class="settings-promo-text settings-promo-text--autopromo">
+        <p class="setting-promo-header">Poczta bez reklam kosztuje</p>
+        <p class="setting-promo-subheader">mniej niż:</p>
+        <img src="./assets/butelka.png" alt="Poczta bez reklam kosztuje mniej niż butelka wody mineralnej" src="#s://o.iplsc.com/n/css/images/autopromo/butelka.png">
+        <p class="setting-promo-caption">Butelka
+          <br>wody</p>
+        <p class="setting-promo-button-title">Na co czekasz?</p>
+        <a class="setting-promo-button" target="_blank" href="#s://ustawienia.interia.pl/poczta/bez-reklam?iwa_source=poczta_ustawienia_v3" data-track-click="settingPanelAutopromo3"></a>
+        <p class="setting-promo-button-caption">Poczta bez reklam <b>tylko 1,23 zł/mc</b></p>
+        <!-- ngIf: ::env.device.isPc && !isCorp -->
+        <p class="settings-copyright settings-copyright--header" ng-if="::env.device.isPc &amp;&amp; !isCorp">
+          Copyright © 1999-2017 <a href="#://firma.interia.pl/o_firmie" target="_blank">INTERIA.PL</a>. Wszystkie prawa zastrzeżone.
+          <br> Korzystanie z portalu oznacza akceptację <a href="#://firma.interia.pl/regulamin" target="_blank">Regulaminu</a>. <a href="#://firma.interia.pl/polityka-cookies" target="_blank">Polityka Cookies</a>
+        </p>
+        <!-- end ngIf: ::env.device.isPc && !isCorp -->
+      </div>
+    </div>
+  </div>
+  <!-- end ngIf: ::!isMobile -->
+  <div class="settings-section-wrapper">
+    <ul class="settings-section settings-section--links">
+      <!-- ngIf: ::disableActions.panelAdmin && env.is_admin -->
+      <!-- ngIf: env.adminBusinessPackType === 1 -->
+      <!-- ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="wizard($event)" ng-href="#s://ustawienia.interia.pl" href="#s://ustawienia.interia.pl">Dostosuj swoją pocztę</a> <span ng-bind-html="::link.description">W jednym miejscu w kilku krokach dostosuj wygląd i działanie poczty do swoich upodobań.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia">Główne ustawienia</a>        <span ng-bind-html="::link.description">Ustaw swojego awatara (dowolny obrazek lub zdjęcie) i określ podstawowe opcje
+ dla swoich wiadomości np. ilość widocznych maili na stronie, sposób dodawania
+ załączników i wiele innych</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/autoresponder/edytuj?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/autoresponder/edytuj?iwa_source=poczta_ustawienia">Automatyczna odpowiedź</a>        <span ng-bind-html="::link.description">Wyjeżdżasz na wakacje? Ustaw automatyczną wiadomość, którą otrzyma każdy kto do ciebie napisze, podczas Twojej nieobecności.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/haslo?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/haslo?iwa_source=poczta_ustawienia">Zmiana hasła i opcji odzyskiwania</a>        <span ng-bind-html="::link.description">Podaj nowe hasło, które trudno złamać oraz wybierz wygodny sposób odzyskiwania aktualnego hasła, na wypadek gdybyś go zapomniał.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/antyspam?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/antyspam?iwa_source=poczta_ustawienia">Antyspam</a> <span ng-bind-html="::link.description">Stwórz swoją własną czarną listę nadawców, od których nie chcesz otrzymywać maili. Tutaj możesz również zdefiniować, od kogo chcesz zawsze dostawać wiadomości.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/konta-zewnetrzne?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/konta-zewnetrzne?iwa_source=poczta_ustawienia">Dodatkowe adresy e-mail</a>        <span ng-bind-html="::link.description">Dodaj wszystkie swoje adresy e-mail z różnych kont (np. WP, Onet, Gmail) do poczty Interii, aby odbierać oraz wysyłać wiadomości w jednym miejscu. Tutaj możesz też dodać nową nazwę swojego konta (alias).</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/bez-reklam?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/bez-reklam?iwa_source=poczta_ustawienia">Poczta bez reklam</a>        <span ng-bind-html="::link.description">Jeśli przeszkadzają ci reklamy, w każdej chwili możesz je szybko tutaj wyłączyć!</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link true" ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#://pomoc.poczta.interia.pl?iwa_source=poczta_ustawienia" href="#://pomoc.poczta.interia.pl?iwa_source=poczta_ustawienia">Pomoc</a> <span ng-bind-html="::link.description">Tutaj znajdziesz odpowiedzi na najczęściej zadawane pytania oraz wszystkie potrzebne informacje dotyczące np. konfiguracji poczty w telefonie.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/filtry?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/filtry?iwa_source=poczta_ustawienia">Uporządkuj pocztę</a>
+        <span
+        ng-bind-html="::link.description">Zdecyduj, do których folderów mają trafić wybrane przez ciebie wiadomości</span>
+      </li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/podpis?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/podpis?iwa_source=poczta_ustawienia">Ustaw podpisy</a> <span ng-bind-html="::link.description">Nie trać czasu na podpisywanie się w każdej wiadomości - ustaw jeden lub kilka podpisów, które dodamy automatycznie.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+    </ul>
+    <section class="settings-section settings-section--skins">
+      <h3 class="settings-skins-label"><span class="bubble-wrapper-empty" nxt-bubble="2" nxt-bubble-extra-padd="[69,98]"></span>Wybierz kolor swojej poczty <span class="bubble-wrapper-empty" nxt-bubble="-1" nxt-bubble-extra-padd="[350,90]"></span></h3>
+      <div nxt-carousel="">
+        <!-- ngIf: carouselMode -->
+        <button class="carousel-button carousel-button--prev icon-slideshow-left" ng-click="prev()" ng-hide="withoutButtons" ng-if="carouselMode" ng-disabled="disabledPrev" nxt-stop-touch-propagation="" disabled="disabled"></button>
+        <!-- end ngIf: carouselMode -->
+        <div class="settings-skins" ng-class="{'settings-skins--without-buttons':withoutButtons}" nxt-stop-touch-propagation="">
+          <div class="settings-skins-carousel">
+            <div nxt-select-skin=""></div>
+            <!-- ngIf: !hasUserHadOwnSkin() && !hideUserSkinSelect -->
+            <div class="settings-skin-add-new" ng-click="openUserThemeWindow()" ng-if="!hasUserHadOwnSkin() &amp;&amp; !hideUserSkinSelect"><span class="settings-skin-name--add-new">Wgraj tło</span></div>
+            <!-- end ngIf: !hasUserHadOwnSkin() && !hideUserSkinSelect -->
+            <!-- ngIf: hasUserHadOwnSkin() && !hideUserSkinSelect -->
+            <!-- ngRepeat: theme in themes -->
+            <div class="settings-skin settings-skin-name--active" ng-repeat="theme in themes" data-skin="default" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Domyślny</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="reindeer" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Świąteczna</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="mint" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Mięta</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="sunflower" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Słonecznik</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="grape" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Winogrono</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="spider" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Spider</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <!-- ngRepeat: theme in fakeThemes -->
+          </div>
+        </div>
+        <!-- ngIf: carouselMode -->
+        <button class="carousel-button carousel-button--next icon-slideshow-right" ng-click="next()" ng-hide="withoutButtons" ng-if="carouselMode" ng-disabled="disabledNext" nxt-stop-touch-propagation=""></button>
+        <!-- end ngIf: carouselMode -->
+        <div nxt-theme=""></div>
+      </div>
+    </section>
+  </div>
+  <!-- ngIf: disableActions.changeInterface -->
+  <footer class="settings-section settings-section--footer" ng-if="disableActions.changeInterface">
+    <!-- ngIf: ::changeable -->
+    <!-- end ngIf: ::changeable -->
+  </footer>
+  <!-- end ngIf: disableActions.changeInterface -->
+</div>
+
+
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- end of modal -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="notice" id="main-notice" style="top:0">
+      <p class="notice-content">Wiadomość wysłana</p>
+      <div class="notification-actions"><a class="btn-icon icon-close"></a></div>
+
     </div>
 
     <noscript>&lt;p class=error-notice&gt;&lt;strong&gt;Ten interfejs wymaga włączonej obsługi języka JavaScript w przeglądarce internetowej.&lt;/strong&gt;&lt;br&gt;&lt;br&gt; Włącz JavaScript i odśwież tę stronę, lub skorzystaj z &lt;a href='/html/chgsystem,type,classic,uid,d093d38a3a12245d'&gt;interfejsu
@@ -62,7 +198,7 @@
                           <ul class="navigation-header-links">
                             <li class="navigation-header-links-item"><a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="icon-settings" ng-click="showSettings(); $event.preventDefault()" data-track-click="settingPanelShow">Ustawienia</a></li>
                             <li class="navigation-header-links-item navigation-header-links-item--logout">
-                              <!-- ngIf: ::!env.isMobileApp --><a ng-if="::!env.isMobileApp" class="icon-logout ng-scope" ng-href="#://interia.hit.gemius.pl/hitredir/id=0ig7YC8kFJmzxBNx4qL5QWaG7FRZSdAG1BSZ7sJNsmz.K7/url=#s://konto.interia.pl/wyloguj?referer=#%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail" data-track-click="settingPanelLogout" href="#://interia.hit.gemius.pl/hitredir/id=0ig7YC8kFJmzxBNx4qL5QWaG7FRZSdAG1BSZ7sJNsmz.K7/url=#s://konto.interia.pl/wyloguj?referer=#%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail">Wyloguj</a>
+                              <!-- ngIf: ::!env.isMobileApp --><a ng-if="::!env.isMobileApp" class="icon-logout ng-scope" ng-href="#" data-track-click="settingPanelLogout" href="#">Wyloguj</a>
                               <!-- end ngIf: ::!env.isMobileApp -->
                               <!-- ngIf: ::env.isMobileApp -->
                             </li>
@@ -92,15 +228,12 @@
                             <li class="navigation-item ng-scope" ng-if="::hasSocialFolder">
                               <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#/folder/16777216?iwa_source=log_p_zaloguj" data-track-click="folderSocial" title="Społeczności (1)" ng-click="openSocial()" class="navigation-button navigation-button--big navigation-button--social icon-social" ng-class="{'navigation-button--active': folders.SOCIAL == activeFolderId &amp;&amp; !isSearch}" ui-sref="folder({'folderId': folders.SOCIAL, 'sort': null, 'search': null, 'searchf': null, 'filter': null, 'mode': null, 'withComposition': null, 'page': null})"><span class="navigation-item-label">Społeczności</span></a>
                             </li>
-                            <li class="navigation-item ng-scope" ng-if="::hasSocialFolder">
-                              <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#/folder/16777216?iwa_source=log_p_zaloguj" data-track-click="folderSocial" title="Społeczności (1)" ng-click="openSocial()" class="navigation-button navigation-button--big navigation-button--social icon-contacts" ng-class="{'navigation-button--active': folders.SOCIAL == activeFolderId &amp;&amp; !isSearch}" ui-sref="folder({'folderId': folders.SOCIAL, 'sort': null, 'search': null, 'searchf': null, 'filter': null, 'mode': null, 'withComposition': null, 'page': null})"><span class="navigation-item-label">Kontakty</span></a>
-                            </li>
                             <!-- end ngIf: ::hasSocialFolder -->
                             <li class="navigation-item"><a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#/folder/2?iwa_source=log_p_zaloguj" data-track-click="folderSent" title="Wysłane (8)" class="navigation-button navigation-button--big navigation-button--sent icon-sent" ng-class="{'navigation-button--active': folders.SENT == activeFolderId &amp;&amp; !isSearch}" ui-sref="folder({'folderId': folders.SENT, 'sort': null, 'search': null, 'searchf': null, 'filter': null, 'mode': null, 'withComposition': null, 'page': null})"><span class="navigation-item-label">Wysłane</span></a></li>
                             <li class="navigation-item">
                               <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#/folder/-1?iwa_source=log_p_zaloguj" data-track-click="folderDraft" title="Robocze (1)" class="navigation-button navigation-button--big navigation-button--drafts icon-drafts" ng-class="{'navigation-button--active': folders.DRAFTS == activeFolderId &amp;&amp; !isSearch}" ui-sref="folder({'folderId': folders.DRAFTS, 'sort': null, 'search': null, 'searchf': null, 'filter': null, 'mode': null, 'withComposition': null, 'page': null})"><span class="navigation-item-label">Robocze</span></a>
                               </li>
-                              <li class="navigation-item"><a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#/folder/3?iwa_source=log_p_zaloguj" data-track-click="folderTrash" title="Kosz (1)" class="navigation-button navigation-button--big navigation-button--trash icon-trash2" ng-class="{'navigation-button--active': folders.TRASH == activeFolderId &amp;&amp; !isSearch}" ui-sref="folder({'folderId': folders.TRASH, 'sort': null, 'search': null, 'searchf': null, 'filter': null, 'mode': null, 'withComposition': null, 'page': null})"><span class="navigation-item-label">Kosz</span> </a>
+                              <li class="navigation-item"><a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#/folder/3?iwa_source=log_p_zaloguj" data-track-click="folderTrash" title="Kosz (1)" class="navigation-button navigation-button--big navigation-button--trash icon-trash2" ng-class="{'navigation-button--active': folders.TRASH == activeFolderId &amp;&amp; !isSearch}" ui-sref="folder({'folderId': folders.TRASH, 'sort': null, 'search': null, 'searchf': null, 'filter': null, 'mode': null, 'withComposition': null, 'page': null})"><span class="navigation-item-label">Kosz</span></a>
                                 <!-- ngIf: env.device.isMobile && folders[folders.TRASH].total > 0 -->
                               </li>
                               <li class="navigation-item">
@@ -138,8 +271,7 @@
                       </div>
                       <div class="new-nav-title">Odebrane</div>
                     </li>
-                    <li class="advertisement">
-                      <a href="#://interia.hit.gemius.pl/hitredir/id=dvaVVIOuySx01gA8FKEw_adzrmGU0Jr4Fg7oihQmG5H.j7/url=#://forum.interia.pl/dlaczego-storczyk-nie-kwitnie-tematy,dId,3059329" target="_blank" id="additionalNavLink"><span class="adNavLeft">Sprawdzone sposoby<br>na piękne storczyki!</span><span class="adNavLinkButton"> Zobacz<span class="adNavRaquo"> »</span></span></a></li>
+
                     <li class="search-header">
                       <div class="search-input-wrapper">
                       <label class="icon-search">
@@ -150,16 +282,16 @@
                     </ul>
               <div id="tabs" class="tabs">
                 <div id="outerTabHeaderCont" class=" dropTarget" style="visibility:hidden"> <span class="scrollable-left scrollable-arrow scrollable-inactive " style="display: none;"><span class="scLeft"><a title="Przewiń w lewo"><b>◀</b></a></span></span><span class="scrollable-right scrollable-arrow" style="display: none;"><span class="scRight"><a title="Przewiń w prawo"><b>▶</b></a></span></span>
-                                  <div class="scrollable-wrapper">
-                                    <div id="tabHeaderCont" class="tabsHeader">
-                                      <ul id="tabsHeader" class="tabsList">
-                                        <li class="tabHeader tab-permanent activeHeaderTab border-tab">
-                                          <div><span title="Odebrane">Odebrane</span></div>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                </div>
-                              </div>
+                                                  <div class="scrollable-wrapper">
+                                                    <div id="tabHeaderCont" class="tabsHeader">
+                                                      <ul id="tabsHeader" class="tabsList">
+                                                        <li class="tabHeader tab-permanent activeHeaderTab border-tab">
+                                                          <div><span title="Odebrane">Odebrane</span></div>
+                                                        </li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
+                                              </div>
               <div id="tabBodyCont" style="margin:0">
                 <div class="tabBody activeBodyTab ">
                   <div id="msglist_1" class="mailList msglist-fld_1">
@@ -182,33 +314,33 @@
                       style="height: 316px;">
                         <table class="mTable" id="mailsTable_1">
                           <tbody id="mailsTbBody_1">
-                            <tr class="msglist-msg-tr ch first " id="mailsTable_1_item_0">
+                            <tr class="msglist-msg-tr ch active-tr" id="mailsTable_1_item_20">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
                               <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Play (P4 Sp. z o.o.) - dostarczone przez Interię</div>
+                              <td class="msglist-threads"><span class="msg-status msg-status-re"></span></td>
+                              <td class="msglist-from" title="wanda.sidlo@interia.pl">
+                                <div class="new-message-sender"><span></span></div>
                               </td>
-                              <td class="msglist-subject" title="Smartfon + maskotka = zestaw idealny! Junior Box na Święta za 2 zł!">
-                                <div>Smartfon + maskotka = zestaw idealny! Junior Box na Święta za 2 zł!</div>
+                              <td class="msglist-subject new-message-title" title="Erasmus">
+                                <div></div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-30 12:45">dziś, 12:45</td>
-                              <td class="msglist-size">131 kB</td>
+                              <td class="msglist-date" title="2017-11-26 17:22">26 lis, 17:22</td>
+                              <td class="msglist-size">2 kB</td>
                             </tr>
-                            <tr onclick="location.href='./Odebrane8a.htm';" class="msglist-msg-tr ch " id="mailsTable_1_item_1">
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_1">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" id="abc">
                               </td>
                               <td class="msglist-flag none"><span></span></td>
                               <td class="msglist-threads"><span class="msg-status "></span></td>
                               <td class="msglist-from" title="mailing@interia.pl">
-                                <div class="new-message-sender"><span></span></div>
+                                <div><span></span>Sklep-intymny.pl - dostarczone przez Interię</div>
                               </td>
                               <td class="msglist-subject" title="Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.">
-                                <div class="new-message-title"></div>
+                                <div>Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
@@ -1023,11 +1155,101 @@
 
     </div>
     <div class="hektor-container hektor-container--close">
-      <a class="hektor-logo" href="#://www.interia.pl/?hkt=sgp#iwa_source=bloczek_poczta" target="_blank"></a>
-      <hr class="hektor-hr">
-      <iframe id="hektor" src="./Odebrane/hektor.html"></iframe>
-      <div class="hektor-close"></div>
-      <div class="hektor-open"></div>
+      <div class="contact-container-content">
+
+                <!-- ngIf: ::env.device.isPc -->
+                <header id="login-out-user-mask" class="contact-user clearfix ng-scope" ng-if="::env.device.isPc" data-tooltip-stop-propagation="">
+                  <!-- ngIf: !isUpdatingAvatar -->
+                  <div nxt-avatar="" nxt-avatar-options="{'imgClass': 'C414', 'isOwnAvatar': true}" class="contact-user-avatar ng-scope ng-isolate-scope" ng-click="showSettings(); $event.stopPropagation();" data-tooltip="Wanda Sidło<br>wanda.sidlo@interia.pl" ng-if="!isUpdatingAvatar">
+                    <div class="avatars-simple-container avatars--large" ng-click="toggleAvatarCard($event);" ng-mouseleave="leaveAvatarCard();" ng-mouseover="toggleAvatarCard($event);" data-tooltip="" ng-class="::{'avatars--large': options.isOwnAvatar}">
+                      <!-- ngIf: !senderInfo.provider --><span ng-if="!senderInfo.provider" class="ng-scope"><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content ng-binding ng-scope avatar-content--skin-15" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span>
+                      <!-- end ngIf: !senderInfo.provider -->
+                      <!-- ngIf: senderInfo.provider -->
+                    </div>
+                  </div>
+                  <!-- end ngIf: !isUpdatingAvatar -->
+                  <div class="contact-user-info">
+                    <div class="contact-user-info-name ng-binding" ng-bind="env.ownName || env.ownEmail" data-tooltip="Wanda Sidło<br>wanda.sidlo@interia.pl">Wanda Sidło</div>
+
+                  </div>
+                  <ul class="contact-user-links">
+                    <li class="contact-user-links-item">
+                      <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="link icon-settings" ng-click="showSettings(); $event.preventDefault(); $event.stopPropagation();" data-track-click="settingPanelShow"><span ng-show="isExpanded" data-track-click="settingPanelShow" class="ng-hide"></span></a>
+                    </li>
+
+                  </ul>
+                </header>
+                <!-- end ngIf: ::env.device.isPc -->
+                <!-- ngIf: ::env.device.isMobile -->
+                <div class="contact-actions-bar" ng-show="::env.device.isPc">
+                  <ul class="contact-actions-list clearfix">
+                    <li class="contact-actions-list-item ng-binding icon-arrow-left" ng-hide="isMobile" ng-class="{'icon-arrow-right': isExpanded, 'icon-arrow-left': !isExpanded}" ng-click="toggleExpand();" data-tooltip="Rozwiń panel kontaktów" data-track-click="">Rozwiń</li>
+                    <li class="contact-actions-list-item icon-contact-add ng-hide" ng-class="{'contact-actions-list-item--active': isContactEdited}" ng-show="isExpanded" ng-click="createContact();" data-tooltip="Dodaj kontakt" data-track-click="contactsMainToolbarAddClick">Dodaj</li>
+                    <li class="contact-actions-list-item icon-contact-group ng-hide" ng-class="{'contact-actions-list-item--active': isGroupsVisible}" ng-show="isExpanded" ng-click="isContactEdited = false; isGroupsVisible = true; isSearchVisible = false;" data-tooltip="Zarządzaj grupami kontaktów">Grupy</li>
+                    <li class="contact-actions-list-item dropdown-icon dropdown-icon--arrowdown ng-hide" ng-show="isExpanded" data-tooltip="Opcje dodatkowe" data-track-dropdownopen="contactsMoreOptionsShow">Opcje
+                      <ul nxt-dropdown="" class="ng-isolate-scope dropdown non-selectable">
+                        <!-- li ng-click="activate('facebook')">Importuj kontakty z facebooka</li>
+                              <li ng-click="activate('google')">Importuj kontakty z gmail</li-->
+                        <li ng-click="activate('import')" data-track-click="contactsMoreOptionsImportFile">Importuj kontakty z pliku</li>
+                        <li ng-click="activate('export')" data-track-click="contactsMoreOptionsExportFile">Eksportuj kontakty do pliku</li>
+                        <li ng-click="sortByPopularity()" data-track-click="contactsMoreOptionsSortPopularity">Sortuj: Najpopularniejsze</li>
+                        <li ng-click="sortAlphabetically()" data-track-click="contactsMoreOptionsSortAlfa">Sortuj: Alfabetycznie</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="contact-section-bar ng-hide" ng-show="isExpanded">
+                  <div class="contact-section-bar--group ng-hide" ng-show="!isSearchVisible &amp;&amp; !isContactEdited"><span ng-form="" name="contactGroupForm" class="ng-pristine ng-valid"><!-- ngIf: ::env.device.isPc --><label class="label label--strong ng-scope" ng-if="::env.device.isPc">Grupa</label><!-- end ngIf: ::env.device.isPc --><!-- ngIf: selectedGroup --><!-- ngIf: !selectedGroup --><span ng-if="!selectedGroup" class="ng-scope"><input class="input input--disabled" name="name" disabled="" readonly="" placeholder="Wszystkie grupy"></span>
+                    <!-- end ngIf: !selectedGroup -->
+                    </span>
+                    <!-- ngIf: groups.length !== undefined -->
+                    <label class="label label--inside label--dropdown ng-scope dropdown-icon dropdown-icon--arrowdown" ng-if="groups.length !== undefined" ng-show="!isGroupAdd">
+                      <ul nxt-dropdown="" class="ng-isolate-scope dropdown non-selectable">
+                        <li ng-click="clearSelectedGroup();">Wszystkie grupy</li>
+                        <!-- ngIf: ::isCorp -->
+                        <!-- ngRepeat: group in groups | destroy -->
+                        <li><a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="link" ng-click="addGroup(); $event.preventDefault();">+ Dodaj nową grupę</a></li>
+                      </ul>
+                    </label>
+                    <!-- end ngIf: groups.length !== undefined -->
+                  </div>
+                  <!-- ngIf: ::env.device.isPc -->
+                  <div class="contact-section-bar--search ng-scope" ng-show="isSearchVisible" ng-if="::env.device.isPc">
+                    <input type="search" class="input input--full ng-pristine ng-untouched ng-valid" name="contact_search" id="contact-search" ng-model="data.search" placeholder="Szukaj kontaktu" data-track-change="useSearcherContact" ng-change="searchChange()">
+                    <label class="label label--inside icon-close ng-hide" ng-click="data.search = undefined;searchChange()" data-tooltip="Wyczyść szukaną frazę" data-track-click="searcherContactClose" ng-show="data.search.length > 0"></label>
+                  </div>
+                  <!-- end ngIf: ::env.device.isPc -->
+                  <div class="contact-section-bar--edit ng-hide" ng-show="isContactEdited &amp;&amp; !env.device.isMobile">
+                    <label class="label ng-binding" ng-bind="(contactEdited.id ? 'Edytuj Kontakt' : 'Dodaj Kontakt')">Dodaj Kontakt</label>
+                  </div>
+                </div>
+                <ul class="contact-list" ng-class="{'contact-list--is-group-edited': isGroupEdited, 'contact-list--loading': contactIsLoading}" nxt-scroll-detector="contact-list:scroll" nxt-attached-scroll-detectors="contact-list:scroll">
+                  <li class="contact-list-item">
+                    <div class="element-contact">
+                    <span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-16" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span>
+                    <h4 class="contact-name">Bartek</h4>
+                    </div>
+                  </li>
+
+                  <li class="contact-list-item">
+                    <div class="element-contact">
+                    <span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-16" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span>
+                    <h4 class="contact-name">Biuro Obsługi Klienta</h4>
+                    </div>
+                  </li>
+                  <!-- ngRepeat: contact in contacts -->
+
+              <!-- end ngRepeat: contact in contacts -->
+
+            <!-- end ngRepeat: contact in contacts -->
+
+            <!-- ngIf: isGroupEdited -->
+            <!-- ngRepeat: contact in otherContacts -->
+            </ul>
+
+            <!-- ngIf: isContactEdited -->
+            <!-- ngIf: panel -->
+            </div>
     </div>
     <form id="msg-opener-form" method="post" action="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#"></form>
     <div id="footer">
@@ -1274,52 +1496,6 @@
     <script type="text/javascript" src="./Odebrane/inpl.browser.js"></script>
     <script type="text/javascript" src="./Odebrane/interiaToolbar.min.js"></script>
 
-    <div id="toolbar" class="inplToolbarShort" style="display: none">
-      <ul class="toolbarUl">
-        <li class="dingLi"><span class="dingWidget intWidget active" id="wgt_ding"><div class="widget widgetOff"><div class="widgetIconContainer"> <a class="dingHref widgetIcon" href="//ding.interia.pl" style="">Ding<div class="count"><span class="incentive"></span></div>
-    </a>
-    </div>
-    </div>
-    </span>
-    </li>
-    <li class="webmailSettingsLi hasInjectedIcon" id="webmailSettingsMainLi"><a class="subMenuActivator" data-activate="mailSettingsBox" href="#://ustawienia.interia.pl/">Ustawienia poczty</a><span class="uAraquo subMenuActivator" data-activate="mailSettingsBox"></span>
-      <div class="widgetContainer" id="mailSettingsBox"><span class="uAraquo subMenuActivator" data-activate="mailSettingsBox"></span>
-        <div class="widgetContent">
-          <div class="userAction" id="webmailSettingsMenu">
-            <ul>
-              <li><a class="menu-bold goToNext" href="#://interia.hit.gemius.pl/hitredir/id=10aQBGOUo_VE6Ksq9G0Z3OW0P6OR8G7cMXdn3f0oeLT.q7/url=#%3A%2F%2Fpoczta.interia.pl%2Fnext%2F">Nowa poczta!</a></li>
-              <li data-gemius="ApTg8q9L4xeJl6G2uv1tAbR5LU9WR2btEMSyP2Uub5j.q7"><a class="webmailNewAlias hideAfterClick" href="#">Zmień nazwę konta</a></li>
-              <li><a class="menu-bold" href="#://konto.interia.pl/haslo/odzyskiwanie-dostepu" target="_blank">Zabezpiecz hasło</a></li>
-              <li data-gemius="1vaQnWNUo2V0I6raBH9Zz5PafbuGLYbkicDVpuh0QwX.E7"><a href="#://ustawienia.interia.pl/">Ustawienia</a></li>
-              <li data-gemius="d1Y64YMubv0EnfKsf.4mGIaTHXIpLMeTboil1xeOU7n.Y7"><a href="#://konto.interia.pl/haslo/zmiana">Zmień hasło</a></li>
-              <li data-gemius="zUowPerXk2SfHruK6VFp54aTfSUpLIbAbmgvIJcLg3j._7"><a class="webmailThemeChoose hideAfterClick" href="#">Zmień kolor</a></li>
-              <li class="dotted" data-gemius="1vaQ.WNUo_V_nkrdlHcxg5Pa31OGLa8H6S6hMLgrgJb._7"><a class="menu-bold" href="#://ustawienia.interia.pl/poczta/bez-reklam/">Wyłącz reklamy</a></li>
-              <li data-gemius="d1aaoYMuf36u04Hd.DsOYYaTP50pLG9YDq_xNJ_aWBL.G7"><a target="_blank" href="#://info.poczta.interia.pl/pomoc/">Pomoc</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="userAccountCreateLi" style="display: none;"><a href="//konto.interia.pl/nowe-konto">Załóż Konto Interia</a></li>
-    <li class="userAccountLi">
-      <div class="userNotLogged" style="display: none;"><a class="loginHref" href="//konto.interia.pl/logowanie?referer=#%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail">Zaloguj się</a></div>
-      <div class="userLogged"><span class="uAmail subMenuActivator user-email" data-activate="accountBox"></span><span class="uAraquo subMenuActivator" data-activate="accountBox"></span>
-        <div class="widgetContainer" id="accountBox"><span class="uAraquo subMenuActivator" data-activate="accountBox"></span>
-          <div class="widgetContent">
-            <div class="userAction" id="userAction">
-              <ul>
-                <li class="dotted"><a href="//konto.interia.pl">Ustawienia Konta Interia</a></li>
-                <li class="userLogout"><a href="./Interia%20-%20Polska%20i%20s%CC%81wiat_%20informacje,%20sport,%20gwiazdy..html">Wyloguj <span class="userRaquo">»</span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        </div>
-    </li>
-    </ul>
-
-    </div>
-
     <script type="text/javascript">
       //<![CDATA[
 
@@ -1397,7 +1573,6 @@
         var textareaContent = localStorage.getItem("divToTextarea");
         var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmianyw sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
 
-
         console.log(richContent);
         document.getElementById("emFoot_1").innerHTML = richContent;
 
@@ -1412,7 +1587,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = innerHTML = 'Re: ' + 'Re: ' + titleOutput.toString();
           }
         })();
 
@@ -1425,30 +1600,23 @@
           }
         })();
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////
-
-        var newName = localStorage.getItem("newName");
-        var newTitleOutput = localStorage.getItem("newTitle");
-        var newMessageContent = localStorage.getItem("newMessage");
-
-        (function assignNewSender() {
-          var newSenderName = document.getElementsByClassName("new-message-sender");
-          console.log(newSenderName);
-          for(var i = 0; i < newSenderName.length; i++) {
-          newSenderName[i].innerHTML = newName.toString();
-          }
-        })();
-
-        (function assignNewTitle() {
-          var newMessageTitle = document.getElementsByClassName("new-message-title");
-          for(var i = 0; i < newMessageTitle.length; i++) {
-          newMessageTitle[i].innerHTML = 'Re: ' + newTitleOutput.toString();
-          }
-        })();
-
+        document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + textareaContent.toString();
+        console.log(localStorage.getItem("divToTextarea"));
       });
 
+    </script>
+
+    <script>
+    setTimeout(function() {
+  $('#main-notice').fadeOut('fast');
+}, 3000);
+    </script>
+
+    <script>
+
+    document.getElementById("login-out-user-mask").addEventListener("click", function(){
+        document.getElementById("hook-loginout-action").style.display = "block";
+    });
     </script>
   </body>
 

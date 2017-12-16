@@ -13,13 +13,13 @@
 
     <link type="text/css" rel="stylesheet" href="./css/Odebrane2.css">
     <link type="text/css" rel="stylesheet" href="./css/Odebrane3.css">
+    <link type="text/css" rel="stylesheet" href="./css/Odebrane3b.css">
     <link rel="stylesheet" href="./css/Odebrane4.css">
     <link rel="stylesheet" href="./css/Odebrane5.css">
     <link rel="stylesheet" href="./css/Odebrane6.css">
     <link rel="stylesheet" href="./css/Odebrane7-base.css">
     <link rel="stylesheet" href="./css/Odebrane8.css">
 
-    <link rel="stylesheet" href="./css/Odebrane6.css">
     <link type="text/css" rel="stylesheet" href="./css/main.css">
     <title>Odebrane (344) - Poczta w Interii</title>
     <link rel="shortcut icon" href="#://poczta.interia.pl/favmix.ico">
@@ -129,15 +129,26 @@
 
             </div>
             <div id="rightContent" style="min-height: 660px;">
-              <ul class="new-navigation-update">
+              <ul class="new-navigation-update new-navigation-update-shadow">
 
-                  <li class="title-header">
-                    <div>
-                      <div>
-                        <span class="icon-all-accounts"></span><span class="all-accounts">Wszystkie konta</span>
-                      </div>
-                      <div class="new-nav-title">Odebrane</div>
-                    </li>
+                <li id="nav1" class="toolbar">
+                  <button onclick="location.href='./Odebrane7b.htm';" id="responseT_nav1" class="responseT act icon-reply" title="Odpowiedz nadawcy">
+                    <span>Odpowiedz</span></button><span class="mSeparator"></span>
+                    <button id="forwardT_nav1" class="forwardT last act icon-mobile-send" disabled="">
+
+                      <span>Prześlij dalej</span>
+                    </button><span class="separator"></span>
+                    <button id="moveMsg_nav1" class="moveMsg act icon-action-move" disabled="">
+
+                      <span>Przenieś</span></button><span class="mSeparator"></span>
+                    <button id="removeBtn_nav1" class="removeBtn act icon-trash" disabled="">
+
+                      <span>Usuń</span></button><span class="mSeparator"></span>
+                    <button id="spamT_nav1" class="spamT last act icon-spam" disabled="">
+                    <span>Uznaj za spam</span></button><span class="separator"></span>
+                    <button id="printBtn_nav1" class="printBtn last act icon-arrow-down" disabled="">
+                      <span>Więcej</span></button>
+                </li>
                     <li class="advertisement">
                       <a href="#://interia.hit.gemius.pl/hitredir/id=dvaVVIOuySx01gA8FKEw_adzrmGU0Jr4Fg7oihQmG5H.j7/url=#://forum.interia.pl/dlaczego-storczyk-nie-kwitnie-tematy,dId,3059329" target="_blank" id="additionalNavLink"><span class="adNavLeft">Sprawdzone sposoby<br>na piękne storczyki!</span><span class="adNavLinkButton"> Zobacz<span class="adNavRaquo"> »</span></span></a></li>
                     <li class="search-header">
@@ -149,37 +160,37 @@
                     </li>
                     </ul>
               <div id="tabs" class="tabs">
-                <div id="outerTabHeaderCont" class=" dropTarget" style="visibility:hidden"> <span class="scrollable-left scrollable-arrow scrollable-inactive " style="display: none;"><span class="scLeft"><a title="Przewiń w lewo"><b>◀</b></a></span></span><span class="scrollable-right scrollable-arrow" style="display: none;"><span class="scRight"><a title="Przewiń w prawo"><b>▶</b></a></span></span>
-                                  <div class="scrollable-wrapper">
-                                    <div id="tabHeaderCont" class="tabsHeader">
-                                      <ul id="tabsHeader" class="tabsList">
-                                        <li class="tabHeader tab-permanent activeHeaderTab border-tab">
-                                          <div><span title="Odebrane">Odebrane</span></div>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                </div>
-                              </div>
+                <div id="outerTabHeaderCont" class=" dropTarget "> <span class="scrollable-left scrollable-arrow scrollable-inactive " style="display: none;"><span class="scLeft"><a title="Przewiń w lewo"><b>◀</b></a></span></span><span class="scrollable-right scrollable-arrow" style="display: none;"><span class="scRight"><a title="Przewiń w prawo"><b>▶</b></a></span></span>
+                  <div class="scrollable-wrapper">
+                    <div id="tabHeaderCont" class="tabsHeader">
+                      <ul id="tabsHeader" class="tabsList">
+                        <li class="tabHeader tab-permanent activeHeaderTab border-tab">
+                          <div><span title="Odebrane">Odebrane</span></div>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
               <div id="tabBodyCont" style="margin:0">
                 <div class="tabBody activeBodyTab ">
                   <div id="msglist_1" class="mailList msglist-fld_1">
                     <div id="outMails_1" class="outMails">
                       <div class="msglist-header">
                         <div class="floatedColumnHeader">
-                          <div class="msglist-head-date"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości po dacie" class="selected"><span>Data</span><i></i></a></div>
-                          <div class="msglist-head-size"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości po rozmiarze"><span>Rozmiar</span><i></i></a></div>
-                          <div class="filter-chooser-container"><a class="filter-chooser" href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Filtruj wiadomości"><b></b></a></div>
+                          <div class="msglist-head-date"><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości po dacie" class="selected"><span>Data</span><i></i></a></div>
+                          <div class="msglist-head-size"><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości po rozmiarze"><span>Rozmiar</span><i></i></a></div>
+                          <div class="filter-chooser-container"><a class="filter-chooser" href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Filtruj wiadomości"><b></b></a></div>
                         </div>
                         <div class="msglist-head-check">
                           <input id="checkAll_1" type="checkbox" title="Zaznacz/odznacz wszystkie">
                         </div>
-                        <div class="msglist-head-flag"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości wg flag"><b class="filter-icon filter-icon-fb">&nbsp;</b></a></div>
-                        <div class="msglist-head-from"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości alfabetycznie"><span>Od</span><i></i></a></div>
-                        <div class="msglist-head-subject"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości alfabetycznie"><span>Temat</span><i></i></a></div>
+                        <div class="msglist-head-flag"><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości wg flag"><b class="filter-icon filter-icon-fb">&nbsp;</b></a></div>
+                        <div class="msglist-head-from"><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości alfabetycznie"><span>Od</span><i></i></a></div>
+                        <div class="msglist-head-subject"><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Posortuj wiadomości alfabetycznie"><span>Temat</span><i></i></a></div>
                       </div>
-                      <div class="msglist-notice"><span class=""></span><a href="#://ustawienia.interia.pl/poczta/bez-reklam/?utm_source=poczta_html&amp;utm_medium=zolta_belka&amp;utm_campaign=posprzataj_poczte">Posprzątaj pocztę »</a></div>
+                      <div class="msglist-notice"><span class=""></span><a href="#s://ustawienia.interia.pl/poczta/bez-reklam/?utm_source=poczta_html&amp;utm_medium=zolta_belka&amp;utm_campaign=posprzataj_poczte">Posprzątaj pocztę »</a></div>
                       <div class="mails-container" id="mailsTbContainer_1"
-                      style="height: 316px;">
+                      style="height: 216px;">
                         <table class="mTable" id="mailsTable_1">
                           <tbody id="mailsTbBody_1">
                             <tr class="msglist-msg-tr ch first " id="mailsTable_1_item_0">
@@ -198,21 +209,21 @@
                               <td class="msglist-date" title="2017-11-30 12:45">dziś, 12:45</td>
                               <td class="msglist-size">131 kB</td>
                             </tr>
-                            <tr onclick="location.href='./Odebrane8a.htm';" class="msglist-msg-tr ch " id="mailsTable_1_item_1">
+                            <tr class="msglist-msg-tr ch active-tr font-400" id="mailsTable_1_item_20">
                               <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" id="abc">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" checked>
                               </td>
                               <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
+                              <td class="msglist-threads"><span class="msg-status msg-status-re"></span></td>
+                              <td class="msglist-from" title="wanda.sidlo@interia.pl">
                                 <div class="new-message-sender"><span></span></div>
                               </td>
-                              <td class="msglist-subject" title="Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.">
-                                <div class="new-message-title"></div>
+                              <td class="msglist-subject new-message-title" title="Erasmus">
+                                <div></div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
-                              <td class="msglist-size">106 kB</td>
+                              <td class="msglist-date" title="2017-11-26 17:22">26 lis, 17:22</td>
+                              <td class="msglist-size">2 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_2">
                               <td class="msglist-check">
@@ -248,7 +259,7 @@
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_4">
                               <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" id="on-select-display-message">
                               </td>
                               <td class="msglist-flag none"><span></span></td>
                               <td class="msglist-threads"><span class="msg-status "></span></td>
@@ -263,7 +274,7 @@
                               <td class="msglist-size">112 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_5">
-                              <td class="msglist-check">
+                              <td class="msglist-check" id="abc">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
                               </td>
                               <td class="msglist-flag none"><span></span></td>
@@ -501,22 +512,6 @@
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-26 18:00">26 lis, 18:00</td>
                               <td class="msglist-size">46 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_20">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="wanda.sidlo@interia.pl">
-                                <div><span></span>Wanda Sidło</div>
-                              </td>
-                              <td class="msglist-subject" title="Erasmus">
-                                <div>Erasmus</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-26 17:22">26 lis, 17:22</td>
-                              <td class="msglist-size">2 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_21">
                               <td class="msglist-check">
@@ -988,33 +983,74 @@
                       <div class="packs-container">
                         <div class="packs">
                           <ul class="packs-list">
-                            <li class="pack-selected"><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p1">1</a></li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p2">2</a></li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p3">3</a></li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p4">4</a></li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p5">5</a></li>
+                            <li class="pack-selected"><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#p1">1</a></li>
+                            <li class=""><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#p2">2</a></li>
+                            <li class=""><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#p3">3</a></li>
+                            <li class=""><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#p4">4</a></li>
+                            <li class=""><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#p5">5</a></li>
                             <li>…</li>
-                            <li class=""><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#p8">8</a></li>
+                            <li class=""><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#p8">8</a></li>
                           </ul>
                         </div>
                       </div>
-                      <div class="msgListSub msgListSub-left"><span class="thread-mode-switcher">Wątkowanie:&nbsp;</span><a class="thread-mode-switcher" href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Włącz wątkowanie">włącz</a></div>
-                      <div class="msgListSub msgListSub-right"><span>Podgląd:&nbsp;</span><a href="#://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Wyłącz podgląd wiadomości">wyłącz</a></div>
+                      <div class="msgListSub msgListSub-left"><span class="thread-mode-switcher">Wątkowanie:&nbsp;</span><a class="thread-mode-switcher" href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Włącz wątkowanie">włącz</a></div>
+                      <div class="msgListSub msgListSub-right"><span>Podgląd:&nbsp;</span><a href="#s://poczta.interia.pl/html/?uid=d093d38a3a12245d#" title="Wyłącz podgląd wiadomości">wyłącz</a></div>
                       <div id="drag" class="slideCr">
                         <div></div>
                       </div>
-                      <div class="mails-framecontainer">
-                        <div class="mail-wrapper" frameborder="0" src="./Odebrane/mailads.html">
-                          <img src="./assets/750x2001.jpg">
-                        </div>
-                        <div class="hide" id="emFoot_1"></div>
-                      </div>
+                      <div class="mails-framecontainer"><div class="mails-headerscontainer " id="emHead_1"><div class="emHead"><span class="message-date"><b>Data: </b>2017-11-26 17:22</span><span class="header-switch" title="Wyświetl/ukryj pełny nagłówek"> </span><span class="emSubject compose-subject_3">Erasmus</span><dl><dt>Od:</dt><dd>Wanda Sidło &lt;<a href="mailto:&quot;Wanda Sidło&quot; &lt;wanda.sidlo@interia.pl&gt;">wanda.sidlo@interia.pl</a>&gt;</dd><br>
+                        <dt title="Do:">Do:</dt><span class="new-message-sender" style="margin-left:3px"><a href="mailto:wanda.sidlo@interia.pl"></a></dt><br></span><div class="hide extHead" id="extHead1"><ul><li><b>Date:</b> Sun, 26 Nov 2017 17:22:44 +0100
+                      </li><li><b>From:</b> Wanda Sidło &lt;wanda.sidlo@interia.pl&gt;
+                      </li><li><b>Subject:</b> Erasmus
+                      </li><li><b>To:</b> wanda.sidlo@interia.pl
+                      </li><li><b>X-Mailer:</b> interia.pl/pf09
+                      </li><li><b>X-Originating-IP:</b> 37.8.231.12
+                      </li><li><b>Message-Id:</b> &lt;pmkwhflktxpzqnmdoumo@xwpd&gt;
+                      </li><li><b>MIME-Version:</b> 1.0
+                      </li><li><b>Content-Type:</b> multipart/alternative; boundary="=-svIFY1Zu35G5FhpEIRqD"
+                      </li><li><b>X-IPL-POID:</b> 4
+                      </li><li><b>X-IPL-SAS-UREP:</b> 0
+                      </li><li><b>X-IPL-SAS-UREP-PRIV:</b> 0
+                      </li><li><b>X-IPL-SAS:</b> 0
+                      </li><li><b>X-IPL-Envelope-To:</b> wanda.sidlo@interia.pl
+                      </li><li><b>DKIM-Signature:</b> v=1; a=rsa-sha256; c=relaxed/relaxed; d=interia.pl;
+                      </li><li>	s=biztos; t=1511713364;
+                      </li><li>	bh=x0174VtTpJ1tNaoNHVDFPk3RMaJuyzv+SNy9QO5NW8E=;
+                      </li><li>	h=Date:From:Subject:To:X-Mailer:X-Originating-IP:Message-Id:
+                      </li><li>	 MIME-Version:Content-Type:X-IPL-POID:X-IPL-SAS-UREP:
+                      </li><li>	 X-IPL-SAS-UREP-PRIV:X-IPL-SAS:X-IPL-Envelope-To;
+                      </li><li>	b=puRQzKJi09oKe44+yWPfO+osnsmkxxOV8/fTJNa38JsdqtwTXXg00SoETM4ZXwxng
+                      </li><li>	 iNnhftEkjWM2HKC/Ig+u32BVbhkBdKzDTYV79gxUgDokOrc9drCF/O9nFbHKB2qLtU
+                      </li><li>	 h+C10o+F+tzDEULbQpSJdnHpyZVesYxKQPGYpm1o=
+                      </li><li></li></ul></div></div></div><div name="mail-frame-1" id="mail-frame-1" class="mail-frame" frameborder="0" src="about:blank" style=""></div><div class=" " id="emFoot_1" style="height:200px;"></div></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="bottomIcons toolbar" id="bottIco" style="display: none;"></div>
+            <div class="bottomIcons toolbar" id="bottIco" style="">
+              <ul class="new-navigation-update new-navigation-update-shadow">
+
+                <li id="nav1" class="toolbar">
+                  <button onclick="location.href='./Odebrane7b.htm';" id="responseT_nav1" class="responseT act icon-reply" title="Odpowiedz nadawcy">
+                    <span>Odpowiedz</span></button><span class="mSeparator"></span>
+                    <button id="forwardT_nav1" class="forwardT last act icon-mobile-send" disabled="">
+
+                      <span>Prześlij dalej</span>
+                    </button><span class="separator"></span>
+                    <button id="moveMsg_nav1" class="moveMsg act icon-action-move" disabled="">
+
+                      <span>Przenieś</span></button><span class="mSeparator"></span>
+                    <button id="removeBtn_nav1" class="removeBtn act icon-trash" disabled="">
+
+                      <span>Usuń</span></button><span class="mSeparator"></span>
+                    <button id="spamT_nav1" class="spamT last act icon-spam" disabled="">
+                    <span>Uznaj za spam</span></button><span class="separator"></span>
+                    <button id="printBtn_nav1" class="printBtn last act icon-arrow-down" disabled="">
+                      <span>Więcej</span></button>
+                </li>
+              </ul>
+                        </div>
             <div id="bottomAd"></div>
           </div>
         </div>

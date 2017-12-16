@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)#://poczta.interia.pl/#iwa_source=sg_ikona -->
+<html lang="pl">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Language" content="pl">
+    <title>logowanie</title>
+
+  </head>
+  <!--[if lt IE 9]> <body class="ielt9"> <![endif]-->
+  <!--[if gt IE 8]><!-->
+
+  <body class=" transitionsOn">
+
+    <input type="text" id="realName" name="realName">
+    <button id="saveRealName" onclick="location.href='./index.htm';inputRealData()">Rozpocznij test!</button>
+  </body>
+
+      <script type="text/javascript" src="js/jquery-1.12.2.js"></script>
+
+      <script>
+        function inputRealData(){
+          var realName = document.getElementById("realName").value;
+
+          localStorage.setItem('realName',realName);
+
+
+          //$('#message-textarea').val(localStorage.getItem("message"));
+          //$('#compose-subject_3').val(localStorage.getItem("title"));
+
+        };
+      </script>
+
+  </body>
+
+</html>

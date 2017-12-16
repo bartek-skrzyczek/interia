@@ -4,17 +4,28 @@
   content: "";
   display: table;
   clear: both;
-  padding: 20px 0;
+  padding: 10px 0;
   margin:0;
 }
 
 .title-header {
   float: left;
   margin-left:30px;
+  padding: 10px 0;
 }
 
 body {
   padding-left: 0!important;
+  font: 400 12px Roboto,sans-serif;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 12px;
+  line-height: normal;
+  font-family: Roboto, sans-serif;
 }
 
 .hektor-logo {
@@ -34,4 +45,96 @@ body {
   left: 0;
   width: 185px;
   background-repeat: no-repeat;
+}
+
+#nav1 {
+  float: left;
+  padding: 9px 5px;
+}
+
+.icon-reply:before, .icon-mobile-send:before, .icon-trash:before, .icon-action-move:before, .icon-spam:before, .icon-arrow-down:before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-size: 28px;
+  left: 0;
+}
+
+.icon-spam:before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-size: 28px;
+}
+
+.icon-trash:before {
+  left:0;
+}
+
+.icon-mobile-send:before {
+  font-size:21px;
+  top:6px;
+}
+
+.icon-action-move:before {
+  font-size:50px;
+}
+
+.new-navigation-update {
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 12px;
+  line-height: normal;
+  font-family: Roboto, sans-serif!important;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.icon-action-move:before {
+  top:-9px;
+}
+
+.icon-arrow-down:before {
+  top: 3px;
+  font-size:22px;
+}
+
+.new-navigation-update-shadow:after
+{
+  background: linear-gradient(#000,#F7F7F7);
+  bottom: -7px;
+  content: '';
+  display: block;
+  height: 6px;
+  left: 0;
+  opacity: .35;
+  position: absolute;
+  right: 0;
+  z-index:1;
+}
+
+.composition-options {
+  border-color: #d1d1d1;
+  border-bottom: 1px;
+}
+
+.icon-fill-blue {
+  fill: #059!important;
+}
+
+.notice-content {
+  background-color: #5FBE64;
+  padding: 10px 35px 9px;
+  position: relative;
+  text-align: center;
+  text-overflow: ellipsis;
+
+  color: #FFF;
+    font-size: 13px;
+    font-weight: 700;
+    list-style-type: none;
 }
