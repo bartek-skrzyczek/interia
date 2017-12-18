@@ -8,6 +8,16 @@ body, #header, #navigation, #tabHeaderCont, .packs-container, .msglist-header {b
 
 }
 
+.msglist-flag span, .thread-subitem, .thread-switch {
+    background-image: url(../assets/common.12.png);
+}
+
+.msg-status-re {
+    background: url(../assets/common.12.png) -34px -28px no-repeat;
+    height: 8px!important;
+    margin-top: 10px;
+}
+
 .mTable tr:hover, #attgal-main>ul>li:hover, .attachments-images-list li:hover {
   background-color: #EBEBEB!important;
 }
@@ -56,4 +66,5 @@ li.activeHeaderTab {
   margin: 0 0 0 .8ex;
   border-left: 1px #ccc solid;
   padding-left: 1ex;
+  display: inline-block;
 }

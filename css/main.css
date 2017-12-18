@@ -41,6 +41,10 @@
     justify-content: center;
 }
 
+.main-cta:focus {
+  
+}
+
 .main-cta span {
   height: 20px;
   text-transform: uppercase;
