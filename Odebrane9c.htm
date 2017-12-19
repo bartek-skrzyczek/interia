@@ -42,15 +42,15 @@
       <div nxt-avatar="" nxt-avatar-options="{'imgClass': 'C435', 'isOwnAvatar': true}" data-tooltip-stop-propagation="">
         <div class="avatars-simple-container avatars--large" ng-click="toggleAvatarCard($event);" ng-mouseleave="leaveAvatarCard();" ng-mouseover="toggleAvatarCard($event);" data-tooltip="" ng-class="::{'avatars--large': options.isOwnAvatar}"><span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-15" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span></div>
       </div><a class="link" ng-href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia">Zmień awatar</a>
-      <div class="settings-user-info-name txt-overflow"
-      ng-bind="env.ownName" ng-show="::env.ownName" data-tooltip="Bartek Skrzyczek">Bartek Skrzyczek</div>
-      <div class="settings-user-info-email txt-overflow" ng-bind-html="::breakLineOwnEmail" ng-show="::env.ownEmail" data-tooltip="bartek.skrzyczek@interia.pl">bartek.skrzyczek
+      <div class="settings-user-info-name txt-overflow real-name"
+      ng-bind="env.ownName" ng-show="::env.ownName" data-tooltip="Bartek Skrzyczek"></div>
+      <div class="settings-user-info-email txt-overflow user-email" ng-bind-html="::breakLineOwnEmail" ng-show="::env.ownEmail" data-tooltip="bartek.skrzyczek@interia.pl">bartek.skrzyczek
         <br>@interia.pl</div>
     </div>
     <div class="settings-user-info-logout">
       <div class="settings-user-info-logout-time" ng-bind-html="::getLastLoginText()">Ostatnie logowanie:
         <br>2017-12-13</div><a ng-href="#://interia.hit.gemius.pl/hitredir/id=0ig7YC8kFJmzxBNx4qL5QWaG7FRZSdAG1BSZ7sJNsmz.K7/url=#s://konto.interia.pl/wyloguj?referer=#%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail"
-      class="button" data-track-click="settingPanelLogout" href="#://interia.hit.gemius.pl/hitredir/id=0ig7YC8kFJmzxBNx4qL5QWaG7FRZSdAG1BSZ7sJNsmz.K7/url=#s://konto.interia.pl/wyloguj?referer=#%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail">Wyloguj</a></div>
+      class="button" data-track-click="settingPanelLogout" href="./login-out11.htm">Wyloguj</a></div>
   </div>
   <!-- ngIf: ::!isMobile -->
   <div nxt-bind-html-compile="autopromo" ng-if="::!isMobile">
@@ -314,38 +314,6 @@
                       style="height: 316px;">
                         <table class="mTable" id="mailsTable_1">
                           <tbody id="mailsTbBody_1">
-                            <tr class="msglist-msg-tr ch active-tr" id="mailsTable_1_item_20">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status msg-status-re"></span></td>
-                              <td class="msglist-from" title="wanda.sidlo@interia.pl">
-                                <div class="new-message-sender"><span></span></div>
-                              </td>
-                              <td class="msglist-subject new-message-title" title="Erasmus">
-                                <div></div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-26 17:22">26 lis, 17:22</td>
-                              <td class="msglist-size">2 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_1">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" id="abc">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>.pl - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.">
-                                <div>Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
-                              <td class="msglist-size">106 kB</td>
-                            </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_2">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
@@ -359,24 +327,8 @@
                                 <div>Wyprzedaż markowych kurtek zimowych Canada Goose i inne już od 349zł! Sprawdź teraz!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-29 18:00">dziś, 18:00</td>
                               <td class="msglist-size">129 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_3">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Sexshop112.pl - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="Dyskretny czny. Sprawdź &gt;&gt;">
-                                <div>Dyskretny czny. Sprawdź &gt;&gt;</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 08:37">29 lis, 08:37</td>
-                              <td class="msglist-size">59 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_4">
                               <td class="msglist-check">
@@ -391,7 +343,7 @@
                                 <div>Sprawdź, jaką kwotę powinien dopłacić Ci ubezpieczyciel z OC/AC</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 07:30">29 lis, 07:30</td>
+                              <td class="msglist-date" title="2017-11-29 07:30">dziś, 07:30</td>
                               <td class="msglist-size">112 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_5">
@@ -407,7 +359,7 @@
                                 <div>Mój tata ma raka... a Ty możesz pomóc!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-28 18:00">4 mar, 18:00</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_6">
@@ -423,7 +375,7 @@
                                 <div>Wyprzedaż markowych kurtek zimowych Canada Goose i inne już od 349zł! Sprawdź teraz!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-28 18:00">4 mar, 18:00</td>
                               <td class="msglist-size">129 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_7">
@@ -439,8 +391,264 @@
                                 <div>Zakręć kołem, wygraj i krzyknij: JACKPOT!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-28 18:00">4 mar, 18:00</td>
                               <td class="msglist-size">68 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_8">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Guns&amp;Tuxedos - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Black Week w G&amp;T. Wszystko -60%.">
+                                <div>Black Week w G&amp;T. Wszystko -60%.</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-28 18:00">4 mar, 18:00</td>
+                              <td class="msglist-size">74 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_9">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Alior Bank - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Mamy dla Ciebie pożyczkę internetową z prowizją 0%! Sprawdź">
+                                <div>Mamy dla Ciebie pożyczkę internetową z prowizją 0%! Sprawdź</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-28 09:45">4 mar, 09:45</td>
+                              <td class="msglist-size">70 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_10">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Strefa.pl - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Taka okazja! 24 zł/rok »">
+                                <div>Taka okazja! 24 zł/rok »</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-28 07:00">4 mar, 07:00</td>
+                              <td class="msglist-size">71 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_11">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Shoperia.pl - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Szukasz prezentu dla Niej? Tysiące pomysłów czeka na Shoperia.pl">
+                                <div>Szukasz prezentu dla Niej? Tysiące pomysłów czeka na Shoperia.pl</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-28 07:00">4 mar, 07:00</td>
+                              <td class="msglist-size">70 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_12">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Extraportfel (Creamfinance Poland) - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Szybka i bezpieczna pożyczka na 45 dni za 0 zł.">
+                                <div>Szybka i bezpieczna pożyczka na 45 dni za 0 zł.</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-27 23:59">3 mar, 23:59</td>
+                              <td class="msglist-size">37 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_13">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Święta bez wstydu? Musisz znać kolędy!">
+                                <div>Święta bez wstydu? Musisz znać kolędy!</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
+                              <td class="msglist-size">62 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_14">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Pożyczka online (Wonga.pl) - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Brakuje na zakupy? Pożycz z wonga.com.">
+                                <div>Brakuje na zakupy? Pożycz z wonga.com.</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
+                              <td class="msglist-size">85 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_15">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>ING Bank Śląski - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Otwórz Konto Direct w promocji i odbierz 100 zł">
+                                <div>Otwórz Konto Direct w promocji i odbierz 100 zł</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
+                              <td class="msglist-size">116 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_16">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Marvint - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Wyprzedaż markowych kurtek zimowych Canada Goose i inne już od 349zł! Sprawdź teraz!">
+                                <div>Wyprzedaż markowych kurtek zimowych Canada Goose i inne już od 349zł! Sprawdź teraz!</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
+                              <td class="msglist-size">129 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_17">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Jackpot (Whow Games GmbH) - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Jackpot- graj za darmo już dziś!">
+                                <div>Jackpot- graj za darmo już dziś!</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
+                              <td class="msglist-size">82 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_19">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Euro-Tax.pl - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Przyspiesz swój zwrot podatku z zagranicy">
+                                <div>Przyspiesz swój zwrot podatku z zagranicy</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-26 18:00">2 mar, 18:00</td>
+                              <td class="msglist-size">46 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_21">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Alior Bank - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Pożyczka 5% na przymiarkę – weź i sprawdź czy Ci pasuje">
+                                <div>Pożyczka 5% na przymiarkę – weź i sprawdź czy Ci pasuje</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-24 18:00">1 mar, 18:00</td>
+                              <td class="msglist-size">58 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_22">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>AXA TFI - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Tnij podatki w AXA IKZE, zyskaj nawet 1637 zł">
+                                <div>Tnij podatki w AXA IKZE, zyskaj nawet 1637 zł</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-24 18:00">1 mar, 18:00</td>
+                              <td class="msglist-size">68 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_23">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Paweł z Clicka - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="U nas ryby zawsze biorą! Odbierz bonus i GRAJ!">
+                                <div>U nas ryby zawsze biorą! Odbierz bonus i GRAJ!</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-24 18:00">1 mar, 18:00</td>
+                              <td class="msglist-size">70 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_24">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Jackpot (Whow Games GmbH) - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Odkryj sposób na nudę z Jackpot.">
+                                <div>Odkryj sposób na nudę z Jackpot.</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-24 18:00">1 mar, 18:00</td>
+                              <td class="msglist-size">86 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_25">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Gramy.Interia.pl - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="Dziś Black Friday, skorzystaj z promocji i WYGRYWAJ!">
+                                <div>Dziś Black Friday, skorzystaj z promocji i WYGRYWAJ!</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-24 13:00">1 mar, 13:00</td>
+                              <td class="msglist-size">70 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_8">
                               <td class="msglist-check">
@@ -1169,7 +1377,7 @@
                   </div>
                   <!-- end ngIf: !isUpdatingAvatar -->
                   <div class="contact-user-info">
-                    <div class="contact-user-info-name ng-binding" ng-bind="env.ownName || env.ownEmail" data-tooltip="Wanda Sidło<br>wanda.sidlo@interia.pl">Wanda Sidło</div>
+                    <div class="contact-user-info-name ng-binding real-name" ng-bind="env.ownName || env.ownEmail" data-tooltip="Wanda Sidło<br>wanda.sidlo@interia.pl">Wanda Sidło</div>
 
                   </div>
                   <ul class="contact-user-links">
@@ -1227,7 +1435,7 @@
                   <li class="contact-list-item">
                     <div class="element-contact">
                     <span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-16" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span>
-                    <h4 class="contact-name">Bartek</h4>
+                    <h4 class="contact-name emTo_3"></h4>
                     </div>
                   </li>
 
@@ -1570,11 +1778,6 @@
         var textAreaInput = localStorage.getItem("message");
         var titleOutput = localStorage.getItem("title");
         var nameOutput = localStorage.getItem("name");
-        var textareaContent = localStorage.getItem("divToTextarea");
-        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmianyw sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
-
-        console.log(richContent);
-        document.getElementById("emFoot_1").innerHTML = richContent;
 
         (function assignSender() {
           var senderName = document.getElementsByClassName("emTo_3");
@@ -1587,7 +1790,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
           }
         })();
 
@@ -1600,10 +1803,24 @@
           }
         })();
 
-        document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + textareaContent.toString();
-        console.log(localStorage.getItem("divToTextarea"));
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+        var newName = localStorage.getItem("newName");
+        var newTitleOutput = localStorage.getItem("newTitle");
+        var newMessageContent = localStorage.getItem("newMessage");
       });
 
+    </script>
+
+    <script>
+      var realName = localStorage.getItem("realName");
+      (function assignRealName() {
+        var userName = document.getElementsByClassName("real-name");
+        for(var i = 0; i < userName.length; i++) {
+          userName[i].innerHTML = realName.toString();
+        }
+      })();
     </script>
 
     <script>
@@ -1618,6 +1835,7 @@
         document.getElementById("hook-loginout-action").style.display = "block";
     });
     </script>
+
   </body>
 
 </html>

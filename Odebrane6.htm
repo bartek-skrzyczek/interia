@@ -144,8 +144,16 @@
             </div>
             <div id="rightContent" style="min-height: 660px;">
               <div id="tabs" class="tabs">
-                <div id="outerTabHeaderCont" class=" dropTarget "> <span class="scrollable-left scrollable-arrow scrollable-inactive " style="display: none;"><span class="scLeft"><a title="Przewiń w lewo"><b>◀</b></a></span></span><span class="scrollable-right scrollable-arrow" style="display: none;"><span class="scRight"><a title="Przewiń w prawo"><b>▶</b></a></span></span>
-                  <div class="scrollable-wrapper">
+                <div id="outerTabHeaderCont" class=" dropTarget" style="visibility:hidden"> <span class="scrollable-left scrollable-arrow scrollable-inactive " style="display: none;"><span class="scLeft"><a title="Przewiń w lewo"><b>◀</b></a></span></span><span class="scrollable-right scrollable-arrow" style="display: none;"><span class="scRight"><a title="Przewiń w prawo"><b>▶</b></a></span></span>
+                  <div
+                  class="scrollable-wrapper">
+                    <div id="tabHeaderCont" class="tabsHeader">
+                      <ul id="tabsHeader" class="tabsList">
+                        <li class="tabHeader tab-permanent activeHeaderTab border-tab">
+                          <div><span title="Odebrane">Odebrane</span></div>
+                        </li>
+                      </ul>
+                    </div>
                 </div>
               </div>
               <div id="tabBodyCont" style="margin:0">
@@ -1342,10 +1350,7 @@
         var titleOutput = localStorage.getItem("title");
         var nameOutput = localStorage.getItem("name");
         var textareaContent = localStorage.getItem("divToTextarea");
-        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmianyw sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
-
-        console.log(richContent);
-        document.getElementById("emFoot_1").innerHTML = richContent;
+        
 
         (function assignSender() {
           var senderName = document.getElementsByClassName("emTo_3");

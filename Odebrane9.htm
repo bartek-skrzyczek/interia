@@ -75,7 +75,7 @@
                           <!-- ngIf: ::env.device.isMobile -->
                           <ul class="navigation-list navigation-list--main">
                             <!-- ngIf: ::!isTouch -->
-                            <li class="navigation-item ng-scope" ng-if="::!isTouch"><a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#" class="navigation-button navigation-button--big navigation-button--new icon-new" ng-click="openComposition(); $event.preventDefault();" data-track-click="mainNewMes" data-tooltip="Napisz wiadomość" data-tooltip-left=""><span class="navigation-item-label">Nowa</span></a></li>
+                            <li onclick="location.href='./Odebrane9b.htm';" class="navigation-item ng-scope" ng-if="::!isTouch"><a href="./Odebrane9b.htm" class="navigation-button navigation-button--big navigation-button--new icon-new" data-track-click="mainNewMes" data-tooltip="Napisz wiadomość" data-tooltip-left=""><span class="navigation-item-label">Nowa</span></a></li>
                             <!-- end ngIf: ::!isTouch -->
                             <li class="navigation-item navigation-item--inbox navigation-item--separator" ng-class="::{'navigation-item--separator': !isTouch}">
                               <a href="#s://poczta.interia.pl/next/?uid=d580f55bc729ae1f#/folder/1?iwa_source=log_p_zaloguj" title="Odebrane (399)" data-track-click="folderInbox" class="navigation-button navigation-button--big navigation-button--inbox icon-inbox navigation-button--active" ng-class="{'navigation-button--active': folders.INBOX == activeFolderId &amp;&amp; !isSearch}" ui-sref="folder({'folderId': folders.INBOX, 'sort': null, 'search': null, 'searchf': null, 'filter': null, 'mode': null, 'withComposition': null, 'page': null})"><span class="navigation-item-label">Odebrane</span> <span class="navigation-item-counter ng-binding ng-hide" ng-show="counters.folders[folders.INBOX] > 0" ng-class="{'navigation-item-counter--4': counters.folders[folders.INBOX] > 999,
@@ -178,38 +178,6 @@
                       style="height: 316px;">
                         <table class="mTable" id="mailsTable_1">
                           <tbody id="mailsTbBody_1">
-                            <tr class="msglist-msg-tr ch active-tr" id="mailsTable_1_item_20">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status msg-status-re"></span></td>
-                              <td class="msglist-from" title="wanda.sidlo@interia.pl">
-                                <div class="new-message-sender"><span></span></div>
-                              </td>
-                              <td class="msglist-subject new-message-title" title="Erasmus">
-                                <div></div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-26 17:22">26 lis, 17:22</td>
-                              <td class="msglist-size">2 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_1">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" id="abc">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>.pl - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.">
-                                <div>Zacznij kontrolować swój orgazm - Hit sprzedaży 2017 ! Last Longer.</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
-                              <td class="msglist-size">106 kB</td>
-                            </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_2">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
@@ -223,24 +191,8 @@
                                 <div>Wyprzedaż markowych kurtek zimowych Canada Goose i inne już od 349zł! Sprawdź teraz!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-29 18:00">dziś, 18:00</td>
                               <td class="msglist-size">129 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_3">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Sexshop112.pl - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="Dyskretny czny. Sprawdź &gt;&gt;">
-                                <div>Dyskretny czny. Sprawdź &gt;&gt;</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 08:37">29 lis, 08:37</td>
-                              <td class="msglist-size">59 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_4">
                               <td class="msglist-check">
@@ -255,7 +207,7 @@
                                 <div>Sprawdź, jaką kwotę powinien dopłacić Ci ubezpieczyciel z OC/AC</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 07:30">29 lis, 07:30</td>
+                              <td class="msglist-date" title="2017-11-29 07:30">dziś, 07:30</td>
                               <td class="msglist-size">112 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_5">
@@ -271,7 +223,7 @@
                                 <div>Mój tata ma raka... a Ty możesz pomóc!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-28 18:00">4 mar, 18:00</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_6">
@@ -287,7 +239,7 @@
                                 <div>Wyprzedaż markowych kurtek zimowych Canada Goose i inne już od 349zł! Sprawdź teraz!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-28 18:00">4 mar, 18:00</td>
                               <td class="msglist-size">129 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_7">
@@ -303,7 +255,7 @@
                                 <div>Zakręć kołem, wygraj i krzyknij: JACKPOT!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-28 18:00">4 mar, 18:00</td>
                               <td class="msglist-size">68 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_8">
@@ -319,7 +271,7 @@
                                 <div>Black Week w G&amp;T. Wszystko -60%.</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 18:00">28 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-28 18:00">4 mar, 18:00</td>
                               <td class="msglist-size">74 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_9">
@@ -335,7 +287,7 @@
                                 <div>Mamy dla Ciebie pożyczkę internetową z prowizją 0%! Sprawdź</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 09:45">28 lis, 09:45</td>
+                              <td class="msglist-date" title="2017-11-28 09:45">4 mar, 09:45</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_10">
@@ -351,7 +303,7 @@
                                 <div>Taka okazja! 24 zł/rok »</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 07:00">28 lis, 07:00</td>
+                              <td class="msglist-date" title="2017-11-28 07:00">4 mar, 07:00</td>
                               <td class="msglist-size">71 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_11">
@@ -367,7 +319,7 @@
                                 <div>Szukasz prezentu dla Niej? Tysiące pomysłów czeka na Shoperia.pl</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-28 07:00">28 lis, 07:00</td>
+                              <td class="msglist-date" title="2017-11-28 07:00">4 mar, 07:00</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_12">
@@ -383,7 +335,7 @@
                                 <div>Szybka i bezpieczna pożyczka na 45 dni za 0 zł.</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-27 23:59">27 lis, 23:59</td>
+                              <td class="msglist-date" title="2017-11-27 23:59">3 mar, 23:59</td>
                               <td class="msglist-size">37 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_13">
@@ -399,7 +351,7 @@
                                 <div>Święta bez wstydu? Musisz znać kolędy!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
                               <td class="msglist-size">62 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_14">
@@ -415,7 +367,7 @@
                                 <div>Brakuje na zakupy? Pożycz z wonga.com.</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
                               <td class="msglist-size">85 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_15">
@@ -431,7 +383,7 @@
                                 <div>Otwórz Konto Direct w promocji i odbierz 100 zł</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
                               <td class="msglist-size">116 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_16">
@@ -447,7 +399,7 @@
                                 <div>Wyprzedaż markowych kurtek zimowych Canada Goose i inne już od 349zł! Sprawdź teraz!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
                               <td class="msglist-size">129 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_17">
@@ -463,24 +415,8 @@
                                 <div>Jackpot- graj za darmo już dziś!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-27 18:00">27 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-27 18:00">3 mar, 18:00</td>
                               <td class="msglist-size">82 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_18">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Sexshop112.pl - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="Dyskretny czny. Sprawdź &gt;&gt;">
-                                <div>Dyskretny czny. Sprawdź &gt;&gt;</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-26 20:00">26 lis, 20:00</td>
-                              <td class="msglist-size">59 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_19">
                               <td class="msglist-check">
@@ -495,24 +431,8 @@
                                 <div>Przyspiesz swój zwrot podatku z zagranicy</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-26 18:00">26 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-26 18:00">2 mar, 18:00</td>
                               <td class="msglist-size">46 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_20">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="wanda.sidlo@interia.pl">
-                                <div><span></span>Wanda Sidło</div>
-                              </td>
-                              <td class="msglist-subject" title="Erasmus">
-                                <div>Erasmus</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-26 17:22">26 lis, 17:22</td>
-                              <td class="msglist-size">2 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_21">
                               <td class="msglist-check">
@@ -527,7 +447,7 @@
                                 <div>Pożyczka 5% na przymiarkę – weź i sprawdź czy Ci pasuje</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-24 18:00">24 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-24 18:00">1 mar, 18:00</td>
                               <td class="msglist-size">58 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_22">
@@ -543,7 +463,7 @@
                                 <div>Tnij podatki w AXA IKZE, zyskaj nawet 1637 zł</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-24 18:00">24 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-24 18:00">1 mar, 18:00</td>
                               <td class="msglist-size">68 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_23">
@@ -559,7 +479,7 @@
                                 <div>U nas ryby zawsze biorą! Odbierz bonus i GRAJ!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-24 18:00">24 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-24 18:00">1 mar, 18:00</td>
                               <td class="msglist-size">70 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_24">
@@ -575,7 +495,7 @@
                                 <div>Odkryj sposób na nudę z Jackpot.</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-24 18:00">24 lis, 18:00</td>
+                              <td class="msglist-date" title="2017-11-24 18:00">1 mar, 18:00</td>
                               <td class="msglist-size">86 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_25">
@@ -591,8 +511,24 @@
                                 <div>Dziś Black Friday, skorzystaj z promocji i WYGRYWAJ!</div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-24 13:00">24 lis, 13:00</td>
+                              <td class="msglist-date" title="2017-11-24 13:00">1 mar, 13:00</td>
                               <td class="msglist-size">70 kB</td>
+                            </tr>
+                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_26">
+                              <td class="msglist-check">
+                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
+                              </td>
+                              <td class="msglist-flag none"><span></span></td>
+                              <td class="msglist-threads"><span class="msg-status "></span></td>
+                              <td class="msglist-from" title="mailing@interia.pl">
+                                <div><span></span>Guns&amp;Tuxedos - dostarczone przez Interię</div>
+                              </td>
+                              <td class="msglist-subject" title="-60% na wszystko - Black Friday,Saturday i Sunday w Guns&amp;Tuxedos.">
+                                <div>-60% na wszystko - Black Friday,Saturday i Sunday w Guns&amp;Tuxedos.</div>
+                              </td>
+                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
+                              <td class="msglist-date" title="2017-11-23 23:59">13 lut, 23:59</td>
+                              <td class="msglist-size">95 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_26">
                               <td class="msglist-check">
@@ -610,22 +546,6 @@
                               <td class="msglist-date" title="2017-11-23 23:59">23 lis, 23:59</td>
                               <td class="msglist-size">95 kB</td>
                             </tr>
-                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_27">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>.pl - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="Wibratory wielofunkcyjne - teraz z mega rabatem do - 60%! ">
-                                <div>Wibratory wielofunkcyjne - teraz z mega rabatem do - 60%! </div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-23 18:00">23 lis, 18:00</td>
-                              <td class="msglist-size">106 kB</td>
-                            </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_28">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
@@ -641,22 +561,6 @@
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-22 23:59">22 lis, 23:59</td>
                               <td class="msglist-size">57 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr  " id="mailsTable_1_item_29">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Sexshop112.pl - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="Dyskretny czny. Sprawdź &gt;&gt;">
-                                <div>Dyskretny czny. Sprawdź &gt;&gt;</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-22 19:00">22 lis, 19:00</td>
-                              <td class="msglist-size">73 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_30">
                               <td class="msglist-check">
@@ -1033,7 +937,7 @@
                   </div>
                   <!-- end ngIf: !isUpdatingAvatar -->
                   <div class="contact-user-info">
-                    <div class="contact-user-info-name ng-binding" ng-bind="env.ownName || env.ownEmail" data-tooltip="Wanda Sidło<br>wanda.sidlo@interia.pl">Wanda Sidło</div>
+                    <div class="contact-user-info-name ng-binding real-name" ng-bind="env.ownName || env.ownEmail" data-tooltip="Wanda Sidło<br>wanda.sidlo@interia.pl">Wanda Sidło</div>
 
                   </div>
                   <ul class="contact-user-links">
@@ -1091,7 +995,7 @@
                   <li class="contact-list-item">
                     <div class="element-contact">
                     <span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-16" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span>
-                    <h4 class="contact-name">Bartek</h4>
+                    <h4 class="contact-name emTo_3"></h4>
                     </div>
                   </li>
 
@@ -1434,11 +1338,6 @@
         var textAreaInput = localStorage.getItem("message");
         var titleOutput = localStorage.getItem("title");
         var nameOutput = localStorage.getItem("name");
-        var textareaContent = localStorage.getItem("divToTextarea");
-        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmianyw sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
-
-        console.log(richContent);
-        document.getElementById("emFoot_1").innerHTML = richContent;
 
         (function assignSender() {
           var senderName = document.getElementsByClassName("emTo_3");
@@ -1451,7 +1350,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
           }
         })();
 
@@ -1464,8 +1363,43 @@
           }
         })();
 
-        document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + textareaContent.toString();
-        console.log(localStorage.getItem("divToTextarea"));
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+        var newName = localStorage.getItem("newName");
+        var newTitleOutput = localStorage.getItem("newTitle");
+        var newMessageContent = localStorage.getItem("newMessage");
+
+        (function assignNewSender() {
+          var newSenderName = document.getElementsByClassName("new-message-sender");
+          console.log(newSenderName);
+          for(var i = 0; i < newSenderName.length; i++) {
+          newSenderName[i].innerHTML = newName.toString();
+          }
+        })();
+
+        (function assignNewTitle() {
+          var newMessageTitle = document.getElementsByClassName("new-message-title");
+          for(var i = 0; i < newMessageTitle.length; i++) {
+          newMessageTitle[i].innerHTML = 'Re: ' + newTitleOutput.toString();
+          }
+        })();
+
+        (function assignNewMessage() {
+          var newMessageContent = document.getElementsByClassName("new-message-content");
+          for(var i = 0; i < newMessageContent.length; i++) {
+          newMessageContent[i].innerHTML = newMessageContent.toString();
+          }
+        })();
+
+        var realName = localStorage.getItem("realName");
+        (function assignRealName() {
+          var userName = document.getElementsByClassName("real-name");
+          for(var i = 0; i < userName.length; i++) {
+            userName[i].innerHTML = realName.toString();
+          }
+        })();
+
       });
 
     </script>

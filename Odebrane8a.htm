@@ -132,7 +132,7 @@
               <ul class="new-navigation-update new-navigation-update-shadow">
 
                 <li id="nav1" class="toolbar">
-                  <button onclick="location.href='./Odebrane7b.htm';" id="responseT_nav1" class="responseT act icon-reply" title="Odpowiedz nadawcy">
+                  <button onclick="location.href='./Odebrane8b.htm';" id="responseT_nav1" class="responseT act icon-reply" title="Odpowiedz nadawcy">
                     <span>Odpowiedz</span></button><span class="mSeparator"></span>
                     <button id="forwardT_nav1" class="forwardT last act icon-mobile-send" disabled="">
 
@@ -216,9 +216,9 @@
                               <td class="msglist-flag none"><span></span></td>
                               <td class="msglist-threads"><span class="msg-status msg-status-re"></span></td>
                               <td class="msglist-from" title="wanda.sidlo@interia.pl">
-                                <div class="new-message-sender"><span></span></div>
+                                <div class="emTo_3"><span></span></div>
                               </td>
-                              <td class="msglist-subject new-message-title" title="Erasmus">
+                              <td class="msglist-subject compose-subject_3" title="Erasmus">
                                 <div></div>
                               </td>
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
@@ -240,22 +240,6 @@
                               <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
                               <td class="msglist-date" title="2017-11-29 18:00">29 lis, 18:00</td>
                               <td class="msglist-size">129 kB</td>
-                            </tr>
-                            <tr class="msglist-msg-tr ch " id="mailsTable_1_item_3">
-                              <td class="msglist-check">
-                                <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable">
-                              </td>
-                              <td class="msglist-flag none"><span></span></td>
-                              <td class="msglist-threads"><span class="msg-status "></span></td>
-                              <td class="msglist-from" title="mailing@interia.pl">
-                                <div><span></span>Sexshop112.pl - dostarczone przez Interię</div>
-                              </td>
-                              <td class="msglist-subject" title="Dyskretny czny. Sprawdź &gt;&gt;">
-                                <div>Dyskretny czny. Sprawdź &gt;&gt;</div>
-                              </td>
-                              <td class="msglist-prioatt"><span class="msg-priority-normal"></span></td>
-                              <td class="msglist-date" title="2017-11-29 08:37">29 lis, 08:37</td>
-                              <td class="msglist-size">59 kB</td>
                             </tr>
                             <tr class="msglist-msg-tr ch " id="mailsTable_1_item_4">
                               <td class="msglist-check">
@@ -1032,7 +1016,7 @@
               <ul class="new-navigation-update new-navigation-update-shadow">
 
                 <li id="nav1" class="toolbar">
-                  <button onclick="location.href='./Odebrane7b.htm';" id="responseT_nav1" class="responseT act icon-reply" title="Odpowiedz nadawcy">
+                  <button onclick="location.href='./Odebrane8b.htm';" id="responseT_nav1" class="responseT act icon-reply" title="Odpowiedz nadawcy">
                     <span>Odpowiedz</span></button><span class="mSeparator"></span>
                     <button id="forwardT_nav1" class="forwardT last act icon-mobile-send" disabled="">
 
@@ -1431,11 +1415,6 @@
         var titleOutput = localStorage.getItem("title");
         var nameOutput = localStorage.getItem("name");
         var textareaContent = localStorage.getItem("divToTextarea");
-        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmianyw sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
-
-
-        console.log(richContent);
-        document.getElementById("emFoot_1").innerHTML = richContent;
 
         (function assignSender() {
           var senderName = document.getElementsByClassName("emTo_3");
@@ -1461,30 +1440,32 @@
           }
         })();
 
+        //document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + textareaContent.toString();
+        //console.log(localStorage.getItem("divToTextarea"));
 
-//////////////////////////////////////////////////////////////////////////////////////////////
 
-        var newName = localStorage.getItem("newName");
-        var newTitleOutput = localStorage.getItem("newTitle");
-        var newMessageContent = localStorage.getItem("newMessage");
+        ////////////////////////////////////////////////////////////////
+        //New data
+        //////////////////////////////////////////////////////////////////
+        var inputTextareaEight = localStorage.getItem("inputTextareaEight");
 
-        (function assignNewSender() {
-          var newSenderName = document.getElementsByClassName("new-message-sender");
-          console.log(newSenderName);
-          for(var i = 0; i < newSenderName.length; i++) {
-          newSenderName[i].innerHTML = newName.toString();
-          }
+        (function displayContent() {
+          var richEight = "Wandziu, " + "<br/>" + "dziękuję za wieść." + "<br/>" + "U mojego wnuka wszystko w najlepszym porządku. Wracam za dwa miesiące i nie będę miała internetu, jadę do Stefci." + "<br/>" + "Pozdrawiam, Krysia. " + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + inputTextareaEight + "</div>";
+          var sevenUpdateMessage = localStorage.setItem('inputTextareaEight',richEight);
+          document.getElementById("emFoot_1").innerHTML = richEight;
         })();
-
-        (function assignNewTitle() {
-          var newMessageTitle = document.getElementsByClassName("new-message-title");
-          for(var i = 0; i < newMessageTitle.length; i++) {
-          newMessageTitle[i].innerHTML = 'Re: ' + newTitleOutput.toString();
-          }
-        })();
-
       });
 
+    </script>
+
+    <script>
+      var realName = localStorage.getItem("realName");
+      (function assignRealName() {
+        var userName = document.getElementsByClassName("real-name");
+        for(var i = 0; i < userName.length; i++) {
+          userName[i].innerHTML = realName.toString();
+        }
+      })();
     </script>
   </body>
 
