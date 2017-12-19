@@ -1,0 +1,46 @@
+.list-bg {
+  background-color: #F7F7F7;
+}
+
+.font-700 {
+  font-weight: 700;
+}
+
+.new-message {
+  font-family: Roboto,sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+.notice {
+    position: fixed;
+    top: -1000px;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    z-index: 1000050;
+    font: 700 11px Tahoma, sans-serif;
+    opacity: .90;
+    filter: alpha(opacity=90);
+}
+
+.notice-content {
+    background-color: #5FBE64;
+    padding: 10px 35px 9px;
+    position: relative;
+    text-align: center;
+    text-overflow: ellipsis;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 700;
+    list-style-type: none;
+}
+
+.notification-actions {
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}

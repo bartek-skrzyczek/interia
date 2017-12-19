@@ -1695,12 +1695,11 @@
     ////////////////////
     // NEW INPUT ///////
       var newMessage = $('#textarea').html();
-      localStorage.setItem('inputTextareaNine',newMessage);
+      localStorage.setItem('newMessage',newMessage);
 
       var newTitle = document.getElementById("new-title").value;
       var newSender = document.getElementById("new-sender").value;
 
-      localStorage.setItem('newMessage',newMessage);
       localStorage.setItem('newTitle',newTitle);
       localStorage.setItem('newSender',newSender);
     };

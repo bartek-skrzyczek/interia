@@ -143,6 +143,7 @@
     <link rel="stylesheet" type="text/css" href="./Poczta w Interii_files/core-1512119433419.min.css">
     <link rel="stylesheet" type="text/css" href="./Poczta w Interii_files/core-1512119433419.min(1).css">
     <link id="theme-stylesheet" rel="stylesheet" type="text/css" href="./Poczta w Interii_files/default-1512119433419.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/Odebrane2.css">
     <link rel="stylesheet" type="text/css" href="./css/Odebrane11.css">
     <style id="userBackground">
 
@@ -283,6 +284,363 @@
       JavaScript w przeglądarce.&lt;p class=noscript-p&gt;Przeczytaj jak włączyć &lt;a target=_blink href=#://info.poczta.interia.pl/pomoc/artykuly,2192752,jak-wlaczyc-obsluge-javascript-w-przegladarce&gt;JavaScript&lt;/a&gt;.&lt;p class=noscript-p&gt;
       Jeżeli Twoja przeglądarka nie obsługuje JS, skorzystaj z &lt;a href='/html/chgsystem,type,touch,uid,d580f55bc729ae1f'&gt;tej wersji poczty&lt;/a&gt;.&lt;/div&gt;</noscript>
     <!-- uiView: contact -->
+
+    <div class="notice" id="main-notice" style="top: 0px;">
+      <p class="notice-content">Wiadomość wysłana</p>
+      <div class="notification-actions"><a class="btn-icon icon-close" style="padding-top:21px"></a></div>
+    </div>
+
+    <div id="hook-loginout-action" class="settings-container" style="display:none">
+  <div class="navigation-header-actions">
+    <button type="button" class="btn-icon icon-close" ng-click="close();" data-track-click="settingPanelClose"></button>
+  </div>
+  <div class="settings-section settings-user-info">
+    <div class="settings-user-info-profile">
+      <div nxt-avatar="" nxt-avatar-options="{'imgClass': 'C435', 'isOwnAvatar': true}" data-tooltip-stop-propagation="">
+        <div class="avatars-simple-container avatars--large" ng-click="toggleAvatarCard($event);" ng-mouseleave="leaveAvatarCard();" ng-mouseover="toggleAvatarCard($event);" data-tooltip="" ng-class="::{'avatars--large': options.isOwnAvatar}"><span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-15" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span></div>
+      </div><a class="link" ng-href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia">Zmień awatar</a>
+      <div class="settings-user-info-name txt-overflow real-name"
+      ng-bind="env.ownName" ng-show="::env.ownName" data-tooltip="Bartek Skrzyczek"></div>
+      <div class="settings-user-info-email txt-overflow user-email" ng-bind-html="::breakLineOwnEmail" ng-show="::env.ownEmail" data-tooltip="bartek.skrzyczek@interia.pl">bartek.skrzyczek
+        <br>@interia.pl</div>
+    </div>
+    <div class="settings-user-info-logout">
+      <div class="settings-user-info-logout-time" ng-bind-html="::getLastLoginText()">Ostatnie logowanie:
+        <br>2017-12-13</div><a ng-href="#://interia.hit.gemius.pl/hitredir/id=0ig7YC8kFJmzxBNx4qL5QWaG7FRZSdAG1BSZ7sJNsmz.K7/url=#s://konto.interia.pl/wyloguj?referer=#%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail"
+      class="button" data-track-click="settingPanelLogout" href="./login-out12.htm">Wyloguj</a></div>
+  </div>
+  <!-- ngIf: ::!isMobile -->
+  <div nxt-bind-html-compile="autopromo" ng-if="::!isMobile">
+    <div class="settings-section settings-section--promo" data-track-click="settingPanelClickAutoPromo">
+      <div class="settings-promo-text settings-promo-text--autopromo">
+        <p class="setting-promo-header">Poczta bez reklam kosztuje</p>
+        <p class="setting-promo-subheader">mniej niż:</p>
+        <img src="./assets/butelka.png" alt="Poczta bez reklam kosztuje mniej niż butelka wody mineralnej" src="#s://o.iplsc.com/n/css/images/autopromo/butelka.png">
+        <p class="setting-promo-caption">Butelka
+          <br>wody</p>
+        <p class="setting-promo-button-title">Na co czekasz?</p>
+        <a class="setting-promo-button" target="_blank" href="#s://ustawienia.interia.pl/poczta/bez-reklam?iwa_source=poczta_ustawienia_v3" data-track-click="settingPanelAutopromo3"></a>
+        <p class="setting-promo-button-caption">Poczta bez reklam <b>tylko 1,23 zł/mc</b></p>
+        <!-- ngIf: ::env.device.isPc && !isCorp -->
+        <p class="settings-copyright settings-copyright--header" ng-if="::env.device.isPc &amp;&amp; !isCorp">
+          Copyright © 1999-2017 <a href="#://firma.interia.pl/o_firmie" target="_blank">INTERIA.PL</a>. Wszystkie prawa zastrzeżone.
+          <br> Korzystanie z portalu oznacza akceptację <a href="#://firma.interia.pl/regulamin" target="_blank">Regulaminu</a>. <a href="#://firma.interia.pl/polityka-cookies" target="_blank">Polityka Cookies</a>
+        </p>
+        <!-- end ngIf: ::env.device.isPc && !isCorp -->
+      </div>
+    </div>
+  </div>
+  <!-- end ngIf: ::!isMobile -->
+  <div class="settings-section-wrapper">
+    <ul class="settings-section settings-section--links">
+      <!-- ngIf: ::disableActions.panelAdmin && env.is_admin -->
+      <!-- ngIf: env.adminBusinessPackType === 1 -->
+      <!-- ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="wizard($event)" ng-href="#s://ustawienia.interia.pl" href="#s://ustawienia.interia.pl">Dostosuj swoją pocztę</a> <span ng-bind-html="::link.description">W jednym miejscu w kilku krokach dostosuj wygląd i działanie poczty do swoich upodobań.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/ustawienia?iwa_source=poczta_ustawienia">Główne ustawienia</a>        <span ng-bind-html="::link.description">Ustaw swojego awatara (dowolny obrazek lub zdjęcie) i określ podstawowe opcje
+ dla swoich wiadomości np. ilość widocznych maili na stronie, sposób dodawania
+ załączników i wiele innych</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/autoresponder/edytuj?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/autoresponder/edytuj?iwa_source=poczta_ustawienia">Automatyczna odpowiedź</a>        <span ng-bind-html="::link.description">Wyjeżdżasz na wakacje? Ustaw automatyczną wiadomość, którą otrzyma każdy kto do ciebie napisze, podczas Twojej nieobecności.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/haslo?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/haslo?iwa_source=poczta_ustawienia">Zmiana hasła i opcji odzyskiwania</a>        <span ng-bind-html="::link.description">Podaj nowe hasło, które trudno złamać oraz wybierz wygodny sposób odzyskiwania aktualnego hasła, na wypadek gdybyś go zapomniał.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/antyspam?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/antyspam?iwa_source=poczta_ustawienia">Antyspam</a> <span ng-bind-html="::link.description">Stwórz swoją własną czarną listę nadawców, od których nie chcesz otrzymywać maili. Tutaj możesz również zdefiniować, od kogo chcesz zawsze dostawać wiadomości.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/konta-zewnetrzne?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/konta-zewnetrzne?iwa_source=poczta_ustawienia">Dodatkowe adresy e-mail</a>        <span ng-bind-html="::link.description">Dodaj wszystkie swoje adresy e-mail z różnych kont (np. WP, Onet, Gmail) do poczty Interii, aby odbierać oraz wysyłać wiadomości w jednym miejscu. Tutaj możesz też dodać nową nazwę swojego konta (alias).</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/bez-reklam?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/bez-reklam?iwa_source=poczta_ustawienia">Poczta bez reklam</a>        <span ng-bind-html="::link.description">Jeśli przeszkadzają ci reklamy, w każdej chwili możesz je szybko tutaj wyłączyć!</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link true" ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#://pomoc.poczta.interia.pl?iwa_source=poczta_ustawienia" href="#://pomoc.poczta.interia.pl?iwa_source=poczta_ustawienia">Pomoc</a> <span ng-bind-html="::link.description">Tutaj znajdziesz odpowiedzi na najczęściej zadawane pytania oraz wszystkie potrzebne informacje dotyczące np. konfiguracji poczty w telefonie.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/filtry?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/filtry?iwa_source=poczta_ustawienia">Uporządkuj pocztę</a>
+        <span
+        ng-bind-html="::link.description">Zdecyduj, do których folderów mają trafić wybrane przez ciebie wiadomości</span>
+      </li>
+      <!-- end ngRepeat: link in ::links -->
+      <li class="settings-link " ng-repeat="link in ::links"><a class="link txt-overflow" target="_blank" ng-click="" ng-href="#s://ustawienia.interia.pl/poczta/podpis?iwa_source=poczta_ustawienia" href="#s://ustawienia.interia.pl/poczta/podpis?iwa_source=poczta_ustawienia">Ustaw podpisy</a> <span ng-bind-html="::link.description">Nie trać czasu na podpisywanie się w każdej wiadomości - ustaw jeden lub kilka podpisów, które dodamy automatycznie.</span></li>
+      <!-- end ngRepeat: link in ::links -->
+    </ul>
+    <section class="settings-section settings-section--skins">
+      <h3 class="settings-skins-label"><span class="bubble-wrapper-empty" nxt-bubble="2" nxt-bubble-extra-padd="[69,98]"></span>Wybierz kolor swojej poczty <span class="bubble-wrapper-empty" nxt-bubble="-1" nxt-bubble-extra-padd="[350,90]"></span></h3>
+      <div nxt-carousel="">
+        <!-- ngIf: carouselMode -->
+        <button class="carousel-button carousel-button--prev icon-slideshow-left" ng-click="prev()" ng-hide="withoutButtons" ng-if="carouselMode" ng-disabled="disabledPrev" nxt-stop-touch-propagation="" disabled="disabled"></button>
+        <!-- end ngIf: carouselMode -->
+        <div class="settings-skins" ng-class="{'settings-skins--without-buttons':withoutButtons}" nxt-stop-touch-propagation="">
+          <div class="settings-skins-carousel">
+            <div nxt-select-skin=""></div>
+            <!-- ngIf: !hasUserHadOwnSkin() && !hideUserSkinSelect -->
+            <div class="settings-skin-add-new" ng-click="openUserThemeWindow()" ng-if="!hasUserHadOwnSkin() &amp;&amp; !hideUserSkinSelect"><span class="settings-skin-name--add-new">Wgraj tło</span></div>
+            <!-- end ngIf: !hasUserHadOwnSkin() && !hideUserSkinSelect -->
+            <!-- ngIf: hasUserHadOwnSkin() && !hideUserSkinSelect -->
+            <!-- ngRepeat: theme in themes -->
+            <div class="settings-skin settings-skin-name--active" ng-repeat="theme in themes" data-skin="default" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Domyślny</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="reindeer" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Świąteczna</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="mint" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Mięta</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="sunflower" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Słonecznik</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="grape" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Winogrono</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <div class="settings-skin" ng-repeat="theme in themes" data-skin="spider" ng-click="selectTheme(theme)" ng-class="{'settings-skin-name--active': activeId == theme.id}">
+              <div class="settings-skin-name" ng-bind="::theme.name">Spider</div>
+            </div>
+            <!-- end ngRepeat: theme in themes -->
+            <!-- ngRepeat: theme in fakeThemes -->
+          </div>
+        </div>
+        <!-- ngIf: carouselMode -->
+        <button class="carousel-button carousel-button--next icon-slideshow-right" ng-click="next()" ng-hide="withoutButtons" ng-if="carouselMode" ng-disabled="disabledNext" nxt-stop-touch-propagation=""></button>
+        <!-- end ngIf: carouselMode -->
+        <div nxt-theme=""></div>
+      </div>
+    </section>
+  </div>
+  <!-- ngIf: disableActions.changeInterface -->
+  <footer class="settings-section settings-section--footer" ng-if="disableActions.changeInterface">
+    <!-- ngIf: ::changeable -->
+    <!-- end ngIf: ::changeable -->
+  </footer>
+  <!-- end ngIf: disableActions.changeInterface -->
+</div>
+
+    <div nxt-dialog="" class="" ng-repeat="d in dialogs track by d.id" nxt-movable="true" nxt-auto-center-vertically="" nxt-title="Nowa wiadomość" nxt-id="composition_1" nxt-template="/dialog/views/dialog_composition.html" nxt-params="d" style="z-index: 121; top: 40px; left: 420.906px; display:none">
+      <div class="dialog-header dialog-header--visible" nxt-movable-handler="" ng-dblclick="toggleMaximize();" ng-click="unMinimize(); $event.stopPropagation();" ng-class="{'dialog-header--no-title': !title, 'dialog-header--visible': params.isHeaderVisible}"
+      ng-show="!params.isHeaderHidden">
+        <!-- ngIf: ::params.isClosable -->
+        <div ng-if="::params.isClosable" class="dialog-header-button icon-close" ng-click="close(); $event.stopPropagation();" ng-mousedown="$event.stopPropagation();" data-tooltip="Zamknij"></div>
+        <!-- end ngIf: ::params.isClosable -->
+        <!-- ngIf: ::params.isMaximizable -->
+        <div ng-if="::params.isMaximizable" class="dialog-header-button icon-maximize" ng-click="toggleMaximize(); $event.stopPropagation();" ng-mousedown="$event.stopPropagation();" data-tooltip="Pełny ekran"></div>
+        <!-- end ngIf: ::params.isMaximizable -->
+        <!-- ngIf: ::params.isMinimizable -->
+        <div ng-if="::params.isMinimizable" class="dialog-header-button icon-minimize" ng-click="toggleMinimize(); $event.stopPropagation();" ng-mousedown="$event.stopPropagation();" data-tooltip="Minimalizuj"></div>
+        <!-- end ngIf: ::params.isMinimizable -->
+        <!-- ngIf: title --><span class="dialog-header-title" title="Nowa wiadomość" ng-if="title">Nowa wiadomość</span>
+        <!-- end ngIf: title -->
+      </div>
+      <!-- ngInclude: template -->
+      <div ng-include="template">
+        <div nxt-composition="" nxt-dialogid="composition_1">
+          <div class="composition-wrapper" ng-mousedown="activateComposition()" ng-class="{'sending-disabled': !isSendingEnabled, 'composition-wrapper--right-min': !isFloatWindow &amp;&amp; rightColumnMin &amp;&amp; isHTML}" nxt-update-composition-size="" style="max-height: 252.8px; margin-bottom: 64px;">
+            <div class="composition-actions ng-hide" ng-show="mode === 'embeded'">
+              <div class="composition-actions-item composition-menu dropdown-icon dropdown-icon--arrowdown" tabindex="-1" data-tooltip="Opcje wiadomości" data-track-click="newMailMoreAction" ng-hide="$parent.isSimplified">
+                <ul nxt-dropdown="" class="dropdown non-selectable">
+                  <li ng-click="save()" data-track-click="newMailSave">Zapisz jako robocze</li>
+                  <li ng-hide="isReplyingToSingle || opt !== 'ra'" ng-click="replyToSingle()" class="ng-hide">Odpowiedz tylko nadawcy</li>
+                  <li ng-show="isReplyingToSingle &amp;&amp; opt === 'ra'" ng-click="replyToAll()" class="ng-hide">Odpowiedz wszystkim</li>
+                </ul>
+              </div>
+              <div class="composition-actions-item icon-maximize" ng-click="popOutComposition()"></div>
+            </div>
+            <div ng-hide="mode === 'embeded'" class="composition-actions-item composition-menu dropdown-icon dropdown-icon--arrowdown" tabindex="-1" data-tooltip="Opcje wiadomości" data-track-click="newMailMoreAction">
+              <ul nxt-dropdown="" class="dropdown non-selectable">
+                <li ng-click="save()" data-track-click="newMailSave">Zapisz jako robocze</li>
+                <li ng-hide="isReplyingToSingle || opt !== 'ra'" ng-click="replyToSingle()" class="ng-hide">Odpowiedz tylko nadawcy</li>
+                <li ng-show="isReplyingToSingle &amp;&amp; opt === 'ra'" ng-click="replyToAll()" class="ng-hide">Odpowiedz wszystkim</li>
+              </ul>
+            </div>
+            <!-- ngIf: filteredAccounts -->
+            <div ng-if="filteredAccounts" class="composition-from" nxt-simple-dropdown="" data-tooltip="Wybierz adres z którego chcesz wysłać wiadomość" data-tooltip-horizontal-offset="15" data-tooltip-top="">
+              <div class="composition-from-selected" ng-bind="sender.display_name + ' <' + sender.email + '>'">Bartek Skrzyczek &lt;bartek.skrzyczek@interia.pl&gt;</div>
+              <div nxt-simple-dropdown-content="" class="composition-from-list">
+                <!-- ngRepeat: a in filteredAccounts track by a.email -->
+                <div ng-repeat="a in filteredAccounts track by a.email" class="composition-from-list-element" ng-click="$event.stopPropagation(); setSender(a)" ng-bind="::a.display_name + ' <' + a.email + '>'">Bartek Skrzyczek &lt;bartek.skrzyczek@interia.pl&gt;</div>
+                <!-- end ngRepeat: a in filteredAccounts track by a.email -->
+                <div ng-repeat="a in filteredAccounts track by a.email" class="composition-from-list-element" ng-click="$event.stopPropagation(); setSender(a)" ng-bind="::a.display_name + ' <' + a.email + '>'">bart.skrzyczek &lt;bart.skrzyczek@gmail.com&gt;</div>
+                <!-- end ngRepeat: a in filteredAccounts track by a.email -->
+                <div class="composition-from-list-element composition-from-list-element--new" ng-click="addAccount()">dodaj nowe konto</div>
+              </div>
+              <!-- ngIf: filteredAccounts.length <= 1 -->
+            </div>
+            <!-- end ngIf: filteredAccounts -->
+            <div nxt-email-input-plain-group="" nxt-to="to" nxt-cc="cc" nxt-bcc="bcc" nxt-embeded="mode == 'embeded'">
+              <div class="composition-all-recipients ng-hide" ng-click="startEditing()" ng-hide="isEditing || allRecipients.bcc.length || allRecipients.cc.length" title=""></div>
+              <div class="composition-ommited-counter ng-hide" ng-show="recipientsCounter > 0 &amp;&amp; !isEditing" ng-click="startEditing()">(w sumie )</div>
+              <div nxt-is-editing="isEditing" nxt-email-input-plain="" nxt-name="composition-to" class="composition-to" nxt-basevalue="to" ng-blur="update()" ng-show="isEditing || (allRecipients.to.length &amp;&amp; !isEditing &amp;&amp; (allRecipients.cc.length || allRecipients.bcc.length))">
+                <div class="email-input-plain composition-field" nxt-simple-dropdown="" nxt-simple-dropdown-opened="inputNodeLength &amp;&amp; !isSuggestHidden &amp;&amp; isEditing" data-position-absolute="" data-tooltip-in-parents="">
+                  <!-- ngRepeat: s in selectedContacts -->
+                  <textarea placeholder=" " autocorrect="off" autocapitalize="off" autocomplete="false" spellcheck="false" nxt-autogrow-input="" class="email-input-plain-input" ng-keyup="inputChange($event)" ng-keydown="inputTab($event)" ng-blur="blurHandler()"
+                  ng-focus="focusHandler()" ng-paste="pasteHandler()" data-tooltip-in-parents="" style="width: 396.469px; height: 30px;"></textarea>
+                  <div nxt-simple-dropdown-content="" class="email-input-plain-suggest">
+                    <!-- ngRepeat: c in contacts -->
+                    <!-- ngRepeat: group in groups track by group.id -->
+                  </div>
+                </div>
+              </div>
+              <div class="composition-switches" ng-show="isEditing">
+                <div class="composition-show composition-show--cc" ng-hide="isCCShown" ng-click="showCC(true); $event.preventDefault()" data-tooltip="Dodaj adresatów (kopia jawna)" data-tooltip-horizontal-offset="-5" data-tooltip-top="">DW</div>
+                <div class="composition-show composition-show--bcc" ng-hide="isBCCShown" ng-click="showBCC(true); $event.preventDefault()" data-tooltip="Dodaj adresatów (kopia ukryta)" data-tooltip-top="">UDW</div>
+              </div>
+              <div nxt-is-editing="isEditing" nxt-email-input-plain="" nxt-name="composition-cc" class="composition-cc ng-hide" nxt-basevalue="cc" ng-show="(isCCShown &amp;&amp; isEditing) || (allRecipients.cc.length &amp;&amp; !isEditing)" ng-blur="update()"
+              data-tooltip-stop-propagation="">
+                <div class="email-input-plain composition-field" nxt-simple-dropdown="" nxt-simple-dropdown-opened="inputNodeLength &amp;&amp; !isSuggestHidden &amp;&amp; isEditing" data-position-absolute="" data-tooltip-in-parents="">
+                  <!-- ngRepeat: s in selectedContacts -->
+                  <textarea placeholder=" " autocorrect="off" autocapitalize="off" autocomplete="false" spellcheck="false" nxt-autogrow-input="" class="email-input-plain-input" ng-keyup="inputChange($event)" ng-keydown="inputTab($event)" ng-blur="blurHandler()"
+                  ng-focus="focusHandler()" ng-paste="pasteHandler()" data-tooltip-in-parents="" style="height: 30px;"></textarea>
+                  <div nxt-simple-dropdown-content="" class="email-input-plain-suggest">
+                    <!-- ngRepeat: c in contacts -->
+                    <!-- ngRepeat: group in groups track by group.id -->
+                  </div>
+                </div>
+              </div>
+              <div nxt-is-editing="isEditing" nxt-email-input-plain="" nxt-name="composition-bcc" class="composition-bcc ng-hide" nxt-basevalue="bcc" ng-show="(isBCCShown &amp;&amp; isEditing) || (allRecipients.bcc.length &amp;&amp; !isEditing)" ng-blur="update()"
+              data-tooltip-stop-propagation="">
+                <div class="email-input-plain composition-field" nxt-simple-dropdown="" nxt-simple-dropdown-opened="inputNodeLength &amp;&amp; !isSuggestHidden &amp;&amp; isEditing" data-position-absolute="" data-tooltip-in-parents="">
+                  <!-- ngRepeat: s in selectedContacts -->
+                  <textarea placeholder=" " autocorrect="off" autocapitalize="off" autocomplete="false" spellcheck="false" nxt-autogrow-input="" class="email-input-plain-input" ng-keyup="inputChange($event)" ng-keydown="inputTab($event)" ng-blur="blurHandler()"
+                  ng-focus="focusHandler()" ng-paste="pasteHandler()" data-tooltip-in-parents="" style="height: 30px;"></textarea>
+                  <div nxt-simple-dropdown-content="" class="email-input-plain-suggest">
+                    <!-- ngRepeat: c in contacts -->
+                    <!-- ngRepeat: group in groups track by group.id -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="composition-subject-wrapper" ng-show="$parent.id">
+              <input class="composition-subject ng-pristine ng-untouched ng-valid" placeholder="Temat:" value="" ng-focus="emailInputsBlurred()" ng-blur="updateTitle()" ng-model="subject" ng-change="markCompositionAsModified()">
+              <div class="composition-important-switch composition-important-switch--before icon-important" ng-class="{active: isImportant}" ng-click="toggleImportant()" data-tooltip="Oznacz wiadomość jako ważną"></div>
+            </div>
+            <!-- ngIf: uploader -->
+            <div ng-if="uploader">
+              <input tabindex="-1" type="file" class="composition-upload-button composition-upload-button--normal" nv-file-select="" uploader="uploader" options="{url: uploadUrl}" multiple="">
+              <input tabindex="-1" type="file" accept="image/*" class="composition-upload-button composition-upload-button--inline" nv-file-select="" uploader="uploader" options="{isInline: true, url: inlineUploadUrl}" multiple="">
+            </div>
+            <!-- end ngIf: uploader -->
+            <div class="composition-tinymce-wrapper" ng-class="{'uploader-visible': uploader.queueLength}">
+              <!-- ngIf: !compositionId -->
+              <!-- ngIf: compositionId -->
+              <div id="mceu_42" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="group" style="visibility: hidden; border-width: 1px;">
+                <div id="mceu_42-body" class="mce-container-body mce-stack-layout">
+                  <div id="mceu_43" class="mce-toolbar-grp mce-container mce-panel mce-stack-layout-item mce-first" hidefocus="1" tabindex="-1" role="group" style="height: 64px;">
+                    <div id="mceu_43-body" class="mce-container-body mce-stack-layout">
+                      <div id="mceu_44" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar">
+                        <div id="mceu_44-body" class="mce-container-body mce-flow-layout">
+                          <div id="mceu_45" class="mce-container mce-flow-layout-item mce-first mce-btn-group" role="group">
+                            <div id="mceu_45-body">
+                              <div id="mceu_32" class="mce-widget mce-btn mce-first" tabindex="-1" aria-labelledby="mceu_32" role="button" aria-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1" data-tooltip="Pogrubienie" data-track-click="mailContentBold" class="btn-active-shadow"><i class="mce-ico mce-i-bold" data-tooltip="Pogrubienie" data-track-click="mailContentBold"></i></button>
+                              </div>
+                              <div id="mceu_33" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_33" role="button" aria-label="Italic">
+                                <button role="presentation" type="button" tabindex="-1" data-tooltip="Kursywa" data-track-click="mailContentItalic" class="btn-active-shadow"><i class="mce-ico mce-i-italic" data-tooltip="Kursywa" data-track-click="mailContentItalic"></i></button>
+                              </div>
+                              <div id="mceu_34" class="mce-widget mce-btn mce-splitbtn mce-btn--with-shadow mce-menubtn" role="button" tabindex="-1" aria-haspopup="true">
+                                <button type="button" hidefocus="1" tabindex="-1" data-tooltip="Rodzaj i wielkość czcionki" data-track-click="mailContentFontType"><i class="mce-ico mce-i-webmailfont" data-tooltip="Rodzaj i wielkość czcionki" data-track-click="mailContentFontType"></i></button>
+                                <button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button>
+                              </div>
+                              <div id="mceu_35" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_35" role="button" aria-label="Underline">
+                                <button role="presentation" type="button" tabindex="-1" data-tooltip="Podkreślenie" data-track-click="mailContentUnderline" class="btn-active-shadow"><i class="mce-ico mce-i-underline" data-tooltip="Podkreślenie" data-track-click="mailContentUnderline"></i></button>
+                              </div>
+                              <div id="mceu_36" class="mce-widget mce-btn mce-btn--with-shadow mce-colorbutton" role="button" tabindex="-1" aria-haspopup="true" aria-label="Text color">
+                                <button role="presentation" hidefocus="1" type="button" tabindex="-1" data-tooltip="Kolor tekstu" data-track-click="mailContentFontColor"><i class="mce-ico mce-i-forecolor" data-tooltip="Kolor tekstu" data-track-click="mailContentFontColor"></i><span id="mceu_36-preview" class="mce-preview"></span></button>
+                                <button type="button" class="mce-open" hidefocus="1"
+                                tabindex="-1"> <i class="mce-caret"></i></button>
+                              </div>
+                              <div id="mceu_37" class="mce-widget mce-btn mce-splitbtn mce-btn--with-shadow mce-menubtn" role="button" tabindex="-1" aria-haspopup="true">
+                                <button type="button" hidefocus="1" tabindex="-1" data-tooltip="Tworzenie list i wyrównanie tekstu" data-track-click="mailContentAlignClick"><i class="mce-ico mce-i-webmailcontentstyle" data-tooltip="Tworzenie list i wyrównanie tekstu" data-track-click="mailContentAlignClick"></i></button>
+                                <button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button>
+                              </div>
+                              <div id="mceu_38" class="mce-widget mce-btn mce-btn--with-shadow mce-colorbutton" role="button" tabindex="-1" aria-haspopup="true">
+                                <button role="presentation" hidefocus="1" type="button" tabindex="-1" data-tooltip="Papeterie" data-track-click="mailContentStationery"><i class="mce-ico mce-i-stationery" data-tooltip="Papeterie" data-track-click="mailContentStationery"></i><span id="mceu_38-preview" class="mce-preview"></span></button>
+                                <button type="button" class="mce-open" hidefocus="1" tabindex="-1">
+                                <i class="mce-caret"></i></button>
+                              </div>
+                              <div id="mceu_39" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_39" role="button">
+                                <button role="presentation" type="button" tabindex="-1" data-tooltip="Wstaw obrazek" data-track-click="mailContentInsImg"><i class="mce-ico mce-i-inlineimage" data-tooltip="Wstaw obrazek" data-track-click="mailContentInsImg"></i></button>
+                              </div>
+                              <div id="mceu_40" class="mce-widget mce-btn mce-btn--with-shadow mce-last" tabindex="-1" aria-labelledby="mceu_40" role="button" aria-label="Emoticons" aria-haspopup="true">
+                                <button role="presentation" type="button" tabindex="-1" data-tooltip="Wstaw emotikonę" data-track-click="mailContentInsEmot"><i class="mce-ico mce-i-emoticons" data-tooltip="Wstaw emotikonę" data-track-click="mailContentInsEmot"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="mceu_46" class="mce-container mce-flow-layout-item mce-last mce-btn-group" role="group">
+                            <div id="mceu_46-body">
+                              <div id="mceu_41" class="mce-widget mce-btn mce-btn--always-inactive mce-first mce-last mce-active" tabindex="-1" aria-labelledby="mceu_41" role="button" aria-pressed="true">
+                                <button role="presentation" type="button" tabindex="-1" data-tooltip="Wyczyść formatowanie" data-track-click="mailContentClearFormat"><i class="mce-ico mce-i-expand" data-tooltip="Wyczyść formatowanie" data-track-click="mailContentClearFormat"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="mceu_47" class="mce-edit-area mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;">
+                    <iframe id="uiTinymce2_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help" src='javascript:""' style="width: 100%; height: 68px; display: block;"></iframe>
+                  </div>
+                </div>
+              </div>
+              <textarea ng-if="compositionId" ui-tinymce="" ng-model="content" ng-model-options="{debounce: 250}" class="composition-content modal-content composition-content ng-pristine ng-untouched ng-valid" nxt-auto-grow="false" id="uiTinymce2" aria-hidden="true"
+              style="display: none;"></textarea>
+              <!-- end ngIf: compositionId -->
+              <!-- ngIf: originalContent && !originalMessageRevealed -->
+              <div ng-show="compositionId" nxt-signature="" nxt-selected-signature="selectedSignature" class="">
+                <div nxt-count-height="" class="composition-signature-add ng-hide" ng-show="isEditingSignature &amp;&amp; signatureAllow">
+                  <textarea placeholder="Z wyrazami szacunku - Jan Kowalski"></textarea>
+                  <div class="composition-signature-add-inputs-wrapper">
+                    <input class="composition-signature-add-name-input ng-pristine ng-untouched ng-valid" ng-change="updateName()" ng-model="signatureName" placeholder="Podaj nazwę">
+                    <div class="composition-signature-add-button composition-signature-add-button--save" ng-click="saveSignature()" ng-class="{'composition-signature-add-button--inActive': isTooLong}">zapisz</div>
+                    <div class="composition-signature-add-button composition-signature-add-button--cancel" ng-click="clearSignature()">anuluj</div>
+                  </div>
+                  <!-- ngIf: isTooLong -->
+                </div>
+                <div nxt-count-height="" class="composition-signature" nxt-simple-dropdown="" ng-hide="isEditingSignature || !signatureAllow">
+                  <div class="composition-signature-selected" nxt-simple-dropdown-activator="" data-tooltip="Dodaj lub wybierz podpis"><span ng-hide="selectedSignature" class="composition-signature-selected-empty">Brak podpisu - <i>kliknij tutaj</i> aby dodać podpis</span></div>
+                  <ul class="composition-signature-list" nxt-simple-dropdown-content="">
+                    <li class="composition-signature-list-none" ng-click="changeSignature()">Brak podpisu</li>
+                    <!-- ngRepeat: (id, s) in signatures -->
+                    <li class="composition-signature-list-add" ng-click="editSignature()" data-track-click="addSignatureClick"><i>+ Dodaj nowy podpis</i></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- ngIf: uploader.queueLength -->
+            </div>
+          </div>
+          <div class="composition-horizontal-line"></div>
+          <div class="composition-basic-actions" ng-mousedown="activateComposition()" ng-class="{'composition-basic-actions--inactive': !isCompositionActive}">
+            <button ng-click="sendButtonClickHandler()" class="composition-basic-action composition-basic-action--send" data-tooltip="Wyślij wiadomość" ng-disabled="sending">Wyślij</button>
+            <!-- ngIf: uploader -->
+            <button ng-click="fileUploadClick()" class="composition-basic-action composition-basic-action--add-attach ico" data-tooltip="Dodaj załącznik" data-track-click="addAttachClick" ng-if="uploader" nxt-upload-button-hover=""></button>
+            <!-- end ngIf: uploader -->
+            <!-- ngIf: !uploader -->
+            <!-- ngIf: isHTML -->
+            <div ng-if="isHTML" class="tinymce-buttons-placeholder" ng-class="{'tinymce-buttons-placeholder--right-min': !isFloatWindow &amp;&amp; rightColumnMin &amp;&amp; isHTML}" ng-click="focusEditor()">
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--bold mce-ico mce-i-bold tinymce-button-placeholder--with-separator" ng-class="{'tinymce-button-placeholder--with-separator': isFloatWindow || (!isFloatWindow &amp;&amp; !rightColumnMin)}"></div>
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--italic mce-ico mce-i-italic"></div>
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--webmailfont mce-ico mce-i-webmailfont"></div>
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--underline mce-ico mce-i-underline"></div>
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--forecolor mce-ico mce-i-forecolor"></div>
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--webmailcontentstyle mce-ico mce-i-webmailcontentstyle"></div>
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--stationery mce-ico mce-i-stationery"></div>
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--inlineimage mce-ico mce-i-inlineimage"></div>
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--emoticons mce-ico mce-i-emoticons"></div>
+              <div class="tinymce-button-placeholder tinymce-button-placeholder--expand tinymce-button-placeholder--with-separator mce-ico mce-i-expand"></div>
+            </div>
+            <!-- end ngIf: isHTML -->
+          </div>
+          <input class="tabindex-guard" ng-focus="loopFocus()">
+          <!-- ngIf: isCompositionActive -->
+          <div class="composition-file-drop" ng-if="isCompositionActive"></div>
+          <!-- end ngIf: isCompositionActive -->
+        </div>
+      </div>
+    </div>
+
+
+
     <section ui-view="contact" class="section section--contacts ng-scope">
       <div class="contact-container ng-scope ng-isolate-scope" ng-class="{&#39;contact-container--expanded&#39;: isExpanded,
                 &#39;contact-container--mobile&#39;: isMobile,
@@ -311,7 +669,7 @@
             </div>
           </header>
           <!-- ngIf: ::env.device.isPc -->
-          <header class="contact-user clearfix ng-scope" ng-if="::env.device.isPc" data-tooltip-stop-propagation="">
+          <header id="login-out-user-mask" class="contact-user clearfix ng-scope" ng-if="::env.device.isPc" data-tooltip-stop-propagation="">
             <!-- ngIf: !isUpdatingAvatar -->
             <div nxt-avatar="" nxt-avatar-options="{&#39;imgClass&#39;: &#39;C414&#39;, &#39;isOwnAvatar&#39;: true}" class="contact-user-avatar ng-scope ng-isolate-scope" ng-click="showSettings(); $event.stopPropagation();" data-tooltip="Wanda Sidło&lt;br&gt;wanda.sidlo@interia.pl"
             ng-if="!isUpdatingAvatar">
@@ -471,40 +829,387 @@
     <!-- uiView: external-account -->
     <section ui-view="external-account" class="section section--external-account section--animate ng-scope"></section>
     <!-- uiView: message -->
-    <section ui-view="message" class="section section--message ng-scope">
-      <!-- ngIf: isRemarketing -->
-      <!-- ngIf: !firstFullMessage -->
-      <!-- ngIf: firstFullMessage -->
-      <div id="mailads" style="
-        width: 100%;
-        height: 100%;
-        position: relative;
-        text-align: center;
-        background-color: #F7F7F7;
-        padding-top: 40px;">
+    <section ui-view="message" class="section section--message">
+    <!-- ngIf: isRemarketing -->
+    <!-- ngIf: !firstFullMessage -->
+    <!-- ngIf: firstFullMessage -->
+    <div class="meessage-outher-wrapper" nxt-ui-events-data="{'panel': 'message'}" ng-class="::{'ipad-ios8': isIos8PlusOnIpad}" ng-if="firstFullMessage">
+      <header class="message-header">
+        <h1 class="message-header-subject new-title" ng-attr-title="{{::firstFullMessage.subject || '(brak tematu)'}}" title="Re:"><a class="message-header-button-back icon-arrow-left" ng-click="back(); $event.preventDefault();$event.stopPropagation();"></a> <span ng-bind="::firstFullMessage.subject || '(brak tematu)'">Re:</span></h1></header>
+      <div class="message-section-container" nxt-simple-dropdown-update-on-scroll="" ng-class="{'single-message': thread.length < 2}">
+        <div class="message-all-wrapper">
+          <div ng-repeat="message in thread track by message.id" ng-if="showOldMessages || !message.isOld" ng-class="{'message-opened': message.isFull, 'message-closed': !message.isFull}" class="message-closed">
+            <!-- ngIf: message.isFull -->
+            <!-- ngIf: !message.isFull -->
+            <div ng-if="!message.isFull" class="message-collapsed message-toolbar first" ng-click="getMessageFromThread($index)" ng-class="{first: $first}">
+              <div class="message-toolbar-users" ng-show="::message.id" ng-attr-title="{{::message.body}}" ng-class="{'message-toolbar-users--without-avatar': !avatarsShowed}">
+                <!-- ngIf: message.senderInfo.DKIM -->
+                <h2 class="message-toolbar-users-item message-toolbar-users-from" ng-attr-title="{{::message.fromName}}" ng-bind="::message.fromName || message.fromEmail" title="Ja">Ja</h2>
+                <h2 class="message-toolbar-users-item message-toolbar-users-to" ng-bind="::message.body"></h2>
+                <div ng-show="avatarsShowed" nxt-avatar="" nxt-avatar-list="message.avatarList" nxt-avatar-contact-name="message.fromName" nxt-avatar-contact-email="message.fromEmail" nxt-avatar-options="{'isCardEnabled': true}" nxt-message-sender-info="message.senderInfo" class="message-toolbar-users-avatar" ng-attr-data-tooltip="{{::message.fromEmail}}" data-tooltip="bartek.skrzyczek@interia.pl">
+                  <div class="avatars-simple-container" ng-click="toggleAvatarCard($event);" ng-mouseleave="leaveAvatarCard();" ng-mouseover="toggleAvatarCard($event);" data-tooltip="" ng-class="::{'avatars--large': options.isOwnAvatar}"><span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-15" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span></div>
+                </div>
+              </div>
+              <ul class="message-toolbar-details clearfix" ng-show="::message.id">
+                <li class="message-toolbar-details-item">
+                  <a href="#" ng-class="message.isStarred ? 'icon-star_checked' : 'icon-star'" ng-click="markAsFavorite(message); $event.stopPropagation(); $event.preventDefault();" data-tooltip="Zaznacz gwiazdkę" class="icon-star"></a>
+                </li>
+                <!-- ngIf: ::!isMobile -->
+                <li class="message-toolbar-details-item message-toolbar-details-item--date" ng-bind="::message.formatDate" ng-attr-data-tooltip="{{::message.date}}" ng-if="::!isMobile" data-tooltip="19-12-2017 13:30">dziś, 13:30</li>
+                <!-- end ngIf: ::!isMobile -->
+                <li class="message-toolbar-details-item message-toolbar-details-item--attachment" ng-class="::{'icon-attachment': message.hasAtta}" data-tooltip="Ta wiadomość zawiera załączniki"></li>
+                <li class="message-toolbar-details-item message-toolbar-details-item--important" ng-class="::{'icon-important': message.priority == 'high'}" data-tooltip="Ta wiadomość została oznaczona jako ważna"></li>
+              </ul>
+              <div class="message-open-full" data-tooltip="Pokaż pełną treść wiadomości"></div>
+            </div>
+            <!-- end ngIf: !message.isFull -->
+          </div>
+          <!-- ngIf: messagesToLoadCount > 0 || showOldMessages === false -->
+          <!-- ngIf: messagesToLoadCount === 0 && showOldMessages -->
+          <!-- ngRepeat: message in thread track by message.id -->
+          <!-- ngIf: showOldMessages || !message.isOld -->
+          <div ng-repeat="message in thread track by message.id" ng-if="showOldMessages || !message.isOld" ng-class="{'message-opened': message.isFull, 'message-closed': !message.isFull}" class="message-closed">
 
-        <div ng-if="!isClose" style="padding: 5px;"><span style="color: #676767;
-    left: 0;
-    right: 0;
-    top: 14px;
-    height: 20px;
-    width: 700px;
-    text-align: left;
-    text-transform: uppercase;
-    margin: 0 auto;
-    font-size: 11px;
-}">Reklama<span><div class="ad-closing icon-close"></div></div>
-        <!-- AdServer CID: INTERIA/poczta PID: body2014 -->
-        <!-- Wygenerowano dla: INTERIA/poczta/body2014 | 2017-12-19 03:03:02 -->
-        <div id="ad_box600x450_web" style="display: block;">
-          <div id="adoceanhubphinhrsjjh1" align="center" style="display: block;"><img class="webmailAd" style="cursor:pointer;max-width:100%; max-height: 100%; width: 80%" src="assets/600x450_bluzy.jpg">
-
+            <!-- ngIf: message.isFull -->
+            <!-- ngIf: !message.isFull -->
+            <div ng-if="!message.isFull" class="message-collapsed message-toolbar first" ng-click="getMessageFromThread($index)" ng-class="{first: $first}">
+              <div class="message-toolbar-users" ng-show="::message.id" ng-attr-title="{{::message.body}}" ng-class="{'message-toolbar-users--without-avatar': !avatarsShowed}">
+                <!-- ngIf: message.senderInfo.DKIM -->
+                <h2 class="message-toolbar-users-item message-toolbar-users-from" ng-attr-title="{{::message.fromName}}" ng-bind="::message.fromName || message.fromEmail" title="Ja">Ja</h2>
+                <h2 class="message-toolbar-users-item message-toolbar-users-to" ng-bind="::message.body"></h2>
+                <div ng-show="avatarsShowed" nxt-avatar="" nxt-avatar-list="message.avatarList" nxt-avatar-contact-name="message.fromName" nxt-avatar-contact-email="message.fromEmail" nxt-avatar-options="{'isCardEnabled': true}" nxt-message-sender-info="message.senderInfo"
+                class="message-toolbar-users-avatar" ng-attr-data-tooltip="{{::message.fromEmail}}" data-tooltip="bartek.skrzyczek@interia.pl">
+                  <div class="avatars-simple-container" ng-click="toggleAvatarCard($event);" ng-mouseleave="leaveAvatarCard();" ng-mouseover="toggleAvatarCard($event);" data-tooltip="" ng-class="::{'avatars--large': options.isOwnAvatar}"><span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-15" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span></div>
+                </div>
+              </div>
+              <ul class="message-toolbar-details clearfix" ng-show="::message.id">
+                <li class="message-toolbar-details-item">
+                  <a href="#" ng-class="message.isStarred ? 'icon-star_checked' : 'icon-star'" ng-click="markAsFavorite(message); $event.stopPropagation(); $event.preventDefault();" data-tooltip="Zaznacz gwiazdkę" class="icon-star"></a>
+                </li>
+                <!-- ngIf: ::!isMobile -->
+                <li class="message-toolbar-details-item message-toolbar-details-item--date" ng-bind="::message.formatDate" ng-attr-data-tooltip="{{::message.date}}" ng-if="::!isMobile" data-tooltip="19-12-2017 13:30">dziś, 13:30</li>
+                <!-- end ngIf: ::!isMobile -->
+                <li class="message-toolbar-details-item message-toolbar-details-item--attachment" ng-class="::{'icon-attachment': message.hasAtta}" data-tooltip="Ta wiadomość zawiera załączniki"></li>
+                <li class="message-toolbar-details-item message-toolbar-details-item--important" ng-class="::{'icon-important': message.priority == 'high'}" data-tooltip="Ta wiadomość została oznaczona jako ważna"></li>
+              </ul>
+              <div class="message-open-full" data-tooltip="Pokaż pełną treść wiadomości"></div>
+            </div>
+            <!-- end ngIf: !message.isFull -->
+          </div>
+          <!-- end ngIf: showOldMessages || !message.isOld -->
+          <!-- end ngRepeat: message in thread track by message.id -->
+          <!-- ngIf: showOldMessages || !message.isOld -->
+          <div ng-repeat="message in thread track by message.id" ng-if="showOldMessages || !message.isOld" ng-class="{'message-opened': message.isFull, 'message-closed': !message.isFull}" class="message-opened">
+            <!-- ngIf: message.isFull -->
+            <div ng-if="message.isFull" class="message-container" ng-class="{first: $first}">
+              <div class="message-toolbar clearfix non-selectable" ng-class="::{'message-toolbar-with-info-bar': message.deliveryReport, 'sticky': isMobile &amp;&amp; stickyMessageToolbar()}">
+                <div class="message-toolbar-users message-toolbar-users--full-message selectable" ng-show="::message.id" ng-class="{'message-toolbar-users--right-min': rightColumnMin, 'message-toolbar-users--right-min-with-att': rightColumnMin &amp;&amp; message.hasAtta, 'message-toolbar-users--without-avatar': !avatarsShowed}">
+                  <!-- ngIf: message.senderInfo.DKIM -->
+                  <h2 class="message-toolbar-users-item message-toolbar-users-from selectable new-sender" ng-attr-title="{{::message.fromTooltipText}}" ng-bind="::message.from.name || message.from.email || '(brak nadawcy)'" title="Bartłomiej Skrzyczek (bartek.skrzyczek@gmail.com)">Bartłomiej Skrzyczek</h2>
+                  <h2 class="message-toolbar-users-item message-toolbar-users-to selectable" ng-attr-title="{{::message.fullRecipientsTooltipText}}" ng-bind="::'do ' + message.recipientsString" title="Do: Ja (bartek.skrzyczek@interia.pl)">do Ja</h2>
+                  <!-- ngIf: ::isMobile -->
+                  <h2 class="message-toolbar-users-item message-toolbar-users-date selectable message-toolbar-details-item--right-min" ng-attr-title="{{::message.fullRecipientsTooltipText}}" ng-bind="::message.formatDate" ng-attr-data-tooltip="{{::message.date}}"
+                  ng-class="{'message-toolbar-details-item--right-min': !rightColumnMin}" title="Do: Ja (bartek.skrzyczek@interia.pl)" data-tooltip="19-12-2017 13:31">dziś, 13:31</h2>
+                  <div ng-show="avatarsShowed" nxt-avatar="" nxt-avatar-list="message.avatarList" nxt-avatar-contact-name="message.fromName" nxt-avatar-contact-email="message.fromEmail" nxt-avatar-options="{'isCardEnabled': true}" nxt-message-sender-info="message.senderInfo"
+                  class="message-toolbar-users-avatar message-toolbar-users-avatar--full-message" ng-attr-data-tooltip="{{::message.fromEmail}}" data-tooltip="bartek.skrzyczek@gmail.com">
+                    <div class="avatars-simple-container" ng-click="toggleAvatarCard($event);" ng-mouseleave="leaveAvatarCard();" ng-mouseover="toggleAvatarCard($event);" data-tooltip="" ng-class="::{'avatars--large': options.isOwnAvatar}"><span><!-- ngIf: ::avatar.type == AVATAR_TYPE.IMAGE --><!-- ngIf: ::avatar.type == AVATAR_TYPE.TEXT --><div class="avatar-simple-content avatar-content--skin-16" ng-if="::avatar.type == AVATAR_TYPE.TEXT" ng-class="::'avatar-content--skin-' + avatar.data" ng-bind="::avatar.initial">B</div><!-- end ngIf: ::avatar.type == AVATAR_TYPE.TEXT --></span></div>
+                  </div>
+                </div>
+                <ul class="message-toolbar-details clearfix" ng-show="::message.id" ng-class="::{'message-toolbar-details--eml': isEml}">
+                  <!-- ngIf: !isEml -->
+                  <li class="message-toolbar-details-item" ng-class="::{'message-toolbar-details-item--separator': message.hasAtta || message.priority == 'high'}" ng-if="!isEml">
+                    <a href="#" ng-class="message.isStarred ? 'icon-star_checked' : 'icon-star'" ng-click="markAsFavorite(message); $event.preventDefault();" data-tooltip="Zaznacz gwiazdkę" data-track-click="" data-track-click-iwa-folder="" class="icon-star"></a>
+                  </li>
+                  <!-- end ngIf: !isEml -->
+                  <!-- ngIf: ::!isMobile -->
+                  <li class="message-toolbar-details-item message-toolbar-details-item--date" ng-class="{'message-toolbar-details-item--right-min': rightColumnMin}" ng-bind="::message.formatDate" ng-attr-data-tooltip="{{::message.date}}" ng-if="::!isMobile"
+                  data-tooltip="19-12-2017 13:31">dziś, 13:31</li>
+                  <!-- end ngIf: ::!isMobile -->
+                  <li class="message-toolbar-details-item message-toolbar-details-item--attachment" ng-class="::{'icon-attachment': message.hasAtta}" data-tooltip="Ta wiadomość zawiera załączniki"></li>
+                  <li class="message-toolbar-details-item message-toolbar-details-item--important" ng-class="::{'icon-important': message.priority == 'high'}" data-tooltip="Ta wiadomość została oznaczona jako ważna"></li>
+                </ul>
+                <ul class="message-toolbar-actions clearfix" ng-show="::message.id">
+                  <li class="message-toolbar-actions-item message-toolbar-actions-item--single-action">
+                    <a href="#" data-track-click="viewMailToolboxReplay" data-track-click-iwa-folder="reply" class="icon-reply" ng-click="reply(message); $event.preventDefault();" data-tooltip="Odpowiedz na tę wiadomość"></a>
+                  </li>
+                  <li class="message-toolbar-actions-item message-toolbar-actions-item--single-action message-toolbar-actions-item--forward">
+                    <a href="#" class="icon-mobile-send" ng-click="forward(message); $event.preventDefault();" data-tooltip="Prześlij dalej"></a>
+                  </li>
+                  <!-- ngIf: ::!isEml -->
+                  <li class="message-toolbar-actions-item message-toolbar-actions-item--single-action message-toolbar-actions-item--spam" ng-if="::!isEml">
+                    <!-- ngIf: ::!folder.isSpam -->
+                    <a href="#" class="icon-spam" ng-if="::!folder.isSpam" ng-click="moveToSpam(message); $event.preventDefault();" data-tooltip="Oznacz jako spam"></a>
+                    <!-- end ngIf: ::!folder.isSpam -->
+                    <!-- ngIf: ::folder.isSpam -->
+                  </li>
+                  <!-- end ngIf: ::!isEml -->
+                  <!-- ngIf: ::!isEml -->
+                  <li class="message-toolbar-actions-item message-toolbar-actions-item--single-action" ng-if="::!isEml">
+                    <!-- ngIf: ::folder.isTrash -->
+                    <!-- ngIf: ::!folder.isTrash -->
+                    <a href="#" class="icon-trash" ng-if="::!folder.isTrash" ng-click="moveMessageFromThreadToTrash($index); $event.preventDefault();" data-tooltip="Usuń tę wiadomość" data-track-click="viewMailToolbarDelete"></a>
+                    <!-- end ngIf: ::!folder.isTrash -->
+                  </li>
+                  <!-- end ngIf: ::!isEml -->
+                  <li class="message-toolbar-actions-item dropdown-icon dropdown-icon--arrowdown" data-tooltip="Zobacz wszystkie opcje wiadomości" data-tooltip-top="" data-track-click="viewMailMoreOptionsShow">
+                    <!-- ngIf: userFolders.length !== undefined -->
+                    <ul nxt-dropdown="" ng-if="userFolders.length !== undefined" ng-init="isLast = false" nxt-dropdown-change="isLast" class="dropdown non-selectable">
+                      <li ng-show="!isReplyingToSingle" ng-click="replyToSender(message)">Odpowiedz tylko nadawcy</li>
+                      <li ng-show="isReplyingToSingle" ng-click="replyToAll(message)" class="ng-hide">Odpowiedz wszystkim</li>
+                      <!-- ngIf: ::isMobile -->
+                      <!-- ngIf: ::isMobile && !folder.isSpam && !isEml -->
+                      <!-- ngIf: ::isMobile && folder.isSpam && !isEml -->
+                      <!-- ngIf: !folder.isTrash && !isEml -->
+                      <li ng-if="!folder.isTrash &amp;&amp; !isEml" ng-click="moveToTrash()" data-track-click="viewMailMoreOptionsDelThread">Usuń cały wątek</li>
+                      <!-- end ngIf: !folder.isTrash && !isEml -->
+                      <!-- ngIf: folder.isTrash && !isEml -->
+                      <!-- ngIf: ::!isEml -->
+                      <li class="scroll-no-hide dropdown-nav dropdown-nav--next" ng-if="::!isEml" data-label="Przenieś do folderu">Przenieś do folderu
+                        <ul class="force-no-hide scroll-no-hide">
+                          <li ng-show="::!folder.isInbox &amp;&amp; !folder.isDrafts &amp;&amp; !folder.isSent" ng-click="moveToFolder(folders.INBOX, message)" data-track-click="moveMesToInbox" class="ng-hide">Odebrane</li>
+                          <li ng-show="::!folder.isSystem &amp;&amp; !folder.isSent &amp;&amp; !folder.isTrash" ng-click="moveToFolder(folders.DRAFTS, message)" class="ng-hide">Robocze</li>
+                          <li ng-show="::!folder.isInbox &amp;&amp; !folder.isDrafts &amp;&amp; !folder.isSent" ng-click="moveToFolder(folders.SENT, message)" data-track-click="moveMesToSent" class="ng-hide">Wysłane</li>
+                          <li ng-show="::!folder.isTrash" ng-click="moveToTrash()" data-track-click="moveMesToTrash">Kosz</li>
+                          <li ng-show="::!folder.isDrafts &amp;&amp; !folder.isSpam &amp;&amp; !folder.isSent" ng-click="moveToSpam()" data-track-click="moveMesToSpam">Spam</li>
+                          <li ng-show="::hasSocialFolder &amp;&amp; !folder.isDrafts &amp;&amp; !folder.isSocial &amp;&amp; !folder.isSent" ng-click="moveToFolder(folders.SOCIAL, message)" data-track-click="moveMesToSocial">Społeczności</li>
+                          <li ng-show="::hasShoppingFolder &amp;&amp; !folder.isDrafts &amp;&amp; !folder.isShopping &amp;&amp; !folder.isSent" ng-click="moveToFolder(folders.SHOPPING, message)" data-track-click="moveMesToShop">Oferty</li>
+                          <!-- ngRepeat: folder in userFolders | orderBy: 'name' -->
+                          <li ng-repeat="folder in userFolders | orderBy: 'name'" ng-init="$parent.isLast = $last" data-track-click="viewMailMoreOptionsMoveToFolder" ng-attr-data-track-click-att="::folder.name" class="scroll-no-hide"><a ng-click="moveToFolder(folder.id, message)" class="scroll-no-hide">anew</a>
+                            <!-- ngIf: folder.subfolders && folder.subfolders.length -->
+                          </li>
+                          <!-- end ngRepeat: folder in userFolders | orderBy: 'name' -->
+                          <li ng-repeat="folder in userFolders | orderBy: 'name'" ng-init="$parent.isLast = $last" data-track-click="viewMailMoreOptionsMoveToFolder" ng-attr-data-track-click-att="::folder.name" class="scroll-no-hide"><a ng-click="moveToFolder(folder.id, message)" class="scroll-no-hide">github_test_repo</a>
+                            <!-- ngIf: folder.subfolders && folder.subfolders.length -->
+                          </li>
+                          <!-- end ngRepeat: folder in userFolders | orderBy: 'name' -->
+                          <li ng-repeat="folder in userFolders | orderBy: 'name'" ng-init="$parent.isLast = $last" data-track-click="viewMailMoreOptionsMoveToFolder" ng-attr-data-track-click-att="::folder.name" class="scroll-no-hide"><a ng-click="moveToFolder(folder.id, message)" class="scroll-no-hide">new</a>
+                            <!-- ngIf: folder.subfolders && folder.subfolders.length -->
+                          </li>
+                          <!-- end ngRepeat: folder in userFolders | orderBy: 'name' -->
+                        </ul>
+                      </li>
+                      <!-- end ngIf: ::!isEml -->
+                      <!-- ngIf: ::!isEml && !isMobileApp -->
+                      <li ng-click="print(message)" data-track-click="viewMailMoreOptionsPrint" ng-if="::!isEml &amp;&amp; !isMobileApp">Drukuj</li>
+                      <!-- end ngIf: ::!isEml && !isMobileApp -->
+                      <li ng-click="showDetails(message)" data-track-click="viewMailMoreOptionsInfo">Szczegóły wiadomości</li>
+                    </ul>
+                    <!-- end ngIf: userFolders.length !== undefined -->
+                  </li>
+                </ul>
+                <!-- ngIf: ::message.deliveryReport -->
+              </div>
+              <section class="message-details ng-hide" ng-show="message.isDetailsVisible">
+                <table>
+                  <tbody>
+                    <!-- ngRepeat: h in message.parsedHeaders -->
+                  </tbody>
+                </table>
+              </section>
+              <div class="message-images-status ng-hide" ng-show="(message.imgProtect === 1)">
+                <!-- ngIf: !isMobile --><span ng-if="!isMobile">Obrazki nie są wyświetlane</span>
+                <!-- end ngIf: !isMobile --><span ng-show="!isForcedShowImages" class="message-images-status-action" ng-click="showImages(message)" data-track-click="viewMailShowImg" data-track-click-iwa-folder="viewMailShowImg" data-tooltip="Dla twojego bezpieczeństwa zablokowaliśmy obrazki. Kliknij aby je zobaczyć">Pokaż obrazki</span>              <span ng-show="isForcedShowImages" class="message-images-status-action ng-hide" ng-click="showImages(message)" data-track-click="viewMailShowImg" data-tooltip="Obrazki zostały odblokowane. Kliknij aby ponownie je zablokować">Ukryj obrazki</span>              <span class="message-images-status-actions-separator">|</span> <span class="message-images-status-action" ng-click="alwaysShowImages(message)" ng-bind="::'Zawsze pokazuj obrazki od ' + (message.from.name || message.from.email)" data-track-click="viewMailAlwaysShowImg"
+                data-track-click-iwa-folder="viewMailAlwaysShowImg" data-tooltip="Dla twojego bezpieczeństwa zablokowaliśmy obrazki. Kliknij aby zawsze pokazywać obrazki od tego adresata">Zawsze pokazuj obrazki od Bartłomiej Skrzyczek</span></div>
+              <!-- ngIf: message.senderInfo.DKIM -->
+              <div class="message-content" ng-class="::{'message-content--mailing': message.isMailing}" nxt-scale-message="">
+                <div class="new-message" src="about:blank" frameborder="0" nxt-scroll-detector="" nxt-message-iframe="" nxt-message-iframe-data="message" style="width: 546px;"></div>
+              </div>
+              <div class="after-content" nxt-public-gallery="" nxt-public-gallery-message="message">
+                <!-- ngIf: ::galleryOn && (isGallery == 1 || (isGallery == 0 && isContent) || isGalleryDraft) -->
+              </div>
+              <!-- ngIf: message.videoEmbeds -->
+              <div class="message-attachments ng-hide" ng-show="::message.attachmentsLength">
+                <!-- ngIf: !message.senderInfo.DKIM -->
+                <div ng-if="!message.senderInfo.DKIM" class="message-attachments-header" ng-bind="::'Załączniki - ' + message.attachmentsLength">Załączniki - 0</div>
+                <!-- end ngIf: !message.senderInfo.DKIM -->
+                <!-- ngIf: message.senderInfo.DKIM && !isMobile -->
+                <!-- ngIf: ::!isIOSApp -->
+                <a class="message-attachments-download-all message-attachments-download-all--before icon-download" ng-href="#s://ud.interia.pl:443/html/getattach,mid,730,all,1,fid,undefined,uid,61a7a12490887c0a?f=Re.zip" ng-if="::!isIOSApp" href="#://ud.interia.pl:443/html/getattach,mid,730,all,1,fid,undefined,uid,61a7a12490887c0a?f=Re.zip">
+                  <!-- ngIf: message.senderInfo.DKIM && isMobile -->Zapisz wszystkie załączniki</a>
+                <!-- end ngIf: ::!isIOSApp -->
+                <!-- ngRepeat: a in message.attachments -->
+              </div>
+              <!-- ngIf: !compositionRemoved && !isMobile && !isEml -->
+              <div ng-if="!compositionRemoved &amp;&amp; !isMobile &amp;&amp; !isEml">
+                <!-- ngIf: $last && (message.relatedDraft || message.replyOpened || ($last && !message.isMailing)) -->
+                <div class="message-composition-arrow" ng-if="$last &amp;&amp; (message.relatedDraft || message.replyOpened || ($last &amp;&amp; !message.isMailing))"></div>
+                <!-- end ngIf: $last && (message.relatedDraft || message.replyOpened || ($last && !message.isMailing)) -->
+                <!-- ngIf: message.relatedDraft -->
+                <!-- ngIf: $last && (message.replyOpened || ($last && !message.isMailing)) && !message.relatedDraft -->
+                <div nxt-composition="" nxt-defaults="{opt: 'ra', mesg: message.id, to: message.replyTo || message.from, cc: message.cc, bcc: message.bcc, from: message.to, envelopeTo: message.envelopeTo, noActivation: true, originalRecipients: message.originalRecipients, senderConfig: message.senderConfig}"
+                nxt-mode="embeded" ng-if="$last &amp;&amp; (message.replyOpened || ($last &amp;&amp; !message.isMailing)) &amp;&amp; !message.relatedDraft" ng-class="{'nxt-composition--right-min': rightColumnMin &amp;&amp; isHTML}">
+                  <div class="composition-wrapper sending-disabled" ng-mousedown="activateComposition()" ng-class="{'sending-disabled': !isSendingEnabled, 'composition-wrapper--right-min': !isFloatWindow &amp;&amp; rightColumnMin &amp;&amp; isHTML}" nxt-update-composition-size="">
+                    <div class="composition-actions" ng-show="mode === 'embeded'">
+                      <div class="composition-actions-item composition-menu dropdown-icon dropdown-icon--arrowdown" tabindex="-1" data-tooltip="Opcje wiadomości" data-track-click="newMailMoreAction" ng-hide="$parent.isSimplified">
+                        <ul nxt-dropdown="" class="dropdown non-selectable">
+                          <li ng-click="save()" data-track-click="newMailSave">Zapisz jako robocze</li>
+                          <li ng-hide="isReplyingToSingle || opt !== 'ra'" ng-click="replyToSingle()" class="ng-hide">Odpowiedz tylko nadawcy</li>
+                          <li ng-show="isReplyingToSingle &amp;&amp; opt === 'ra'" ng-click="replyToAll()" class="ng-hide">Odpowiedz wszystkim</li>
+                        </ul>
+                      </div>
+                      <div class="composition-actions-item icon-maximize" ng-click="popOutComposition()"></div>
+                    </div>
+                    <div ng-hide="mode === 'embeded'" class="composition-actions-item composition-menu dropdown-icon dropdown-icon--arrowdown ng-hide" tabindex="-1" data-tooltip="Opcje wiadomości" data-track-click="newMailMoreAction">
+                      <ul nxt-dropdown="" class="dropdown non-selectable">
+                        <li ng-click="save()" data-track-click="newMailSave">Zapisz jako robocze</li>
+                        <li ng-hide="isReplyingToSingle || opt !== 'ra'" ng-click="replyToSingle()" class="ng-hide">Odpowiedz tylko nadawcy</li>
+                        <li ng-show="isReplyingToSingle &amp;&amp; opt === 'ra'" ng-click="replyToAll()" class="ng-hide">Odpowiedz wszystkim</li>
+                      </ul>
+                    </div>
+                    <!-- ngIf: filteredAccounts -->
+                    <div ng-if="filteredAccounts" class="composition-from" nxt-simple-dropdown="" data-tooltip="Wybierz adres z którego chcesz wysłać wiadomość" data-tooltip-horizontal-offset="15" data-tooltip-top="">
+                      <div class="composition-from-selected" ng-bind="sender.display_name + ' <' + sender.email + '>'"><span class="real-name"></span> &lt;<span class="user-email"></span>&gt;</div>
+                      <div nxt-simple-dropdown-content="" class="composition-from-list">
+                        <!-- ngRepeat: a in filteredAccounts track by a.email -->
+                        <div ng-repeat="a in filteredAccounts track by a.email" class="composition-from-list-element" ng-click="$event.stopPropagation(); setSender(a)" ng-bind="::a.display_name + ' <' + a.email + '>'">Bartek Skrzyczek &lt;bartek.skrzyczek@interia.pl&gt;</div>
+                        <!-- end ngRepeat: a in filteredAccounts track by a.email -->
+                        <div ng-repeat="a in filteredAccounts track by a.email" class="composition-from-list-element" ng-click="$event.stopPropagation(); setSender(a)" ng-bind="::a.display_name + ' <' + a.email + '>'">bart.skrzyczek &lt;bart.skrzyczek@gmail.com&gt;</div>
+                        <!-- end ngRepeat: a in filteredAccounts track by a.email -->
+                        <div class="composition-from-list-element composition-from-list-element--new" ng-click="addAccount()">dodaj nowe konto</div>
+                      </div>
+                      <!-- ngIf: filteredAccounts.length <= 1 -->
+                    </div>
+                    <!-- end ngIf: filteredAccounts -->
+                    <div nxt-email-input-plain-group="" nxt-to="to" nxt-cc="cc" nxt-bcc="bcc" nxt-embeded="mode == 'embeded'">
+                      <div class="composition-all-recipients ng-hide" ng-click="startEditing()" ng-hide="isEditing || allRecipients.bcc.length || allRecipients.cc.length" title="Bartłomiej Skrzyczek">Bartłomiej Skrzyczek</div>
+                      <div class="composition-ommited-counter ng-hide" ng-show="recipientsCounter > 0 &amp;&amp; !isEditing" ng-click="startEditing()">(w sumie )</div>
+                      <div nxt-is-editing="isEditing" nxt-email-input-plain="" nxt-name="composition-to" class="composition-to" nxt-basevalue="to" ng-blur="update()" ng-show="isEditing || (allRecipients.to.length &amp;&amp; !isEditing &amp;&amp; (allRecipients.cc.length || allRecipients.bcc.length))">
+                        <div class="email-input-plain composition-field" nxt-simple-dropdown="" nxt-simple-dropdown-opened="inputNodeLength &amp;&amp; !isSuggestHidden &amp;&amp; isEditing" data-position-absolute="" data-tooltip-in-parents="">
+                          <!-- ngRepeat: s in selectedContacts -->
+                          <div class="email-input-plain-element" ng-repeat="s in selectedContacts" ng-class="{highlighted: s.isHighlighted, added: s.isNewlyAdded, 'animation-enabled': s.isAnimationEnabled}"><span class="email-input-plain-element-text new-sender"></span> <span class="email-input-plain-element-close icon-close" ng-click="removeContact($index)"
+                            data-tooltip="usuń kontakt z pola adresatów"></span></div>
+                          <!-- end ngRepeat: s in selectedContacts -->
+                          <textarea placeholder=" " autocorrect="off" autocapitalize="off" autocomplete="false" spellcheck="false" nxt-autogrow-input="" class="email-input-plain-input" ng-keyup="inputChange($event)" ng-keydown="inputTab($event)" ng-blur="blurHandler()"
+                          ng-focus="focusHandler()" ng-paste="pasteHandler()" data-tooltip-in-parents="" style="width: 397.938px; height: 30px;"></textarea>
+                          <div nxt-simple-dropdown-content="" class="email-input-plain-suggest">
+                            <!-- ngRepeat: c in contacts -->
+                            <!-- ngRepeat: group in groups track by group.id -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="composition-switches" ng-show="isEditing">
+                        <div class="composition-show composition-show--cc" ng-hide="isCCShown" ng-click="showCC(true); $event.preventDefault()" data-tooltip="Dodaj adresatów (kopia jawna)" data-tooltip-horizontal-offset="-5" data-tooltip-top="">DW</div>
+                        <div class="composition-show composition-show--bcc" ng-hide="isBCCShown" ng-click="showBCC(true); $event.preventDefault()" data-tooltip="Dodaj adresatów (kopia ukryta)" data-tooltip-top="">UDW</div>
+                      </div>
+                      <div nxt-is-editing="isEditing" nxt-email-input-plain="" nxt-name="composition-cc" class="composition-cc ng-hide" nxt-basevalue="cc" ng-show="(isCCShown &amp;&amp; isEditing) || (allRecipients.cc.length &amp;&amp; !isEditing)" ng-blur="update()"
+                      data-tooltip-stop-propagation="">
+                        <div class="email-input-plain composition-field" nxt-simple-dropdown="" nxt-simple-dropdown-opened="inputNodeLength &amp;&amp; !isSuggestHidden &amp;&amp; isEditing" data-position-absolute="" data-tooltip-in-parents="">
+                          <!-- ngRepeat: s in selectedContacts -->
+                          <textarea placeholder=" " autocorrect="off" autocapitalize="off" autocomplete="false" spellcheck="false" nxt-autogrow-input="" class="email-input-plain-input" ng-keyup="inputChange($event)" ng-keydown="inputTab($event)" ng-blur="blurHandler()"
+                          ng-focus="focusHandler()" ng-paste="pasteHandler()" data-tooltip-in-parents="" style="width: 411.938px; height: 30px;"></textarea>
+                          <div nxt-simple-dropdown-content="" class="email-input-plain-suggest">
+                            <!-- ngRepeat: c in contacts -->
+                            <!-- ngRepeat: group in groups track by group.id -->
+                          </div>
+                        </div>
+                      </div>
+                      <div nxt-is-editing="isEditing" nxt-email-input-plain="" nxt-name="composition-bcc" class="composition-bcc ng-hide" nxt-basevalue="bcc" ng-show="(isBCCShown &amp;&amp; isEditing) || (allRecipients.bcc.length &amp;&amp; !isEditing)"
+                      ng-blur="update()" data-tooltip-stop-propagation="">
+                        <div class="email-input-plain composition-field" nxt-simple-dropdown="" nxt-simple-dropdown-opened="inputNodeLength &amp;&amp; !isSuggestHidden &amp;&amp; isEditing" data-position-absolute="" data-tooltip-in-parents="">
+                          <!-- ngRepeat: s in selectedContacts -->
+                          <textarea placeholder=" " autocorrect="off" autocapitalize="off" autocomplete="false" spellcheck="false" nxt-autogrow-input="" class="email-input-plain-input" ng-keyup="inputChange($event)" ng-keydown="inputTab($event)" ng-blur="blurHandler()"
+                          ng-focus="focusHandler()" ng-paste="pasteHandler()" data-tooltip-in-parents="" style="width: 411.938px; height: 30px;"></textarea>
+                          <div nxt-simple-dropdown-content="" class="email-input-plain-suggest">
+                            <!-- ngRepeat: c in contacts -->
+                            <!-- ngRepeat: group in groups track by group.id -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="composition-subject-wrapper ng-hide" ng-show="$parent.id">
+                      <input class="composition-subject ng-pristine ng-untouched ng-valid" placeholder="Temat:" value="" ng-focus="emailInputsBlurred()" ng-blur="updateTitle()" ng-model="subject" ng-change="markCompositionAsModified()">
+                      <div class="composition-important-switch composition-important-switch--before icon-important"></div>
+                    </div>
+                    <!-- ngIf: uploader -->
+                    <div id="textarea" class="composition-tinymce-wrapper" contenteditable="true" style="margin: 0; padding: 0; font-family: Roboto, sans-serif; font-size: 14px; padding-top: 5px;">
+                      <!-- ngIf: !compositionId -->
+                      <div class="composition-content-placeholder">
+                      </div>
+                      <!-- end ngIf: !compositionId -->
+                      <!-- ngIf: compositionId -->
+                      <!-- ngIf: originalContent && !originalMessageRevealed -->
+                      <div ng-show="compositionId" nxt-signature="" nxt-selected-signature="selectedSignature" class="ng-hide">
+                        <div nxt-count-height="" class="composition-signature-add ng-hide" ng-show="isEditingSignature &amp;&amp; signatureAllow">
+                          <textarea placeholder="Z wyrazami szacunku - Jan Kowalski"></textarea>
+                          <div class="composition-signature-add-inputs-wrapper">
+                            <input class="composition-signature-add-name-input ng-pristine ng-untouched ng-valid" ng-change="updateName()" ng-model="signatureName" placeholder="Podaj nazwę">
+                            <div class="composition-signature-add-button composition-signature-add-button--save" ng-click="saveSignature()" ng-class="{'composition-signature-add-button--inActive': isTooLong}">zapisz</div>
+                            <div class="composition-signature-add-button composition-signature-add-button--cancel" ng-click="clearSignature()">anuluj</div>
+                          </div>
+                          <!-- ngIf: isTooLong -->
+                        </div>
+                        <div nxt-count-height="" class="composition-signature" nxt-simple-dropdown="" ng-hide="isEditingSignature || !signatureAllow">
+                          <div class="composition-signature-selected" nxt-simple-dropdown-activator="" data-tooltip="Dodaj lub wybierz podpis"><span ng-hide="selectedSignature" class="composition-signature-selected-empty">Brak podpisu - <i>kliknij tutaj</i> aby dodać podpis</span></div>
+                          <ul class="composition-signature-list" nxt-simple-dropdown-content="">
+                            <li class="composition-signature-list-none" ng-click="changeSignature()">Brak podpisu</li>
+                            <!-- ngRepeat: (id, s) in signatures -->
+                            <li class="composition-signature-list-add" ng-click="editSignature()" data-track-click="addSignatureClick"><i>+ Dodaj nowy podpis</i></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- ngIf: uploader.queueLength -->
+                    </div>
+                  </div>
+                  <div class="composition-horizontal-line"></div>
+                  <div onclick="location.href='./Odebrane11b.htm';" class="composition-basic-actions composition-basic-actions--inactive" ng-mousedown="activateComposition()" ng-class="{'composition-basic-actions--inactive': !isCompositionActive}">
+                    <button ng-click="sendButtonClickHandler()" class="composition-basic-action composition-basic-action--send" data-tooltip="Wyślij wiadomość" ng-disabled="sending">Wyślij</button>
+                    <!-- ngIf: uploader -->
+                    <!-- ngIf: !uploader -->
+                    <button class="composition-basic-action composition-basic-action--add-attach composition-basic-action--add-attach-fake ico" ng-if="!uploader"></button>
+                    <!-- end ngIf: !uploader -->
+                    <!-- ngIf: isHTML -->
+                    <div ng-if="isHTML" class="tinymce-buttons-placeholder" ng-class="{'tinymce-buttons-placeholder--right-min': !isFloatWindow &amp;&amp; rightColumnMin &amp;&amp; isHTML}" ng-click="focusEditor()">
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--bold mce-ico mce-i-bold tinymce-button-placeholder--with-separator" ng-class="{'tinymce-button-placeholder--with-separator': isFloatWindow || (!isFloatWindow &amp;&amp; !rightColumnMin)}"></div>
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--italic mce-ico mce-i-italic"></div>
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--webmailfont mce-ico mce-i-webmailfont"></div>
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--underline mce-ico mce-i-underline"></div>
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--forecolor mce-ico mce-i-forecolor"></div>
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--webmailcontentstyle mce-ico mce-i-webmailcontentstyle"></div>
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--stationery mce-ico mce-i-stationery"></div>
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--inlineimage mce-ico mce-i-inlineimage"></div>
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--emoticons mce-ico mce-i-emoticons"></div>
+                      <div class="tinymce-button-placeholder tinymce-button-placeholder--expand tinymce-button-placeholder--with-separator mce-ico mce-i-expand"></div>
+                    </div>
+                    <!-- end ngIf: isHTML -->
+                  </div>
+                  <input class="tabindex-guard" ng-focus="loopFocus()">
+                  <!-- ngIf: isCompositionActive -->
+                </div>
+                <!-- end ngIf: $last && (message.replyOpened || ($last && !message.isMailing)) && !message.relatedDraft -->
+              </div>
+              <!-- end ngIf: !compositionRemoved && !isMobile && !isEml -->
+              <div class="message-header-separator"></div>
+              <div class="message-open-full" ng-click="collapseMessage($index)" data-tooltip="Zwiń wiadomość"></div>
+            </div>
+            <!-- end ngIf: message.isFull -->
+            <!-- ngIf: !message.isFull -->
+          </div>
+          <!-- end ngIf: showOldMessages || !message.isOld -->
+          <!-- end ngRepeat: message in thread track by message.id -->
+        </div>
+        <div nxt-ad-place="box300x250" ng-show="isMessageLoaded &amp;&amp; isAdv" class="message-ad-place ad ad--box300x250">
+          <!-- ngIf: isShowAdDescription && !isPremiumTest -->
+          <div class="adDescription adDescription--message" ng-if="isShowAdDescription &amp;&amp; !isPremiumTest" nxt-adv-close="" nxt-adv-close-name="navi">
+            <!-- ngIf: !isClose -->
+            <div ng-if="!isClose" class="adDescription-desc">Reklama
+              <div class="ad-closing icon-close" ng-click="closeAd()"></div>
+            </div>
+            <!-- end ngIf: !isClose -->
+            <!-- ngIf: isClose -->
+          </div>
+          <!-- end ngIf: isShowAdDescription && !isPremiumTest -->
+          <!-- ngIf: isShowAdDescription && isPremiumTest -->
+          <div>
+            <div frameborder="0" id="box300x250" allowtransparency="true" src="/next/adv,advKeyword,stary_next,adType,box300x250_web" style="height: 204px;">
+            <img src="./assets/20171129_strefa_dbb.png"></div>
           </div>
         </div>
-
       </div>
-      <!-- end ngIf: firstFullMessage -->
-    </section>
+    </div>
+    <!-- end ngIf: firstFullMessage -->
+  </section>
+
+
 
     <!-- uiView: message-list -->
     <section ui-view="message-list" class="section section--message-list ng-scope">
@@ -1016,7 +1721,7 @@
         </section>
         <!-- end ngIf: folder -->
         </header>
-        <section class="msglist-container msglist-container--with-load-more" ng-class="{&#39;msglist-container--with-load-more&#39;: isMoreMessages}" nxt-scroll-detector="msglist:scroll" nxt-scroll-to-page="" nxt-attached-scroll-detectors="msglist:scroll">
+        <section class="msglist-container msglist-container--with-load-more" ng-class="{&#39;msglist-container--with-load-more&#39;: isMoreMessages}" nxt-scroll-detector="msglist:scroll" nxt-scroll-to-page="" nxt-attached-scroll-detectors="msglist:scroll" style="border-top:solid 1px #D3D3D3">
           <!-- ngIf: messages.length && folder.isInbox && env.isCoolEvent -->
           <!-- ngIf: folder && messages.length && (folder.isSpam || folder.isTrash) -->
           <!-- ngIf: isFolderUnfreeze !== undefined && !isSearch -->
@@ -1038,9 +1743,9 @@
               </div>
             </li>
             <!-- ngRepeat: message in messages -->
-            <li ng-repeat="message in messages" class="msglist-item ng-scope" ng-class="{&#39;msglist-item--seen&#39;: message.seen,
+            <li ng-repeat="message in messages" class="msglist-item msglist-item--seen msglist-item--active" ng-class="{&#39;msglist-item--seen&#39;: message.seen,
                                &#39;msglist-item--active&#39;: message.uniqueId === activeUniqueId,
-                               &#39;msglist-item--is-only-interia&#39;: message.isOnlyInteria}">
+                               &#39;msglist-item--is-only-interia&#39;: message.isOnlyInteria}" style="background:white">
               <div class="msglist-item-message-precontainer">
                 <input type="checkbox" ng-attr-id="{{::&#39;message-&#39; + message.uniqueId}}" ng-checked="message.checked" ng-click="checkMessage(message, $event.shiftKey); " id="message-m492">
                 <label class="msglist-checkbox" ng-attr-for="{{::&#39;message-&#39; + message.uniqueId}}" for="message-m492"></label>
@@ -2762,7 +3467,15 @@
 
         var newSender = localStorage.getItem("newSender");
         var newTitle = localStorage.getItem("newTitle");
-        var newMessageContent = localStorage.getItem("newMessage");
+        var selfMessage = localStorage.getItem("selfMessage");
+        var realName = localStorage.getItem("realName");
+
+        (function assignRealName() {
+          var userName = document.getElementsByClassName("real-name");
+          for(var i = 0; i < userName.length; i++) {
+            userName[i].innerHTML = realName.toString();
+          }
+        })();
 
         (function assignNewSender() {
           var senderName = document.getElementsByClassName("new-sender");
@@ -2778,32 +3491,48 @@
           }
         })();
 
+
+//SELF MESSAGE
+        (function assignNewMessage() {
+          var newMessage = document.getElementsByClassName("new-message");
+          for(var i = 0; i < newMessage.length; i++) {
+          newMessage[i].innerHTML = selfMessage.toString();
+          }
+        })();
+
+        (function assignReply() {
+          var newMessage = document.getElementsByClassName("composition-tinymce-wrapper");
+          for(var i = 0; i < newMessage.length; i++) {
+          newMessage[i].innerHTML = "<br/>" + "<br/>" + "Od: " + realName + "<br/>" + "Do: " + newSender + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + newTitle + "<br/>" + "<br/>" + "<div class=separator-border>" + "</div>";
+          }
+        })();
+
+
+
       });
 
     </script>
 
     <script>
-      var realName = localStorage.getItem("realName");
-      (function assignRealName() {
-        var userName = document.getElementsByClassName("real-name");
-        for(var i = 0; i < userName.length; i++) {
-          userName[i].innerHTML = realName.toString();
-        }
-      })();
+    function selfMessage(){
+      var newMessage = $('#textarea').html();
+      localStorage.setItem('selfMessage',selfMessage);
+    }
     </script>
 
     <script>
-    function sendWholeContentToValue(){
-    ////////////////////
-    // NEW INPUT ///////
-      var newMessage = $('#textarea').html();
-      localStorage.setItem('inputTextareaNine',newMessage);
-
-      var newTitle = document.getElementById("new-title").value;
-      var newSender = document.getElementById("new-sender").value;
-
-    };
+    setTimeout(function() {
+  $('#main-notice').fadeOut('fast');
+}, 3000);
     </script>
+
+    <script>
+
+    document.getElementById("login-out-user-mask").addEventListener("click", function(){
+        document.getElementById("hook-loginout-action").style.display = "block";
+    });
+    </script>
+
   </body>
 
 
