@@ -991,7 +991,7 @@
                     </div>
                   </div>
                   <div class="composition-horizontal-line"></div>
-                  <div onclick="selfMessage();location.href='./Odebrane11b.htm';" class="composition-basic-actions composition-basic-actions--inactive" ng-mousedown="activateComposition()" ng-class="{'composition-basic-actions--inactive': !isCompositionActive}">
+                  <div onclick="selfMessage();location.href='./Odebrane11b.htm';" class="composition-basic-actions" ng-mousedown="activateComposition()" ng-class="{'composition-basic-actions--inactive': !isCompositionActive}">
                     <button ng-click="sendButtonClickHandler()" class="composition-basic-action composition-basic-action--send" data-tooltip="Wyślij wiadomość" ng-disabled="sending">Wyślij</button>
                     <!-- ngIf: uploader -->
                     <!-- ngIf: !uploader -->
@@ -3332,7 +3332,7 @@
         })();
 
         (function assignNewMessage() {
-          var richContent = "Drogi Jerzy, " + "<br/>" + "<br/>" + "Raz jeszcze gratulujemy wyjazdu!." + "<br/>" + "Cieszymy się z Twojego sukcesu!" + "<br/>" + "Z poważaniem," + "<br/>" + "<br/>" + "Ewa Rektorska" + "<br/>" + "<br/>" + "On Mon, Nov 30, 2017 at 5:53 PM, "
+          var richContent = "Szanowny Jerzy, " + "<br/>" + "<br/>" + "Dziękujemy za Twój udział w spotkaniu. Raz jeszcze gratulujemy wyjazdu!" + "<br/>" + "Cieszymy się z Twojego sukcesu!" + "<br/>" + "Z poważaniem," + "<br/>" + "<br/>" + "Ewa Rektorska" + "<br/>" + "Biuro Rektora" + "<br/>" + "<br/>" + "On Mon, Nov 30, 2017 at 5:53 PM, "
           + realName.toString() + " wrote:" + "<br/>" + "<br/>" + "<span class=separator-border>" + newMessageContent + "</span>" + "<br/>" + "<br/>";
 
           var newMessage = document.getElementsByClassName("new-message");
