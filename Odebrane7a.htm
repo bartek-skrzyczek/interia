@@ -251,7 +251,7 @@
                               <td class="msglist-date" title="2017-11-30 12:45">dziś, 20:45</td>
                               <td class="msglist-size">131 kB</td>
                             </tr>
-                            <tr onclick="location.href='./Odebrane7b.htm';" class="msglist-msg-tr ch font-400" id="mailsTable_1_item_1">
+                            <tr onclick="location.href='./Odebrane7b.htm';" class="msglist-msg-tr ch font-400 active-tr" id="mailsTable_1_item_1">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" id="abc" checked>
                               </td>
@@ -1681,7 +1681,7 @@
         var inputTextareaSeven = localStorage.getItem("inputTextareaSeven");
 
         (function displayContent() {
-          var richSeven = "Wandziu, " + "<br/>" + "dziękuję za wieść." + "<br/>" + "U mojego wnuka wszystko w najlepszym porządku. A co słychać u Twoich dzieci?" + "<br/>" + "Pozdrawiam, Krysia. " + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + inputTextareaSeven + "</div>";
+          var richSeven = "Wandziu, " + "<br/>" + "dziękuję za wieść." + "<br/>" + "U mojego wnuka wszystko w najlepszym porządku!. Tak, stawia już pierwsze kroczki. A co słychać u Twoich dzieci?" + "<br/>" + "Pozdrawiam, Krysia. " + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + inputTextareaSeven + "</div>";
           var sevenUpdateMessage = localStorage.setItem('inputTextareaEight',richSeven);
           document.getElementById("emFoot_1").innerHTML = richSeven;
         })();

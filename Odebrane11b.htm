@@ -875,7 +875,7 @@
             <div ng-if="!message.isFull" class="message-collapsed message-toolbar first" ng-click="getMessageFromThread($index)" ng-class="{first: $first}">
               <div class="message-toolbar-users" ng-show="::message.id" ng-attr-title="{{::message.body}}" ng-class="{'message-toolbar-users--without-avatar': !avatarsShowed}">
                 <!-- ngIf: message.senderInfo.DKIM -->
-                <h2 class="message-toolbar-users-item message-toolbar-users-from" ng-attr-title="{{::message.fromName}}" ng-bind="::message.fromName || message.fromEmail" title="Ja">Ja</h2>
+                <h2 class="message-toolbar-users-item message-toolbar-users-from new-sender" ng-attr-title="{{::message.fromName}}" ng-bind="::message.fromName || message.fromEmail" title="Ja">Ja</h2>
                 <h2 class="message-toolbar-users-item message-toolbar-users-to" ng-bind="::message.body"></h2>
                 <div ng-show="avatarsShowed" nxt-avatar="" nxt-avatar-list="message.avatarList" nxt-avatar-contact-name="message.fromName" nxt-avatar-contact-email="message.fromEmail" nxt-avatar-options="{'isCardEnabled': true}" nxt-message-sender-info="message.senderInfo"
                 class="message-toolbar-users-avatar" ng-attr-data-tooltip="{{::message.fromEmail}}" data-tooltip="bartek.skrzyczek@interia.pl">
@@ -905,8 +905,8 @@
               <div class="message-toolbar clearfix non-selectable" ng-class="::{'message-toolbar-with-info-bar': message.deliveryReport, 'sticky': isMobile &amp;&amp; stickyMessageToolbar()}">
                 <div class="message-toolbar-users message-toolbar-users--full-message selectable" ng-show="::message.id" ng-class="{'message-toolbar-users--right-min': rightColumnMin, 'message-toolbar-users--right-min-with-att': rightColumnMin &amp;&amp; message.hasAtta, 'message-toolbar-users--without-avatar': !avatarsShowed}">
                   <!-- ngIf: message.senderInfo.DKIM -->
-                  <h2 class="message-toolbar-users-item message-toolbar-users-from selectable new-sender" ng-attr-title="{{::message.fromTooltipText}}" ng-bind="::message.from.name || message.from.email || '(brak nadawcy)'" title="Bartłomiej Skrzyczek (bartek.skrzyczek@gmail.com)">Bartłomiej Skrzyczek</h2>
-                  <h2 class="message-toolbar-users-item message-toolbar-users-to selectable" ng-attr-title="{{::message.fullRecipientsTooltipText}}" ng-bind="::'do ' + message.recipientsString" title="Do: Ja (bartek.skrzyczek@interia.pl)">do Ja</h2>
+                  <h2 class="message-toolbar-users-item message-toolbar-users-from selectable" ng-attr-title="{{::message.fromTooltipText}}" ng-bind="::message.from.name || message.from.email || '(brak nadawcy)'" title="Bartłomiej Skrzyczek (bartek.skrzyczek@gmail.com)">Ja</h2>
+                  <h2 class="message-toolbar-users-item message-toolbar-users-to selectable" ng-attr-title="{{::message.fullRecipientsTooltipText}}" ng-bind="::'do ' + message.recipientsString" title="Do: Ja (bartek.skrzyczek@interia.pl)">do <span class="new-sender"></span></h2>
                   <!-- ngIf: ::isMobile -->
                   <h2 class="message-toolbar-users-item message-toolbar-users-date selectable message-toolbar-details-item--right-min" ng-attr-title="{{::message.fullRecipientsTooltipText}}" ng-bind="::message.formatDate" ng-attr-data-tooltip="{{::message.date}}"
                   ng-class="{'message-toolbar-details-item--right-min': !rightColumnMin}" title="Do: Ja (bartek.skrzyczek@interia.pl)" data-tooltip="19-12-2017 13:31">dziś, 13:31</h2>

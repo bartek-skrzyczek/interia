@@ -195,7 +195,7 @@
                               <td class="msglist-date" title="2017-11-30 12:45">dziś, 12:45</td>
                               <td class="msglist-size">131 kB</td>
                             </tr>
-                            <tr onclick="location.href='./Odebrane3a.htm';" class="msglist-msg-tr ch font-400" id="mailsTable_1_item_20">
+                            <tr onclick="location.href='./Odebrane3a.htm';" class="msglist-msg-tr ch font-400 active-tr" id="mailsTable_1_item_20">
                               <td class="msglist-check">
                                 <input type="checkbox" title="Zaznacz/odznacz wiadomość" class="undraggable" checked>
                               </td>
@@ -1096,15 +1096,13 @@
         //////////////////////////////////////////////////////////////////
 
         var textareaInput = localStorage.getItem("answerTextarea");
-        var richThird = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Przepraszam ponownie za późną odpowiedź, gdyż jestem w rozjazdach. " + "<br/>" + "Hmm, muszę sprawdzić tego emaila, coś nie pamiętam." + "<br/>" + "Powodzenia!" + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + textareaInput + "</div>";
+        var richThird = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Przepraszam ponownie za późną odpowiedź, gdyż jestem w rozjazdach. " + "<br/>" + "Hmm, muszę sprawdzić tego emaila do Ewy, coś nie pamiętam :)." + "<br/>" + "Powodzenia!" + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + textareaInput + "</div>";
 
           document.getElementById("emFoot_1").innerHTML = richThird;
           console.log(richThird);
 
           var thirdUpdateMessage = localStorage.setItem('divToTextareaThird',richThird);
-          console.log(thirdUpdateMessage);
           console.log(localStorage.getItem("divToTextareaThird"));
-          console.log(richThird);
       });
     </script>
 
