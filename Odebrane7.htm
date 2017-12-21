@@ -1371,22 +1371,29 @@
     <script type="text/javascript" src="js/drag.js"></script>
 
     <script>
+      ////HALINA
+      var sender7_name = "mateusz.kijowski@gmail.com";
+      var sender7 = localStorage.setItem("sender7", sender7_name);
+
+      var title7_name = "Prośba o wpłatę";
+      var sender7 = localStorage.setItem("title7", title7_name);
+
+    </script>
+
+    <script>
       $(document).ready(function() {
         console.log("jQuery is ready to use...");
 
         var textAreaInput = localStorage.getItem("message");
-        var titleOutput = localStorage.getItem("title");
-        var nameOutput = localStorage.getItem("name");
+        var titleOutput = localStorage.getItem("title7");
+        var nameOutput = localStorage.getItem("sender7");
         var textareaContent = localStorage.getItem("divToTextarea");
-        var richContent = "Cześć Wandziu, " + "<br/>" + "<br/>" + "Niestety, nie potrafię odpowiedzieć Ci na pytanie, czy pojawiły się zmianyw sposobie obliczania emerytury na nowy rok. " + "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, Wanda Sidło <wanda.sidlo@interia.pl> wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
 
-        console.log(richContent);
-        document.getElementById("emFoot_1").innerHTML = richContent;
 
         (function assignSender() {
           var senderName = document.getElementsByClassName("emTo_3");
           for(var i = 0; i < senderName.length; i++) {
-          senderName[i].innerHTML = nameOutput.toString();
+          senderName[i].innerHTML = nameOutput;
           }
         })();
 
@@ -1394,7 +1401,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = titleOutput;
           }
         })();
 
@@ -1407,7 +1414,7 @@
           }
         })();
 
-        document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + textareaContent.toString();
+        //document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + textareaContent.toString();
         console.log(localStorage.getItem("divToTextarea"));
       });
 

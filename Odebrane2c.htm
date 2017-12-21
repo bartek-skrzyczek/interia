@@ -42,7 +42,7 @@
       <div id="navigation">
         <ul>
           <li id="nav0" class="toolbar">
-            <a href="Nowa wiadomość - Poczta w Interii.htm"><button id="compose_nav0" class="compose act" accesskey="n" title="Nowa wiadomość"><span>Nowa</span></button><span class="mSeparator"></span></a>
+            <a href="./Odebrane2d.htm"><button id="compose_nav0" class="compose act" accesskey="n" title="Nowa wiadomość"><span>Nowa</span></button><span class="mSeparator"></span></a>
             <button id="fetch_nav0" class="fetch act" accesskey="o" title="Odśwież listę wiadomości"><span>Odśwież</span></button><span class="mSeparator"></span>
             <button id="contacts_nav0" class="contacts last act" accesskey="k" title="Kontakty"><span>Kontakty</span></button><span class="separator"></span></li>
           <li id="nav1" class="toolbar">
@@ -1459,8 +1459,8 @@
         console.log("jQuery is ready to use...");
 
         var textAreaInput = localStorage.getItem("message");
-        var titleOutput = localStorage.getItem("title");
-        var nameOutput = localStorage.getItem("name");
+        var titleOutput = localStorage.getItem("title1");
+        var nameOutput = localStorage.getItem("sender1");
         console.log(localStorage.getItem("message"));
 
         document.getElementById("emFoot_1").innerHTML = textAreaInput.toString();

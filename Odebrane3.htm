@@ -1359,19 +1359,29 @@
     <script type="text/javascript" src="js/localstorage.js"></script>
 
     <script>
+      ////HALINA
+      var sender2_name = "twoj_dziekanat@gmail.com";
+      var sender2 = localStorage.setItem("sender2", sender2_name);
+
+      var title2_name = "Erasmus: wyniki";
+      var sender2 = localStorage.setItem("title2", title2_name);
+
+    </script>
+
+    <script>
       $(document).ready(function() {
         console.log("jQuery is ready to use...");
 
         var textAreaInput = localStorage.getItem("message");
-        var titleOutput = localStorage.getItem("title");
-        var nameOutput = localStorage.getItem("name");
+        var titleOutput = localStorage.getItem("title2");
+        var nameOutput = localStorage.getItem("sender2");
         var textareaContent = localStorage.getItem("divToTextarea");
 
 
         (function assignSender() {
           var senderName = document.getElementsByClassName("emTo_3");
           for(var i = 0; i < senderName.length; i++) {
-          senderName[i].innerHTML = nameOutput.toString();
+          senderName[i].innerHTML = nameOutput;
           }
         })();
 
@@ -1379,7 +1389,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = titleOutput;
           }
         })();
 
@@ -1392,7 +1402,7 @@
           }
         })();
 
-        document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + textareaContent.toString();
+        //document.getElementById("textarea").innerHTML = "<br/>" + "<br/>" + "Od: Wanda" + "<br/>" + "Do: " + nameOutput + "<br/>" + "Wysłane: " + "17:53 Piątek 2017-12-15" + "<br/>" + "Temat: " + titleOutput + "<br/>" + "<br/>" + textareaContent.toString();
         console.log(localStorage.getItem("divToTextarea"));
       });
 

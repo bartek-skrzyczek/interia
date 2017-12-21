@@ -1083,9 +1083,9 @@
       $(document).ready(function() {
         console.log("jQuery is ready to use...");
 
-        var textAreaInput = localStorage.getItem("message");
-        var titleOutput = localStorage.getItem("title");
-        var nameOutput = localStorage.getItem("name");
+        var textAreaInput = localStorage.getItem("messageA");
+        var titleOutput = localStorage.getItem("titleA");
+        var nameOutput = localStorage.getItem("nameA");
         var textareaContent = localStorage.getItem("divToTextarea");
 
         (function assignSender() {
@@ -1119,10 +1119,10 @@
         ////////////////////////////////////////////////////////////////
         //New data
         //////////////////////////////////////////////////////////////////
-        var textareaInputSix = localStorage.getItem("inputTextareaSix");
+        var textareaInputSix = localStorage.getItem("messageA");
 
         (function displayContent() {
-          var richSix = "Szanowny Jerzy, " + "<br/>" + "Uprzejmie informuję, że Komisja w nowym składzie zaczęła zapoznawać się z przesłanymi podaniami." + "<br/>" + "Jak tylko pojawią się wyniki, niezwłocznie Pana o tym poinformuję. " + "<br/>" + "Z wyrazami szacunku, " + "<br/>" + "Piotr Komisyjny. " + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + textareaInputSix + "</div>";
+          var richSix = "Szanowny Panie, " + "<br/>" + "Dziękujemy za wiadomość." + "<br/>" + "Aby Pana zgłoszenie zostało przyjęte, proszę stawić się osobiście w dowolnym komisariacie na terenie całego kraju, w przeciwnym wypadku nie możemy spisać protokołu, czyli podjąć kroków w tej sprawie. " + "<br/>" + "Z wyrazami szacunku, " + "<br/>" + "Jerzy Policyjny. " + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + textareaInputSix + "</div>";
           var sixUpdateMessage = localStorage.setItem('divToTextareaFive',richSix);
           document.getElementById("emFoot_1").innerHTML = richSix;
         })();

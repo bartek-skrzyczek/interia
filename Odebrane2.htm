@@ -1351,9 +1351,15 @@
         var titleOutput = localStorage.getItem("title");
         var nameOutput = localStorage.getItem("name");
 
+        var sender1_name = "pawel_z_warszawy@gmail.com";
+        var sender1 = localStorage.setItem("sender1", sender1_name);
+        
+        var title1_name = "Kiedy oddasz MOJE PINIĄDZEE??";
+        var sender1 = localStorage.setItem("title1", title1_name);
+
         document.getElementById("emFoot_1").innerHTML = textAreaInput.toString();
-        document.getElementById("compose-subject_3").innerHTML = 'Re: ' + titleOutput.toString();
-        document.getElementById("emTo_3").innerHTML = nameOutput.toString();
+        document.getElementById("compose-subject_3").innerHTML = title1_name;
+        document.getElementById("emTo_3").innerHTML = sender1_name;
 
         var email = localStorage.getItem("email");
 

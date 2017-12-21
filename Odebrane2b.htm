@@ -1530,15 +1530,15 @@
         console.log("jQuery is ready to use...");
 
         var textAreaInput = localStorage.getItem("message");
-        var titleOutput = localStorage.getItem("title");
-        var nameOutput = localStorage.getItem("name");
+        var titleOutput = localStorage.getItem("title1");
+        var nameOutput = localStorage.getItem("sender1");
         var textareaContent = localStorage.getItem("divToTextarea");
 
 
         (function assignSender() {
           var senderName = document.getElementsByClassName("emTo_3");
           for(var i = 0; i < senderName.length; i++) {
-          senderName[i].innerHTML = nameOutput.toString();
+          senderName[i].innerHTML = nameOutput;
           }
         })();
 
@@ -1546,7 +1546,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput;
           }
         })();
 
@@ -1571,8 +1571,7 @@
     // NEW INPUT ///////
 
       var answerTextarea = $('#textarea').html();
-      console.log(answerTextarea);
-      localStorage.setItem('answerTextarea',answerTextarea);
+      localStorage.setItem('answerTextarea1',answerTextarea);
     };
     </script>
 

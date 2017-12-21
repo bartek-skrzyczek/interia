@@ -1058,8 +1058,8 @@
         console.log("jQuery is ready to use...");
 
         var textAreaInput = localStorage.getItem("message");
-        var titleOutput = localStorage.getItem("title");
-        var nameOutput = localStorage.getItem("name");
+        var titleOutput = localStorage.getItem("title2");
+        var nameOutput = localStorage.getItem("sender2");
         var textareaContent = localStorage.getItem("divToTextarea");
 
 
@@ -1074,7 +1074,7 @@
           var titleValue = document.getElementsByClassName("compose-subject_3");
           console.log(titleValue);
           for(var i = 0; i < titleValue.length; i++) {
-          titleValue[i].innerHTML = innerHTML = 'Re: ' + titleOutput.toString();
+          titleValue[i].innerHTML = innerHTML = titleOutput.toString();
           }
         })();
 
@@ -1096,7 +1096,7 @@
         //////////////////////////////////////////////////////////////////
 
         var textareaInput = localStorage.getItem("answerTextarea");
-        var richThird = "Szanowny Jerzy, " + "<br/>" + "<br/>" + "Uprzejmie informuję, że komisja przyznawania stypendium została zawieszona w czynnościach z powodu podejrzenia o przyjęcie korzyści majątkowych. " + "<br/>" + "Aktualnie trwają czynności prokuratorskie." + "<br/>" + "<br/>" + "Będę na bieżąco starał się informować o statusie Pańskiego wyjazdu na stypendium." + "<br/>" + "Z wyrazami szacunku," + "<br/>" + "Piotr Komisyjny" + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + textareaInput + "</div>";
+        var richThird = "Cześć Jerzy, " + "<br/>" + "<br/>" + "Uprzejmie informuję, że w tym roku wyjazdy na stypendium Erasmusa zostały wstrzymane. " + "<br/>" + "Czy będziesz zainteresowany programem partnerskim CEEPUS?" + "<br/>" + "<br/>" + "Proszę ponadto o informację, kiedy możesz pojawić się osobiście w dziekanacie: przygotowaliśmy dla Ciebie nową legitymację studencką." + "<br/>" + "Z pozdrowieniami," + "<br/>" + "Piotr Komisyjny";
 
           document.getElementById("emFoot_1").innerHTML = richThird;
           console.log(richThird);

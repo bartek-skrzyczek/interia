@@ -1416,31 +1416,7 @@
 
     </script>
     <!-- AdServer CID: INTERIA/poczta PID: body -->
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('#drag').on('mousedown', function(e){
-            var $dragable = $(this).parent(),
-                startWidth = $dragable.width(),
-                pX = e.pageX;
 
-            $(document).on('mouseup', function(e){
-                $(document).off('mouseup').off('mousemove');
-            });
-            $(document).on('mousemove', function(me){
-                var mx = (me.pageX - pX);
-                //var my = (me.pageY - pY);
-
-                $dragable.css({
-                    left: mx / 2,
-                    width: startWidth - mx,
-                    //top: my
-                });
-            });
-
-        });
-    });
-
-    </script>
 
 
 
@@ -1585,11 +1561,11 @@
         console.log("jQuery is ready to use...");
 
         var textAreaInput = localStorage.getItem("message");
-        var titleOutput = localStorage.getItem("title");
-        var nameOutput = localStorage.getItem("name");
+        var titleOutput = localStorage.getItem("title1");
+        var nameOutput = localStorage.getItem("sender1");
         var email = localStorage.getItem("email");
 
-        var richContent = "Szanowny Jerzy, " + "<br/>" + "<br/>" + "Przepraszamy za późną odpowiedź. " + "Uprzejmie informujemy, że procedura ogłoszenia wyników przedłuży się o dwa tygodnie." + "<br/>" + "Powodem jest to, że komisja przebywa obecnie na urlopie. " + "<br/>" + "Z wyrazami szacunku," + "<br/>" + "Piotr Komisyjny." + "<br/>" + "<br/>" + "On Mon, Nov 30, 2017 at 5:53 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
+        var richContent = "Jurek, " + "<br/>" + "<br/>" + "Kiedy zwrócisz winną nam kase??. " + "Dług rośnie każdego dnia o 500zł." + "<br/>" + "Widzimy się jutro na rynku w samo południe. " + "<br/>" + "<br/>" + "P.S Wiem, gdzie mieszkasz." + "<br/>" + "<br/>" + "Pozdrawiam," + "<br/>" + "PAWEŁ Z WARSZAWY.";
 
         // var richContent = "Szanowny Jerzy, " + "<br/>" + "<br/>" + "Na wstępie chciałbym przeprosić Cię za późną odpowiedź. Dzięki, że do mnie napisałeś! Aktualnie przebywam w New York City i jak tylko znajdę chwilę, chętnie napiszę. "<br/>" + "Czy kontaktowałaś się może z Krysią?" + "<br/>" + "<br/>" + "On Mon, Dec 11, 2017 at 5:53 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<span class=separator-border>" + textAreaInput.toString() + "</span>";
         document.getElementById("emFoot_1").innerHTML = richContent;
@@ -1597,14 +1573,14 @@
         (function assignSender() {
           var senderName = document.getElementsByClassName("emTo_3");
           for(var i = 0; i < senderName.length; i++) {
-          senderName[i].innerHTML = nameOutput.toString();
+          senderName[i].innerHTML = nameOutput;
           }
         })();
 
         (function assignTtile() {
           var messageTitle = document.getElementsByClassName("compose-subject_3");
           for(var i = 0; i < messageTitle.length; i++) {
-          messageTitle[i].innerHTML = 'Re: ' + titleOutput.toString();
+          messageTitle[i].innerHTML = titleOutput;
           }
         })();
 
