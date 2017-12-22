@@ -1412,8 +1412,8 @@
         console.log("jQuery is ready to use...");
 
         var textAreaInput = localStorage.getItem("message");
-        var titleOutput = localStorage.getItem("title");
-        var nameOutput = localStorage.getItem("name");
+        var titleOutput = localStorage.getItem("title1");
+        var nameOutput = localStorage.getItem("sender1");
         var textareaContent = localStorage.getItem("divToTextarea");
 
         (function assignSender() {
@@ -1447,10 +1447,10 @@
         ////////////////////////////////////////////////////////////////
         //New data
         //////////////////////////////////////////////////////////////////
-        var inputTextareaEight = localStorage.getItem("inputTextareaEight");
+        var inputTextareaEight = localStorage.getItem("answerTextarea1");
 
         (function displayContent() {
-          var richEight = "Szanowny Jerzy, " + "<br/>" + "Uprzejmie informuję, że w przyszły piątek przyjedzie gość z uczelni partnerskiej, do której Pan się wybiera w październiku. " + "<br/>" + "Proszę o informację, czy jest Pan potencjalnie zainteresowany udziałem w spotkaniu." + "<br/>" + "Z wyrazami szacunku, " + "<br/>" + "Piotr Komisyjny " + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + inputTextareaEight + "</div>";
+          var richEight = "Ej no, umawialiśmy się czy nie?? " + "<br/>" + "Przyjdę więc osobiście do Twojego domu." + "<br/>" + "PAWEŁ Z WARSZAWY" + "<br/>" + "<br/>" + "On Mon, Dec 27, 2017 at 11:57 PM, " + "<a href=#>" + email + "</a>" + " wrote: " + "<br/>" + "<br/>" + "<div class=separator-border>" + inputTextareaEight + "</div>";
           var sevenUpdateMessage = localStorage.setItem('inputTextareaEight',richEight);
           document.getElementById("emFoot_1").innerHTML = richEight;
         })();
