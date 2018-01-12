@@ -1,0 +1,1 @@
+﻿crtg_content = ''; (function(){document.cookie = 'crtgin_rta=' + escape(crtg_content) + '; path=/; expires=Tue, 06 Feb 2018 23:19:36 GMT; domain=interia.pl';})();

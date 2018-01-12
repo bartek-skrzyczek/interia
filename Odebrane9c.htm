@@ -50,7 +50,7 @@
     <div class="settings-user-info-logout">
       <div class="settings-user-info-logout-time" ng-bind-html="::getLastLoginText()">Ostatnie logowanie:
         <br>2017-12-13</div><a ng-href="#://interia.hit.gemius.pl/hitredir/id=0ig7YC8kFJmzxBNx4qL5QWaG7FRZSdAG1BSZ7sJNsmz.K7/url=#s://konto.interia.pl/wyloguj?referer=#%253A%252F%252Fwww.interia.pl%252Fwyloguj.html%2523utm_source%253Dkonto%2526utm_medium%253Dpasek_portalowy%2526utm_campaign%253DWylogowania_z_poczty%2526iwa_source%253Dlayer_logout_mail"
-      class="button" data-track-click="settingPanelLogout" href="./login-out11.htm">Wyloguj</a></div>
+      class="button" data-track-click="settingPanelLogout" href="./login-out11portal.htm">Wyloguj</a></div>
   </div>
   <!-- ngIf: ::!isMobile -->
   <div nxt-bind-html-compile="autopromo" ng-if="::!isMobile">
@@ -154,10 +154,7 @@
     </section>
   </div>
   <!-- ngIf: disableActions.changeInterface -->
-  <footer class="settings-section settings-section--footer" ng-if="disableActions.changeInterface">
-    <!-- ngIf: ::changeable -->
-    <!-- end ngIf: ::changeable -->
-  </footer>
+<footer class="settings-section settings-section--footer" ng-if="disableActions.changeInterface"><!-- ngIf: ::changeable --><p class="settings-footer-change-interface" ng-if="::changeable"><span class="settings-footer-change-interface-label">Wersje poczty:</span> <span class="settings-footer-change-interface-new">nowa</span> <a ng-href="/html/chgsystem,type,html,uid,1971dba127e5384d" class="link link--separator" href="/html/chgsystem,type,html,uid,1971dba127e5384d">stara</a></p><!-- end ngIf: ::changeable --></footer>
   <!-- end ngIf: disableActions.changeInterface -->
 </div>
 
@@ -1456,7 +1453,7 @@
     <script async="" src="./Odebrane/iwa.js"></script>
     <script src="./Odebrane/inpl.anc.jssc"></script>
     <script async="" src="./Odebrane/analytics.js"></script>
-    
+
     <script type="text/javascript">
       <!--//--><![CDATA[//><!--
       var pp_gemius_identifier = ".X.rQiLxZ.Hi_8k_eg7y38eyTH68EexpOHQMkQtydm3.h7";

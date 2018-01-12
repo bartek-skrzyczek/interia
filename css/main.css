@@ -42,7 +42,7 @@
 }
 
 .main-cta:focus {
-  
+
 }
 
 .main-cta span {
@@ -73,4 +73,12 @@ LOGOWANIE ALL END
 
 #textarea {
   overflow-y: scroll;
+}
+
+.portal-bg {
+  background-image: url("../assets/portal-main.png");
+  height: 1000px;
+  width: 100%;
+  background-size: 100%;
+  margin-top: -90px;
 }

@@ -1,0 +1,89 @@
+#mainContent-2 {
+    margin-left: 85px;
+}
+
+#sidebar {
+    width: 85px;
+    float: left;
+    margin-left: -85px;
+}
+
+.logo-interia-white {
+  background-position: 13px 16px, -7px 38px;
+  background-size: 56px 19px, 111px 7px;
+}
+
+#content.hektor-content.hektor-content--close {
+  width: calc(100% - 90px);
+}
+
+.hektor-container {
+  width: 90px;
+  padding:0;
+  border-radius: 0;
+}
+
+body {
+  padding:0;
+}
+
+.link.icon-settings {
+  text-decoration: none;
+}
+
+#footer-side1 {
+  margin-left:20px;
+}
+
+#footer-side2 {
+  margin-right: 20px;
+}
+
+.element-contact {
+  margin: 9px 0;
+  position: relative;
+  text-align: center;
+}
+
+h4.contact-name {
+  font-size: 11px;
+  margin: -2px 0 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.msglist-from {
+  width:100%;
+}
+
+.mTable td{
+  overflow:visible;
+}
+
+.ball {
+  position:relative;
+}
+
+.ball:before {
+  border-radius: 100%;
+  background-color: #d69e83;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  height: 15px;
+  line-height: 30px;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 15px;
+  z-index: 11;
+  content: "";
+  left: -15px;
+}

@@ -1,0 +1,189 @@
+#mainContent-2 {
+    margin-left: 85px;
+}
+
+#sidebar {
+    width: 85px;
+    float: left;
+    margin-left: -85px;
+}
+
+.logo-interia-white {
+  background-position: 13px 16px, -7px 38px;
+  background-size: 56px 19px, 111px 7px;
+}
+
+#content.hektor-content.hektor-content--close {
+  width: calc(100% - 90px);
+}
+
+.hektor-container {
+  width: 90px;
+  padding:0;
+  border-radius: 0;
+}
+
+body {
+  padding:0;
+}
+
+.link.icon-settings {
+  text-decoration: none;
+}
+
+#footer-side1 {
+  margin-left:20px;
+}
+
+#footer-side2 {
+  margin-right: 20px;
+}
+
+.element-contact {
+  margin: 9px 0;
+  position: relative;
+  text-align: center;
+}
+
+h4.contact-name {
+  font-size: 11px;
+  margin: -2px 0 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.msglist-from {
+  width:100%;
+}
+
+.mTable td{
+  overflow:visible;
+}
+
+.ball {
+  position:relative;
+}
+
+.ball:before {
+  border-radius: 100%;
+  background-color: #d69e83;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  height: 30px;
+  line-height: 30px;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 30px;
+  z-index: 11;
+  content: "";
+  left: -10px;
+}
+
+.msglist-from.ball div {
+  margin-left:30px;
+  color: #292929;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+}
+
+.msglist-from.ball div:last-child {
+  margin-left:30px;
+  color: #292929;
+  font-size: 12px;
+line-height: 16px;
+    font-weight: 700;
+    line-height: 17px;
+}
+
+.mTable td {
+  padding:12px 0px;
+}
+
+.msglist-date, .msglist-size {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.msglist-flag {
+  margin-top:20px;
+}
+
+.msglist-flag{
+    line-height:38px;
+  }
+
+
+.msglist-check {
+  line-height:4;
+}
+
+.dialog-header-button, :before, [class*=" icon-"]:before {
+    font-family: icomoon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.msglist-header {
+  height:35px;
+}
+
+#tabBodyCont div.tabBody {
+  overflow:visible;
+}
+
+.icon-avatars-on:before {
+    content: "\e67d";
+    margin-left: -15px;
+    font-size:25px;
+    position: absolute;
+    top: 5px;
+    color: #757575;
+}
+
+.msglist-head-check {
+  margin-top:10px!important;
+}
+
+.icon-star_checked:before {
+    content: "\e603";
+}
+
+.icon-attachment:before {
+    content: "\e607";
+}
+
+.icon-filters-unread:before {
+    content: "\e67f";
+}
+
+.icon-filters-contacts:before {
+    content: "\e67e";
+}
+
+.msglist-toolbar-filters-item a {
+  margin-top:4px!important;
+}
+
+.msglist-header {
+  background-color: #F7F7F7;
+}
+
+.new-navigation-update {
+  background-color: white;
+  margin-bottom:0px;
+}
